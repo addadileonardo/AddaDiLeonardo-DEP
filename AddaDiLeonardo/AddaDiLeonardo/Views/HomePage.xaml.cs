@@ -17,5 +17,12 @@ namespace AddaDiLeonardo.Views
 			InitializeComponent ();
             ImgWall.Source = ImageSource.FromResource("AddaDiLeonardo.Images.backgroundFadeBlack.png");
         }
-    }
+
+		private async void Button_Clicked(object sender, EventArgs e)
+		{
+			//await DisplayAlert("Click", ((Button)sender).ClassId, "ok");
+
+			await Navigation.PushModalAsync(new TappaPage(((Button)sender).ClassId));
+		}
+	}
 }

@@ -13,10 +13,18 @@
         <ScrollView>
             <AbsoluteLayout HeightRequest="1400" BackgroundColor="Black">
                 <Image x:Name="ImgWall" Aspect="AspectFill" AbsoluteLayout.LayoutBounds="0.1,0,1,0.3" AbsoluteLayout.LayoutFlags="All"></Image>
-                <Button Text="ciao"  AbsoluteLayout.LayoutBounds="0.53,0.46,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="Red"></Button>
-                <Button Text="ciao"  AbsoluteLayout.LayoutBounds="0.53,0.635,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="OrangeRed"></Button>
-                <Button Text="ciao"  AbsoluteLayout.LayoutBounds="0.53,0.81,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="Green"></Button>
-                <Button Text="ciao"  AbsoluteLayout.LayoutBounds="0.53,0.985,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="Yellow"></Button>
+                <Button Text="Tappa 1"  AbsoluteLayout.LayoutBounds="0.53,0.46,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="Red"
+                        ClassId="btn1"
+                        Clicked="Button_Clicked"></Button>
+                <Button Text="Tappa 2"  AbsoluteLayout.LayoutBounds="0.53,0.635,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="OrangeRed"
+                        ClassId="btn2"
+                        Clicked="Button_Clicked"></Button>
+                <Button Text="Tappa 3"  AbsoluteLayout.LayoutBounds="0.53,0.81,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="Green"
+                        ClassId="btn3"
+                        Clicked="Button_Clicked"></Button>
+                <Button Text="Tappa 4"  AbsoluteLayout.LayoutBounds="0.53,0.985,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="Yellow"
+                        ClassId="btn4"
+                        Clicked="Button_Clicked"></Button>
             </AbsoluteLayout>
         </ScrollView>
 
