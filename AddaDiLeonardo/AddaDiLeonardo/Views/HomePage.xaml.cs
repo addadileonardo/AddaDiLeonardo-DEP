@@ -15,6 +15,7 @@ namespace AddaDiLeonardo.Views
 		public HomePage ()
 		{
 			InitializeComponent ();
-		}
-	}
+            Immaginesfondo.Source = ImageSource.FromResource("AddaLeo.Images.backgroundFadeBlack.png");
+        }
+    }
 }

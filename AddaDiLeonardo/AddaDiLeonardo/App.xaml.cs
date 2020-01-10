@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AddaDiLeonardo.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace AddaDiLeonardo
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavPage();
         }
 
         protected override void OnStart()
