@@ -10,12 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace AddaDiLeonardo.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HomePage : ContentPage
+	public partial class Map : ContentPage
 	{
-		public HomePage ()
+		public Map ()
 		{
 			InitializeComponent ();
-            ImgWall.Source = ImageSource.FromResource("AddaDiLeonardo.Images.backgroundFadeBlack.png");
-        }
-    }
+		}
+	}
 }
