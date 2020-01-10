@@ -12,7 +12,7 @@
     </ContentPage.Content>-->
         <ScrollView>
             <AbsoluteLayout HeightRequest="1400" BackgroundColor="Black">
-                <Image x:Name="Immaginesfondo" Aspect="AspectFill" AbsoluteLayout.LayoutBounds="0.1,0,1,0.3" AbsoluteLayout.LayoutFlags="All"></Image>
+                <Image x:Name="ImgWall" Aspect="AspectFill" AbsoluteLayout.LayoutBounds="0.1,0,1,0.3" AbsoluteLayout.LayoutFlags="All"></Image>
                 <Button Text="ciao"  AbsoluteLayout.LayoutBounds="0.53,0.46,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="Red"></Button>
                 <Button Text="ciao"  AbsoluteLayout.LayoutBounds="0.53,0.635,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="OrangeRed"></Button>
                 <Button Text="ciao"  AbsoluteLayout.LayoutBounds="0.53,0.81,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="Green"></Button>
