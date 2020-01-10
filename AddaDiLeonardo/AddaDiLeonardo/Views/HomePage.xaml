@@ -1,12 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AddaDiLeonardo.Views.HomePage">
-    <ContentPage.Content>
+             x:Class="AddaDiLeonardo.Views.HomePage"
+             NavigationPage.HasNavigationBar="False">
+    <!--<ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
-    </ContentPage.Content>
+    </ContentPage.Content>-->
+        <ScrollView>
+            <AbsoluteLayout HeightRequest="1400" BackgroundColor="Black">
+                <Image x:Name="Immaginesfondo" Aspect="AspectFill" AbsoluteLayout.LayoutBounds="0.1,0,1,0.3" AbsoluteLayout.LayoutFlags="All"></Image>
+                <Button Text="ciao"  AbsoluteLayout.LayoutBounds="0.53,0.46,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="Red"></Button>
+                <Button Text="ciao"  AbsoluteLayout.LayoutBounds="0.53,0.635,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="OrangeRed"></Button>
+                <Button Text="ciao"  AbsoluteLayout.LayoutBounds="0.53,0.81,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="Green"></Button>
+                <Button Text="ciao"  AbsoluteLayout.LayoutBounds="0.53,0.985,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="Yellow"></Button>
+            </AbsoluteLayout>
+        </ScrollView>
+
 </ContentPage>
