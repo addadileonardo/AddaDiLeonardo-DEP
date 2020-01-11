@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AddaDiLeonardo.CustomControls.Accordion"
+             x:Name="_accordion">
+  <ContentView.Content>
+      <!--<StackLayout>
+          <Label Text="Hello Xamarin.Forms!" />
+      </StackLayout>-->
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <!--Header-->
+            <Grid Grid.Row="0"
+                  Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <!--Title-->
+                <Label Grid.Column="0" x:Name="_title"
+                       HorizontalOptions="Start" VerticalOptions="Center" Margin="5,0,0,0"
+                       Text="{Binding Source={x:Reference _accordion}, Path=Title}"/>
+                
+                <!--Indicator-->
+                <ContentView Grid.Column="1" x:Name="_indicator"
+                             HorizontalOptions="End" VerticalOptions="Center"
+                             Content="{Binding Source={x:Reference _accordion}, Path=Indicator}"/>
+                
+                <!--TapHandler-->
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
+                </Grid.GestureRecognizers>
+
+            </Grid>
+            
+            <!--Content-->
+            <ContentView Grid.Row="1" x:Name="_content"
+                         Margin="5"
+                         Content="{Binding Source={x:Reference _accordion}, Path=AccordionContent}"/>
+
+        </Grid>
+      
+      
+  </ContentView.Content>
+</ContentView>

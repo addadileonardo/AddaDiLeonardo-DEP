@@ -1,0 +1,97 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace AddaDiLeonardo.CustomControls
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Accordion : ContentView
+    {
+        public Accordion()
+        {
+            InitializeComponent();
+            IsOpen = true;
+        }
+
+        //Elements
+
+        public static readonly BindableProperty TitleTextProperty = BindableProperty.Create(nameof(Title), typeof(string), typeof(Accordion), default(string));
+        public string Title
+        {
+            get => (string)GetValue(TitleTextProperty);
+            set => SetValue(TitleTextProperty, value);
+        }
+
+        public static readonly BindableProperty IndicatorProperty = BindableProperty.Create(nameof(Indicator), typeof(View), typeof(Accordion), default(View));
+        public View Indicator
+        {
+            get => (View)GetValue(IndicatorProperty);
+            set => SetValue(IndicatorProperty, value);
+        }
+
+        public static readonly BindableProperty IsOpenProperty = BindableProperty.Create(nameof(IsOpen), typeof(bool), typeof(Accordion), false, propertyChanged: IsOpenChanged);
+        public bool IsOpen
+        {
+            get => (bool)GetValue(IsOpenProperty);
+            set => SetValue(IsOpenProperty, value);
+        }
+
+        public static readonly BindableProperty AccordionContentProperty = BindableProperty.Create(nameof(AccordionContent), typeof(View), typeof(Accordion), default(View));
+        public View AccordionContent
+        {
+            get => (View)GetValue(AccordionContentProperty);
+            set => SetValue(AccordionContentProperty, value);
+        }
+
+        //Open handling
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            IsOpen = !IsOpen;
+        }
+
+        public static void IsOpenChanged(BindableObject bindable, object oldValue, object newValue)
+        {
+            if(bindable != null && newValue != null)
+            {
+                var Control = (Accordion)bindable;
+
+                if(Control.IsOpen == false)
+                {
+                    VisualStateManager.GoToState(Control, "Open");
+                    Control.Close();
+                }
+                if(Control.IsOpen == true)
+                {
+                    VisualStateManager.GoToState(Control, "Closed");
+                    Control.Open();
+                }
+            }
+        }
+
+        public uint AnimationDuration { get; set; } = 250;
+        async void Open()
+        {
+            _content.IsVisible = true;
+            await Task.WhenAll(
+                _content.TranslateTo(0, 10, AnimationDuration),
+                _indicator.RotateTo(0, AnimationDuration),
+                _content.FadeTo(30, 50, Easing.SinIn)
+                );
+        }
+        async void Close()
+        {
+            await Task.WhenAll(
+                _content.TranslateTo(0, -10, AnimationDuration),
+                _indicator.RotateTo(-180, AnimationDuration),
+                _content.FadeTo(0, 50)
+                );
+            _content.IsVisible = false;
+        }
+    }
+}

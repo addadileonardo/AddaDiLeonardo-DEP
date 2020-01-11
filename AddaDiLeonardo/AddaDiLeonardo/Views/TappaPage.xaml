@@ -3,13 +3,73 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:AddaDiLeonardo.CustomControls"
              mc:Ignorable="d"
              x:Class="AddaDiLeonardo.Views.TappaPage">
     <ContentPage.Content>
-        <StackLayout>
+        <!--<StackLayout>
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        </StackLayout>-->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <!--Accordions-->
+
+            <local:Accordion Grid.Row="0"
+                             Title="Titolo1">
+
+                <local:Accordion.Indicator>
+                    <Label Text="^"/>
+                </local:Accordion.Indicator>
+                <local:Accordion.AccordionContent>
+                    <Label Text="Contenuto1"/>
+                </local:Accordion.AccordionContent>
+                
+            </local:Accordion>
+
+            <local:Accordion Grid.Row="1"
+                             Title="Titolo2">
+
+                <local:Accordion.Indicator>
+                    <Label Text="^"/>
+                </local:Accordion.Indicator>
+                <local:Accordion.AccordionContent>
+                    <Label Text="Contenuto2"/>
+                </local:Accordion.AccordionContent>
+
+            </local:Accordion>
+
+            <local:Accordion Grid.Row="2"
+                             Title="Titolo3">
+
+                <local:Accordion.Indicator>
+                    <Label Text="^"/>
+                </local:Accordion.Indicator>
+                <local:Accordion.AccordionContent>
+                    <Label Text="Contenuto3"/>
+                </local:Accordion.AccordionContent>
+
+            </local:Accordion>
+
+            <local:Accordion Grid.Row="3"
+                             Title="Titolo4">
+
+                <local:Accordion.Indicator>
+                    <Label Text="^"/>
+                </local:Accordion.Indicator>
+                <local:Accordion.AccordionContent>
+                    <Label Text="Contenuto4"/>
+                </local:Accordion.AccordionContent>
+
+            </local:Accordion>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
