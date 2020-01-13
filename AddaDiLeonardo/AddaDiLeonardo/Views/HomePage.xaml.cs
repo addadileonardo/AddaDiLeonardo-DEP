@@ -36,11 +36,6 @@ namespace AddaDiLeonardo.Views
                 throw ex;
             }
         }
-        private async void Button_Clicked(object sender, EventArgs e)
-		{
-			//await DisplayAlert("Click", ((Button)sender).ClassId, "ok");
 
-			await Navigation.PushModalAsync(new TappaPage());
-		}
 	}
 }
