@@ -15,18 +15,27 @@ namespace AddaDiLeonardo.Views
 		public HomePage ()
 		{
 			InitializeComponent ();
-            Immaginesfondo.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Prova3.png");
-            Tappa1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Fiume.jpg");
-            Tappa2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa_ponte.jpg");
-            Tappa3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Centrale.jpg");
-            Tappa4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Vergine.jpg");
+
+            //To update: source of image (incorporate and XAML)
+            background.Source = ImageSource.FromResource("AddaDiLeonardo.Images.backgroundFadeBlack.png");
+            step1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Fiume.jpg");
+            step2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa_ponte.jpg");
+            step3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Centrale.jpg");
+            step4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Vergine.jpg");
+
         }
 
-		private async void Button_Clicked(object sender, EventArgs e)
-		{
-			//await DisplayAlert("Click", ((Button)sender).ClassId, "ok");
+        private async void OnImageNameTapped(object sender, EventArgs args)
+        {
+            try
+            {
+                await Navigation.PushModalAsync(new TappaPage());
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
-			await Navigation.PushModalAsync(new BaseTappa());
-		}
 	}
 }
