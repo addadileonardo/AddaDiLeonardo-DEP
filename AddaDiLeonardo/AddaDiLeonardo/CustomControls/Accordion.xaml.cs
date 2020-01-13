@@ -15,7 +15,8 @@ namespace AddaDiLeonardo.CustomControls
         public Accordion()
         {
             InitializeComponent();
-            IsOpen = true;
+            IsOpen = false;
+            Close();
         }
 
         //Elements

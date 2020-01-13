@@ -12,17 +12,15 @@ namespace AddaDiLeonardo.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TappaPage : ContentPage
     {
-        public TappaPage(string index)
+        public TappaPage()
         {
             InitializeComponent();
 
-            switch (index)
-            {
-                case "btn1": BackgroundColor = Color.Red; break;
-                case "btn2": BackgroundColor = Color.OrangeRed; break;
-                case "btn3": BackgroundColor = Color.Green; break;
-                case "btn4": BackgroundColor = Color.Yellow; break;
-            }
+            imgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa1.adda.jpg");
+            indicator1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow.png");
+            indicator2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow.png");
+            indicator3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow.png");
+            indicator4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow.png");
         }
     }
 }

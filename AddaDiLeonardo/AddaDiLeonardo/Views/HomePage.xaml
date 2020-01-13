@@ -3,29 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AddaDiLeonardo.Views.HomePage"
              NavigationPage.HasNavigationBar="False">
-    <!--<ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>-->
-        <ScrollView>
-            <AbsoluteLayout HeightRequest="1400" BackgroundColor="Black">
-                <Image x:Name="ImgWall" Aspect="AspectFill" AbsoluteLayout.LayoutBounds="0.1,0,1,0.3" AbsoluteLayout.LayoutFlags="All"></Image>
-                <Button Text="Tappa 1"  AbsoluteLayout.LayoutBounds="0.53,0.46,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="Red"
-                        ClassId="btn1"
-                        Clicked="Button_Clicked"></Button>
-                <Button Text="Tappa 2"  AbsoluteLayout.LayoutBounds="0.53,0.635,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="OrangeRed"
-                        ClassId="btn2"
-                        Clicked="Button_Clicked"></Button>
-                <Button Text="Tappa 3"  AbsoluteLayout.LayoutBounds="0.53,0.81,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="Green"
-                        ClassId="btn3"
-                        Clicked="Button_Clicked"></Button>
-                <Button Text="Tappa 4"  AbsoluteLayout.LayoutBounds="0.53,0.985,0.90,0.14" AbsoluteLayout.LayoutFlags="All" CornerRadius="10" BackgroundColor="Yellow"
-                        ClassId="btn4"
-                        Clicked="Button_Clicked"></Button>
-            </AbsoluteLayout>
-        </ScrollView>
+    <ScrollView>
+        <AbsoluteLayout HeightRequest="1500" BackgroundColor="White">
+            <Image x:Name="Immaginesfondo"  Aspect="Fill" HorizontalOptions="StartAndExpand" AbsoluteLayout.LayoutBounds="0.1,0.05,1,0.3" AbsoluteLayout.LayoutFlags="All" Scale="1.50"></Image>
+            <ImageButton x:Name="Tappa1" Clicked="Button_Clicked" AbsoluteLayout.LayoutBounds="0.53,0.37,0.90,0.14" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Red" Aspect="AspectFill" ></ImageButton>
+            <ImageButton x:Name="Tappa2" Clicked="Button_Clicked" AbsoluteLayout.LayoutBounds="0.53,0.56,0.90,0.14" AbsoluteLayout.LayoutFlags="All" BackgroundColor="OrangeRed"  Aspect="AspectFill"></ImageButton>
+            <ImageButton x:Name="Tappa3" Clicked="Button_Clicked" AbsoluteLayout.LayoutBounds="0.53,0.75,0.90,0.14" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Green" Aspect="AspectFill"></ImageButton>
+            <ImageButton x:Name="Tappa4" Clicked="Button_Clicked"  AbsoluteLayout.LayoutBounds="0.53,0.94,0.90,0.14" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Yellow" Aspect="AspectFill"></ImageButton>
+            
+            
+        </AbsoluteLayout>
+    </ScrollView>
 
 </ContentPage>

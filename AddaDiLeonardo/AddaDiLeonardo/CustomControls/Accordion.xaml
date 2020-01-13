@@ -13,13 +13,13 @@
 
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
             
             <!--Header-->
             <Grid Grid.Row="0"
-                  Margin="5">
+                  Padding="5,5,5,5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="Auto"/>
@@ -28,11 +28,12 @@
                 <!--Title-->
                 <Label Grid.Column="0" x:Name="_title"
                        HorizontalOptions="Start" VerticalOptions="Center" Margin="5,0,0,0"
-                       Text="{Binding Source={x:Reference _accordion}, Path=Title}"/>
+                       Text="{Binding Source={x:Reference _accordion}, Path=Title}"
+                       FontSize="Medium" TextColor="Black"/>
                 
                 <!--Indicator-->
                 <ContentView Grid.Column="1" x:Name="_indicator"
-                             HorizontalOptions="End" VerticalOptions="Center"
+                             HorizontalOptions="End" VerticalOptions="Center" 
                              Content="{Binding Source={x:Reference _accordion}, Path=Indicator}"/>
                 
                 <!--TapHandler-->

@@ -15,14 +15,18 @@ namespace AddaDiLeonardo.Views
 		public HomePage ()
 		{
 			InitializeComponent ();
-            ImgWall.Source = ImageSource.FromResource("AddaDiLeonardo.Images.backgroundFadeBlack.png");
+            Immaginesfondo.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Prova3.png");
+            Tappa1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Fiume.jpg");
+            Tappa2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa_ponte.jpg");
+            Tappa3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Centrale.jpg");
+            Tappa4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Vergine.jpg");
         }
 
 		private async void Button_Clicked(object sender, EventArgs e)
 		{
 			//await DisplayAlert("Click", ((Button)sender).ClassId, "ok");
 
-			await Navigation.PushModalAsync(new TappaPage(((Button)sender).ClassId));
+			await Navigation.PushModalAsync(new TappaPage());
 		}
 	}
 }

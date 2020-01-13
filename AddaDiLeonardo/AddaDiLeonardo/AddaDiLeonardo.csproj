@@ -11,16 +11,32 @@
 
   <ItemGroup>
     <None Remove="Images\backgroundFadeBlack.png" />
+    <None Remove="Images\Bella.png" />
+    <None Remove="Images\Centrale.jpg" />
+    <None Remove="Images\Fiume.jpg" />
     <None Remove="Images\home.png" />
+    <None Remove="Images\Icons\arrow.png" />
     <None Remove="Images\map.png" />
+    <None Remove="Images\Prova3.png" />
     <None Remove="Images\settings.png" />
+    <None Remove="Images\Tappa1\adda.jpg" />
+    <None Remove="Images\Tappa_ponte.jpg" />
+    <None Remove="Images\Vergine.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Images\backgroundFadeBlack.png" />
+    <EmbeddedResource Include="Images\Bella.png" />
+    <EmbeddedResource Include="Images\Centrale.jpg" />
+    <EmbeddedResource Include="Images\Fiume.jpg" />
+    <EmbeddedResource Include="Images\Icons\arrow.png" />
     <EmbeddedResource Include="Images\Icons\home.png" />
     <EmbeddedResource Include="Images\Icons\map.png" />
     <EmbeddedResource Include="Images\Icons\settings.png" />
+    <EmbeddedResource Include="Images\Prova3.png" />
+    <EmbeddedResource Include="Images\Tappa1\adda.jpg" />
+    <EmbeddedResource Include="Images\Tappa_ponte.jpg" />
+    <EmbeddedResource Include="Images\Vergine.jpg" />
   </ItemGroup>
 
   <ItemGroup>
