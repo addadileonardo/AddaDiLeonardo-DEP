@@ -42,14 +42,12 @@
 
                         <local:Accordion Grid.Row="0"
                              Title="Lorem ipsum dolor sit amet">
-
                             <local:Accordion.Indicator>
                                 <Image x:Name="indicator1" Margin="0,5,0,0"></Image>
                             </local:Accordion.Indicator>
                             <local:Accordion.AccordionContent>
                                 <Label Text="Contenuto1"/>
                             </local:Accordion.AccordionContent>
-
                         </local:Accordion>
 
                         <local:Accordion Grid.Row="1"
