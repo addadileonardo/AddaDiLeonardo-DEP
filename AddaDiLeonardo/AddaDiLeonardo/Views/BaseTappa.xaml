@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:AddaDiLeonardo.CustomControls"
+             mc:Ignorable="d"
+             x:Class="AddaDiLeonardo.Views.BaseTappa">
+    <ContentPage.Content>
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <StackLayout>
+                    <Image x:Name="imgTappa" Aspect="Fill"></Image>
+                </StackLayout>
+                <StackLayout>
+                    <Label Margin="5,0" Text="Ponte San Michele" FontSize="Large" FontAttributes="Bold" TextColor="Black"></Label>
+                    <Label Margin="5,0" Text="Una delle più interessanti realizzazioni dell'ingegneria italiana nell'800, punto di unione tra le due sponde rivali dell'Adda" TextColor="Black"></Label>
+                    <Label Margin="5,0" x:Name="lblDescrizione" Text=" Il Ponte San Michele, situato a Paderno d'Adda, è stato progettato dall'ingegnere svizzero Jules Röthlisberger nel 1889, come collegamento viabilistico e ferroviario tra l'area economica della bergamasca e quella milanese. La struttura e i numerosi eventi di cui è stato teatro l'hanno reso un'opera architettonica di grande importanza storica."></Label>
+                    <StackLayout HorizontalOptions="FillAndExpand" Orientation="Vertical">
+                    </StackLayout>
+                    <BoxView Color="#E7EAED" WidthRequest="1000" HeightRequest="1"></BoxView>
+                </StackLayout>
+                
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <local:Accordion Grid.Row="0"
+                             Title="Il ponte nella storia">
+                        <local:Accordion.Indicator>
+                            <Image x:Name="indicator0" Aspect="AspectFill" Margin="20,0,0,0"></Image>
+                        </local:Accordion.Indicator>
+                        <local:Accordion.AccordionContent>
+                            <StackLayout>
+                                <Image x:Name="imgFirstSection0" Aspect="AspectFill"></Image>
+                                <Label Margin="5,0" Text="Il fiume ai tempi di Leonardo" FontSize="Large" FontAttributes="Bold" TextColor="Black"></Label>
+                                <Label Margin="5,0"  Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in dictum lorem, ut rutrum metus. Donec faucibus aliquet leo vel tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec dapibus urna ipsum, in facilisis libero dignissim vitae. Aenean aliquet tempus felis et tempor. Aenean dignissim nisi augue, in porta mauris pulvinar vel. Praesent rhoncus vestibulum efficitur. Aliquam faucibus laoreet neque non efficitur. Nulla semper dolor vel elit ultricies, sit amet egestas erat fermentum. Donec pharetra gravida nisi, ut luctus tellus condimentum et. Donec at vulputate nulla. Nullam pellentesque sem eget cursus porta. Donec id leo dui. Maecenas non neque lorem. Vivamus id metus nibh."></Label>
+                            </StackLayout>
+                        </local:Accordion.AccordionContent>
+                    </local:Accordion>
+
+                    <local:Accordion Grid.Row="1"
+                             Title="La struttura">
+                        <local:Accordion.Indicator>
+                            <Image x:Name="indicator1" Aspect="AspectFill" Margin="20,0,0,0"></Image>
+                        </local:Accordion.Indicator>
+                        <local:Accordion.AccordionContent>
+                            <StackLayout>
+                                <Image x:Name="imgFirstSection1" Aspect="AspectFill"></Image>
+                                <Label Margin="5,0" Text="Il fiume ai tempi di Leonardo" FontSize="Large" FontAttributes="Bold" TextColor="Black"></Label>
+                                <Label Margin="5,0"  Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in dictum lorem, ut rutrum metus. Donec faucibus aliquet leo vel tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec dapibus urna ipsum, in facilisis libero dignissim vitae. Aenean aliquet tempus felis et tempor. Aenean dignissim nisi augue, in porta mauris pulvinar vel. Praesent rhoncus vestibulum efficitur. Aliquam faucibus laoreet neque non efficitur. Nulla semper dolor vel elit ultricies, sit amet egestas erat fermentum. Donec pharetra gravida nisi, ut luctus tellus condimentum et. Donec at vulputate nulla. Nullam pellentesque sem eget cursus porta. Donec id leo dui. Maecenas non neque lorem. Vivamus id metus nibh."></Label>
+                            </StackLayout>
+                        </local:Accordion.AccordionContent>
+                    </local:Accordion>
+
+                    <local:Accordion Grid.Row="2"
+                             Title="Storia e maledizione dell'ingegnere">
+                        <local:Accordion.Indicator>
+                            <Image x:Name="indicator2" Aspect="AspectFill" Margin="20,0,0,0"></Image>
+                        </local:Accordion.Indicator>
+                        <local:Accordion.AccordionContent>
+                            <StackLayout>
+                                <Image x:Name="imgFirstSection2" Aspect="AspectFill"></Image>
+                                <Label Margin="5,0" Text="Il fiume ai tempi di Leonardo" FontSize="Large" FontAttributes="Bold" TextColor="Black"></Label>
+                                <Label Margin="5,0"  Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in dictum lorem, ut rutrum metus. Donec faucibus aliquet leo vel tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec dapibus urna ipsum, in facilisis libero dignissim vitae. Aenean aliquet tempus felis et tempor. Aenean dignissim nisi augue, in porta mauris pulvinar vel. Praesent rhoncus vestibulum efficitur. Aliquam faucibus laoreet neque non efficitur. Nulla semper dolor vel elit ultricies, sit amet egestas erat fermentum. Donec pharetra gravida nisi, ut luctus tellus condimentum et. Donec at vulputate nulla. Nullam pellentesque sem eget cursus porta. Donec id leo dui. Maecenas non neque lorem. Vivamus id metus nibh."></Label>
+                            </StackLayout>
+                        </local:Accordion.AccordionContent>
+                    </local:Accordion>
+
+                    <local:Accordion Grid.Row="3"
+                             Title="Leonardo da Vinci">
+                        <local:Accordion.Indicator>
+                            <Image x:Name="indicator3" Aspect="AspectFill" Margin="20,0,0,0"></Image>
+                        </local:Accordion.Indicator>
+                        <local:Accordion.AccordionContent>
+                            <StackLayout>
+                                <Image x:Name="imgFirstSection3" Aspect="AspectFill"></Image>
+                                <Label Margin="5,0" Text="Il fiume ai tempi di Leonardo" FontSize="Large" FontAttributes="Bold" TextColor="Black"></Label>
+                                <Label Margin="5,0"  Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in dictum lorem, ut rutrum metus. Donec faucibus aliquet leo vel tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec dapibus urna ipsum, in facilisis libero dignissim vitae. Aenean aliquet tempus felis et tempor. Aenean dignissim nisi augue, in porta mauris pulvinar vel. Praesent rhoncus vestibulum efficitur. Aliquam faucibus laoreet neque non efficitur. Nulla semper dolor vel elit ultricies, sit amet egestas erat fermentum. Donec pharetra gravida nisi, ut luctus tellus condimentum et. Donec at vulputate nulla. Nullam pellentesque sem eget cursus porta. Donec id leo dui. Maecenas non neque lorem. Vivamus id metus nibh."></Label>
+                            </StackLayout>
+                        </local:Accordion.AccordionContent>
+                    </local:Accordion>
+
+                    <local:Accordion Grid.Row="4"
+                             Title="Curiosità">
+                        <local:Accordion.Indicator>
+                            <Image x:Name="indicator4" Aspect="AspectFill" Margin="20,0,0,0"></Image>
+                        </local:Accordion.Indicator>
+                        <local:Accordion.AccordionContent>
+                            <StackLayout>
+                                <Image x:Name="imgFirstSection4" Aspect="AspectFill"></Image>
+                                <Label Margin="5,0" Text="Il fiume ai tempi di Leonardo" FontSize="Large" FontAttributes="Bold" TextColor="Black"></Label>
+                                <Label Margin="5,0"  Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in dictum lorem, ut rutrum metus. Donec faucibus aliquet leo vel tempus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec dapibus urna ipsum, in facilisis libero dignissim vitae. Aenean aliquet tempus felis et tempor. Aenean dignissim nisi augue, in porta mauris pulvinar vel. Praesent rhoncus vestibulum efficitur. Aliquam faucibus laoreet neque non efficitur. Nulla semper dolor vel elit ultricies, sit amet egestas erat fermentum. Donec pharetra gravida nisi, ut luctus tellus condimentum et. Donec at vulputate nulla. Nullam pellentesque sem eget cursus porta. Donec id leo dui. Maecenas non neque lorem. Vivamus id metus nibh."></Label>
+                            </StackLayout>
+                        </local:Accordion.AccordionContent>
+                    </local:Accordion>
+
+                </Grid>
+            </StackLayout>
+            
+            
+            
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

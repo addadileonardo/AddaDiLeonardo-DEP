@@ -26,7 +26,7 @@ namespace AddaDiLeonardo.Views
 		{
 			//await DisplayAlert("Click", ((Button)sender).ClassId, "ok");
 
-			await Navigation.PushModalAsync(new TappaPage());
+			await Navigation.PushModalAsync(new BaseTappa());
 		}
 	}
 }
