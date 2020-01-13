@@ -3,16 +3,104 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AddaDiLeonardo.Views.HomePage"
              NavigationPage.HasNavigationBar="False">
-    <ScrollView>
-        <AbsoluteLayout HeightRequest="1500" BackgroundColor="White">
-            <Image x:Name="Immaginesfondo"  Aspect="Fill" HorizontalOptions="StartAndExpand" AbsoluteLayout.LayoutBounds="0.1,0.05,1,0.3" AbsoluteLayout.LayoutFlags="All" Scale="1.50"></Image>
-            <ImageButton x:Name="Tappa1" Clicked="Button_Clicked" AbsoluteLayout.LayoutBounds="0.53,0.37,0.90,0.14" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Red" Aspect="AspectFill" ></ImageButton>
-            <ImageButton x:Name="Tappa2" Clicked="Button_Clicked" AbsoluteLayout.LayoutBounds="0.53,0.56,0.90,0.14" AbsoluteLayout.LayoutFlags="All" BackgroundColor="OrangeRed"  Aspect="AspectFill"></ImageButton>
-            <ImageButton x:Name="Tappa3" Clicked="Button_Clicked" AbsoluteLayout.LayoutBounds="0.53,0.75,0.90,0.14" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Green" Aspect="AspectFill"></ImageButton>
-            <ImageButton x:Name="Tappa4" Clicked="Button_Clicked"  AbsoluteLayout.LayoutBounds="0.53,0.94,0.90,0.14" AbsoluteLayout.LayoutFlags="All" BackgroundColor="Yellow" Aspect="AspectFill"></ImageButton>
-            
-            
-        </AbsoluteLayout>
-    </ScrollView>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <RelativeLayout>
 
+                <Image Aspect="Fill" x:Name="background"
+			        RelativeLayout.WidthConstraint="{ConstraintExpression
+				    Type=RelativeToParent,
+			        Property=Width,
+				    Factor=1}" />
+
+                <Button Text="Guarda ora" BackgroundColor="Black" TextColor="White" BorderWidth="2" BorderColor="White" WidthRequest="150" HeightRequest="40" BorderRadius="10"  x:Name="btnRiproduci"
+                    RelativeLayout.XConstraint="{ConstraintExpression
+				    Type=RelativeToParent,
+				    Property=Width,
+				    Factor=0.5,
+                    Constant= -75}"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+				    Type=RelativeToView,
+                    ElementName=background,
+				    Property=Height,
+				    Factor=0.70 }" />
+                
+                <!-- Dipendenza HEIGHT -> spacing (yConstraint) -->
+                <Image Aspect="Fill" WidthRequest="330" HeightRequest="200" x:Name="step1"  
+                        RelativeLayout.XConstraint="{ConstraintExpression
+				        Type=RelativeToParent,
+				        Property=Width,
+				        Factor=0.5,
+                        Constant= -165}"
+                        RelativeLayout.YConstraint="{ConstraintExpression
+				        Type=RelativeToView,
+                        ElementName=btnRiproduci,
+				        Property=Y,
+				        Factor=1,
+                        Constant= 85 }">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnImageNameTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Aspect="Fill" WidthRequest="330" HeightRequest="200" x:Name="step2"
+                        RelativeLayout.XConstraint="{ConstraintExpression
+				        Type=RelativeToParent,
+				        Property=Width,
+				        Factor=0.5,
+                        Constant= -165}"
+                        RelativeLayout.YConstraint="{ConstraintExpression
+				        Type=RelativeToView,
+                        ElementName=step1,
+				        Property=Y,
+				        Factor=1,
+                        Constant= 230 }">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnImageNameTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Aspect="Fill" WidthRequest="330" HeightRequest="200" x:Name="step3"
+                        RelativeLayout.XConstraint="{ConstraintExpression
+				        Type=RelativeToParent,
+				        Property=Width,
+				        Factor=0.5,
+                        Constant= -165}"
+                        RelativeLayout.YConstraint="{ConstraintExpression
+				        Type=RelativeToView,
+                        ElementName=step2,
+				        Property=Y,
+				        Factor=1,
+                        Constant= 230 }">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnImageNameTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Image Aspect="Fill" WidthRequest="330" HeightRequest="200" x:Name="step4"
+                        RelativeLayout.XConstraint="{ConstraintExpression
+				        Type=RelativeToParent,
+				        Property=Width,
+				        Factor=0.5,
+                        Constant= -165}"
+                        RelativeLayout.YConstraint="{ConstraintExpression
+				        Type=RelativeToView,
+                        ElementName=step3,
+				        Property=Y,
+				        Factor=1,
+                        Constant= 230 }">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnImageNameTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+            </RelativeLayout>
+        </ScrollView>
+    </ContentPage.Content>
 </ContentPage>
