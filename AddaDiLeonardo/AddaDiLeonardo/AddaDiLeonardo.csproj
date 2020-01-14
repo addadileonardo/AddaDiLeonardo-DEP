@@ -10,15 +10,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Files\BaseTappa\BaseHtml.html" />
     <None Remove="Images\backgroundFadeBlack.png" />
     <None Remove="Images\Bella.png" />
     <None Remove="Images\Centrale.jpg" />
     <None Remove="Images\Fiume.jpg" />
     <None Remove="Images\home.png" />
     <None Remove="Images\Icons\arrow.png" />
+    <None Remove="Images\Icons\arrow2.png" />
     <None Remove="Images\Icons\circle-down.png" />
     <None Remove="Images\Icons\circle-up.png" />
     <None Remove="Images\map.png" />
+    <None Remove="Images\Ponte.jpg" />
     <None Remove="Images\Prova3.png" />
     <None Remove="Images\settings.png" />
     <None Remove="Images\Tappa1\adda.jpg" />
@@ -27,16 +30,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Files\BaseTappa\BaseHtml.html" />
     <EmbeddedResource Include="Images\backgroundFadeBlack.png" />
     <EmbeddedResource Include="Images\Bella.png" />
     <EmbeddedResource Include="Images\Centrale.jpg" />
     <EmbeddedResource Include="Images\Fiume.jpg" />
     <EmbeddedResource Include="Images\Icons\arrow.png" />
+    <EmbeddedResource Include="Images\Icons\arrow2.png" />
     <EmbeddedResource Include="Images\Icons\circle-down.png" />
     <EmbeddedResource Include="Images\Icons\circle-up.png" />
     <EmbeddedResource Include="Images\Icons\home.png" />
     <EmbeddedResource Include="Images\Icons\map.png" />
     <EmbeddedResource Include="Images\Icons\settings.png" />
+    <EmbeddedResource Include="Images\Ponte.jpg" />
     <EmbeddedResource Include="Images\Prova3.png" />
     <EmbeddedResource Include="Images\Tappa1\adda.jpg" />
     <EmbeddedResource Include="Images\Tappa_ponte.jpg" />
