@@ -35,7 +35,7 @@
                     <local:Accordion Grid.Row="0"
                              Title="Il ponte nella storia">
                         <local:Accordion.Indicator>
-                            <Image x:Name="indicator0" Aspect="AspectFill" Margin="20,0,0,0"></Image>
+                            <!--Image x:Name="indicator0" Aspect="AspectFill" Margin="20,0,0,0"></-->
                         </local:Accordion.Indicator>
                         <local:Accordion.AccordionContent>
                             <StackLayout>
@@ -49,7 +49,7 @@
                     <local:Accordion Grid.Row="1"
                              Title="La struttura">
                         <local:Accordion.Indicator>
-                            <Image x:Name="indicator1" Aspect="AspectFill" Margin="20,0,0,0"></Image>
+                            <!--Image x:Name="indicator1" Aspect="AspectFill" Margin="20,0,0,0"></-->
                         </local:Accordion.Indicator>
                         <local:Accordion.AccordionContent>
                             <StackLayout>
@@ -63,7 +63,7 @@
                     <local:Accordion Grid.Row="2"
                              Title="Storia e maledizione dell'ingegnere">
                         <local:Accordion.Indicator>
-                            <Image x:Name="indicator2" Aspect="AspectFill" Margin="20,0,0,0"></Image>
+                            <!--Image x:Name="indicator2" Aspect="AspectFill" Margin="20,0,0,0"></-->
                         </local:Accordion.Indicator>
                         <local:Accordion.AccordionContent>
                             <StackLayout>
@@ -77,7 +77,7 @@
                     <local:Accordion Grid.Row="3"
                              Title="Leonardo da Vinci">
                         <local:Accordion.Indicator>
-                            <Image x:Name="indicator3" Aspect="AspectFill" Margin="20,0,0,0"></Image>
+                            <!--Image x:Name="indicator3" Aspect="AspectFill" Margin="20,0,0,0"></-->
                         </local:Accordion.Indicator>
                         <local:Accordion.AccordionContent>
                             <StackLayout>
@@ -91,7 +91,7 @@
                     <local:Accordion Grid.Row="4"
                              Title="Curiosità">
                         <local:Accordion.Indicator>
-                            <Image x:Name="indicator4" Aspect="AspectFill" Margin="20,0,0,0"></Image>
+                            <!--Image x:Name="indicator4" Aspect="AspectFill" Margin="20,0,0,0"></-->
                         </local:Accordion.Indicator>
                         <local:Accordion.AccordionContent>
                             <StackLayout>

@@ -17,6 +17,8 @@ namespace AddaDiLeonardo.CustomControls
             InitializeComponent();
             IsOpen = false;
             Close();
+
+            Indicator = Img;
         }
 
         //Elements
@@ -34,6 +36,8 @@ namespace AddaDiLeonardo.CustomControls
             get => (View)GetValue(IndicatorProperty);
             set => SetValue(IndicatorProperty, value);
         }
+
+        Image Img = new Image() { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.circle-up.png"), Margin = new Thickness(0, 0, 0, 0) };
 
         public static readonly BindableProperty IsOpenProperty = BindableProperty.Create(nameof(IsOpen), typeof(bool), typeof(Accordion), false, propertyChanged: IsOpenChanged);
         public bool IsOpen
@@ -81,18 +85,35 @@ namespace AddaDiLeonardo.CustomControls
             _content.IsVisible = true;
             await Task.WhenAll(
                 _content.TranslateTo(0, 10, AnimationDuration),
+                Img.TranslateTo(-20, 0, AnimationDuration),
+                IndicatorOpen(),
                 _indicator.RotateTo(0, AnimationDuration),
                 _content.FadeTo(30, 50, Easing.SinIn)
                 );
         }
+        public async Task IndicatorOpen()
+        {
+            Img.Margin = new Thickness(0, 0, -10, 0);
+
+            return;
+        }
+
         async void Close()
         {
             await Task.WhenAll(
                 _content.TranslateTo(0, -10, AnimationDuration),
+                Img.TranslateTo(10, 0, AnimationDuration),
+                IndicatorClose(),
                 _indicator.RotateTo(-180, AnimationDuration),
                 _content.FadeTo(0, 50)
                 );
             _content.IsVisible = false;
+        }
+        public async Task IndicatorClose()
+        {
+            Img.Margin = new Thickness(0, 0, 0, 0);
+
+            return;
         }
     }
 }
