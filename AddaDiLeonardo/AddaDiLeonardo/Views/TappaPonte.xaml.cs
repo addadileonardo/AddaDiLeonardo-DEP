@@ -12,7 +12,7 @@ namespace AddaDiLeonardo.Views
             InitializeComponent();
             HtmlServices _htmlServices = new HtmlServices();
 
-            imgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Ponte.jpg");
+            imgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Ponte.Ponte.jpg");
             imgSection1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa1.adda.jpg");
 
 
