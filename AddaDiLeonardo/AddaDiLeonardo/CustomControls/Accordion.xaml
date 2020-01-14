@@ -48,7 +48,8 @@
             <!--Content-->
             <ContentView Grid.Row="1" x:Name="_content"
                          Margin="2"
-                         Content="{Binding Source={x:Reference _accordion}, Path=AccordionContent}"/>
+                         Content="{Binding Source={x:Reference _accordion}, Path=AccordionContent}">
+            </ContentView>
 
         </Grid>
       
