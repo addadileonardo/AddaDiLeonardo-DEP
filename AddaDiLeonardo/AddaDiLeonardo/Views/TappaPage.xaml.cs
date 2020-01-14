@@ -17,7 +17,7 @@ namespace AddaDiLeonardo.Views
             InitializeComponent();
 
             imgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa1.adda.jpg");
-            indicator1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow.png");
+            //indicator1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow.png");
             indicator2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow.png");
             indicator3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow.png");
             indicator4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow.png");
