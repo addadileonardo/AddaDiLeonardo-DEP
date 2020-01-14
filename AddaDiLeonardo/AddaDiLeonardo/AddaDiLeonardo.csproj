@@ -17,6 +17,7 @@
     <None Remove="Images\Fiume.jpg" />
     <None Remove="Images\home.png" />
     <None Remove="Images\Icons\arrow.png" />
+    <None Remove="Images\Icons\arrow2.png" />
     <None Remove="Images\Icons\circle-down.png" />
     <None Remove="Images\Icons\circle-up.png" />
     <None Remove="Images\map.png" />
@@ -35,6 +36,7 @@
     <EmbeddedResource Include="Images\Centrale.jpg" />
     <EmbeddedResource Include="Images\Fiume.jpg" />
     <EmbeddedResource Include="Images\Icons\arrow.png" />
+    <EmbeddedResource Include="Images\Icons\arrow2.png" />
     <EmbeddedResource Include="Images\Icons\circle-down.png" />
     <EmbeddedResource Include="Images\Icons\circle-up.png" />
     <EmbeddedResource Include="Images\Icons\home.png" />
