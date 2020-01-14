@@ -34,8 +34,10 @@
                 <!--Indicator-->
                 <ContentView Grid.Column="1" x:Name="_indicator"
                              HorizontalOptions="End" VerticalOptions="Center" 
-                             Content="{Binding Source={x:Reference _accordion}, Path=Indicator}"/>
-                
+                             Content="{Binding Source={x:Reference _accordion}, Path=Indicator}">
+                    
+                </ContentView>
+
                 <!--TapHandler-->
                 <Grid.GestureRecognizers>
                     <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
@@ -46,7 +48,8 @@
             <!--Content-->
             <ContentView Grid.Row="1" x:Name="_content"
                          Margin="2"
-                         Content="{Binding Source={x:Reference _accordion}, Path=AccordionContent}"/>
+                         Content="{Binding Source={x:Reference _accordion}, Path=AccordionContent}">
+            </ContentView>
 
         </Grid>
       

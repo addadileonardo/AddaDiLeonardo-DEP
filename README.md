@@ -8,3 +8,7 @@ Utilizzare questo branch per sviluppare la base dell'applicazione. Nel momento d
 
 # Note
 - Tutte le immagini principali della tappa devono avere le stesse dimensioni
+
+# Font
+- Titolo: Oswald (https://fonts.google.com/specimen/Oswald)
+- Testo: Roboto light (https://fonts.google.com/specimen/Roboto)
