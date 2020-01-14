@@ -29,7 +29,7 @@ namespace AddaDiLeonardo.Views
         {
             try
             {
-                await Navigation.PushModalAsync(new BaseTappa());
+                await Navigation.PushModalAsync(new TappaPonte());
             }
             catch (Exception ex)
             {

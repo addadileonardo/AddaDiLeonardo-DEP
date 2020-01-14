@@ -10,7 +10,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Files\Nuova cartella1\**" />
+    <Compile Remove="Files\Nuova cartella\**" />
+    <EmbeddedResource Remove="Files\Nuova cartella1\**" />
+    <EmbeddedResource Remove="Files\Nuova cartella\**" />
+    <None Remove="Files\Nuova cartella1\**" />
+    <None Remove="Files\Nuova cartella\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Files\BaseTappa\BaseHtml.html" />
+    <None Remove="Files\Ponte\Ponte_Intro.html" />
+    <None Remove="Files\Ponte\Ponte_section_1.html" />
     <None Remove="Images\backgroundFadeBlack.png" />
     <None Remove="Images\Bella.png" />
     <None Remove="Images\Centrale.jpg" />
@@ -31,6 +42,8 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Files\BaseTappa\BaseHtml.html" />
+    <EmbeddedResource Include="Files\Ponte\Ponte_Intro.html" />
+    <EmbeddedResource Include="Files\Ponte\Ponte_section_1.html" />
     <EmbeddedResource Include="Images\backgroundFadeBlack.png" />
     <EmbeddedResource Include="Images\Bella.png" />
     <EmbeddedResource Include="Images\Centrale.jpg" />
@@ -73,6 +86,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\TappaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\TappaPonte.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
