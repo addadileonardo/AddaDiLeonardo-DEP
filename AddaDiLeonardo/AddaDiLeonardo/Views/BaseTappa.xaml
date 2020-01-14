@@ -10,19 +10,18 @@
         <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout>
                 <StackLayout>
-                    <Image x:Name="imgTappa" Aspect="Fill"></Image>
+                    <Image x:Name="imgTappa" Aspect="AspectFill"></Image>
                 </StackLayout>
                 <StackLayout>
                     <!--<Label Margin="5,0" Text="Ponte San Michele" FontSize="Large" FontAttributes="Bold" TextColor="Black"></Label>
                     <Label Margin="5,0" Text="Una delle più interessanti realizzazioni dell'ingegneria italiana nell'800, punto di unione tra le due sponde rivali dell'Adda" TextColor="Black"></Label>
                     <Label Margin="5,0" x:Name="lblDescrizione" Text=" Il Ponte San Michele, situato a Paderno d'Adda, è stato progettato dall'ingegnere svizzero Jules Röthlisberger nel 1889, come collegamento viabilistico e ferroviario tra l'area economica della bergamasca e quella milanese. La struttura e i numerosi eventi di cui è stato teatro l'hanno reso un'opera architettonica di grande importanza storica."></Label>-->
 
-                    <WebView x:Name="wbTappa" HeightRequest="100"></WebView>
+                    <WebView x:Name="wbTappa" HeightRequest="300" BackgroundColor="#FAFAFA"></WebView>
                     
                     
                     
                     
-                    <BoxView Color="#E7EAED" WidthRequest="1000" HeightRequest="1"></BoxView>
                 </StackLayout>
                 
                 <Grid RowSpacing="0">
