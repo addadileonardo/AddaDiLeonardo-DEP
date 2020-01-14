@@ -11,15 +11,23 @@
           <Label Text="Hello Xamarin.Forms!" />
       </StackLayout>-->
 
-        <Grid>
+        <Grid RowSpacing="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            
+
+
+            <Frame BackgroundColor="White"
+                   CornerRadius="7"
+                   HasShadow="False"
+                   Padding="0,0,0,0"
+                   Margin="5,5,5,0">
             <!--Header-->
             <Grid Grid.Row="0"
-                  Padding="5,5,5,5">
+                  Padding="15,15,15,15"
+                  
+                  BackgroundColor="White">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="Auto"/>
@@ -44,12 +52,25 @@
                 </Grid.GestureRecognizers>
 
             </Grid>
-            
+            </Frame>
             <!--Content-->
-            <ContentView Grid.Row="1" x:Name="_content"
-                         Margin="2"
-                         Content="{Binding Source={x:Reference _accordion}, Path=AccordionContent}">
-            </ContentView>
+
+            <Grid Grid.Row="1" Margin="5,0,5,10" x:Name="_content"
+                       >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                <Frame BorderColor="White"
+                   CornerRadius="7"
+                   HasShadow="False"
+                   Padding="0,0,0,0"
+                   >
+                    <ContentView Grid.Row="0"  BackgroundColor="White" Content="{Binding Source={x:Reference _accordion}, Path=AccordionContent}"   >
+                    </ContentView>
+                </Frame>
+            </Grid>
+                
 
         </Grid>
       
