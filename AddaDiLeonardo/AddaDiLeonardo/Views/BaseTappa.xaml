@@ -8,8 +8,8 @@
              x:Class="AddaDiLeonardo.Views.BaseTappa">
     <ContentPage.Content>
         <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-            <StackLayout>
-                <StackLayout>
+            <StackLayout Padding="0" Spacing="0">
+                <StackLayout Padding="0" Spacing="0">
                     <Image x:Name="imgTappa" Aspect="AspectFill"></Image>
                 </StackLayout>
                 <StackLayout>
