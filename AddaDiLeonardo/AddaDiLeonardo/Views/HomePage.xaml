@@ -6,7 +6,7 @@
     
     <ContentPage.Content>
         <ScrollView>
-            <RelativeLayout>
+            <RelativeLayout Padding="0, 30, 0, 0">
 
                 <Image Aspect="Fill" x:Name="background"
 			        RelativeLayout.WidthConstraint="{ConstraintExpression

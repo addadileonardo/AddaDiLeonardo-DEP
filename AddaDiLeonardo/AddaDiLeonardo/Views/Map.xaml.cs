@@ -15,6 +15,12 @@ namespace AddaDiLeonardo.Views
 		public Map ()
 		{
 			InitializeComponent ();
+			ImageMap.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Map.MappaRaul.png");
+			ImagePonte.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Map.rectanglePosition.png"); 
+			ImageCentrali.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Map.rectanglePosition.png");
+			ImageFiume.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Map.rectanglePosition.png");
+			ImageRocchetta.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Map.rectanglePosition.png");
+			ImageTraghetto.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Map.rectanglePosition.png");
 		}
 	}
 }
