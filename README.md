@@ -13,3 +13,6 @@ Utilizzare questo branch per sviluppare la base dell'applicazione. Nel momento d
 # Font
 - Titolo: Oswald (https://fonts.google.com/specimen/Oswald)
 - Testo: Roboto light (https://fonts.google.com/specimen/Roboto)
+
+# Convert Html to string
+http://easyonlineconverter.com/converters/dot-net-string-escape.html
