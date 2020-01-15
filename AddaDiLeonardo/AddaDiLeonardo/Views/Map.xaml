@@ -3,11 +3,94 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AddaDiLeonardo.Views.Map"
              NavigationPage.HasNavigationBar="False">
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+
+        <RelativeLayout>
+            
+            <Image Aspect="AspectFit" x:Name="ImageMap" 
+                        RelativeLayout.WidthConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=Width,
+                        Factor=1}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression
+                        Type=RelativeToParent,
+                        Property=Height,
+                        Factor=1}"/>
+            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" x:Name="ImagePonte"  
+                        RelativeLayout.XConstraint="{ConstraintExpression
+				        Type=RelativeToView,
+                        ElementName=ImageMap,
+				        Property=Width,
+				        Factor=0.178,
+                        Constant= 15}"
+                        RelativeLayout.YConstraint="{ConstraintExpression
+				        Type=RelativeToView,
+                        ElementName=ImageMap,
+				        Property=Height,
+				        Factor=0.364,
+                        Constant= 15 }">
+            </Image>
+            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" x:Name="ImageRocchetta"  
+                        RelativeLayout.XConstraint="{ConstraintExpression
+				        Type=RelativeToView,
+                        ElementName=ImageMap,
+				        Property=Width,
+				        Factor=0.539,
+                        Constant= 15}"
+                        RelativeLayout.YConstraint="{ConstraintExpression
+				        Type=RelativeToView,
+                        ElementName=ImageMap,
+				        Property=Height,
+				        Factor=0.667,
+                        Constant= 15 }">
+            </Image>
+            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" x:Name="ImageTraghetto"  
+                        RelativeLayout.XConstraint="{ConstraintExpression
+				        Type=RelativeToView,
+                        ElementName=ImageMap,
+				        Property=Width,
+				        Factor=0.317,
+                        Constant= 15}"
+                        RelativeLayout.YConstraint="{ConstraintExpression
+				        Type=RelativeToView,
+                        ElementName=ImageMap,
+				        Property=Height,
+				        Factor=0.150,
+                        Constant= 15 }">
+            </Image>
+            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" x:Name="ImageCentrali"  
+                        RelativeLayout.XConstraint="{ConstraintExpression
+				        Type=RelativeToView,
+                        ElementName=ImageMap,
+				        Property=Width,
+				        Factor=0.649,
+                        Constant= 15}"
+                        RelativeLayout.YConstraint="{ConstraintExpression
+				        Type=RelativeToView,
+                        ElementName=ImageMap,
+				        Property=Height,
+				        Factor=0.842,
+                        Constant= 15 }">
+            </Image>
+            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" x:Name="ImageFiume"  
+                        RelativeLayout.XConstraint="{ConstraintExpression
+				        Type=RelativeToView,
+                        ElementName=ImageMap,
+				        Property=Width,
+				        Factor=0.312,
+                        Constant= 15}"
+                        RelativeLayout.YConstraint="{ConstraintExpression
+				        Type=RelativeToView,
+                        ElementName=ImageMap,
+				        Property=Height,
+				        Factor=0.276,
+                        Constant= 15 }">
+            </Image>
+
+
+
+        </RelativeLayout>
+
     </ContentPage.Content>
 </ContentPage>
