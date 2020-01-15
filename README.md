@@ -8,6 +8,7 @@ Utilizzare questo branch per sviluppare la base dell'applicazione. Nel momento d
 
 # Note
 - Tutte le immagini principali della tappa devono avere le stesse dimensioni
+- I file html nella cartella files potranno essere rimossi dalle risorse incorporate una volta che sarà implementato il database.
 
 # Font
 - Titolo: Oswald (https://fonts.google.com/specimen/Oswald)
