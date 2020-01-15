@@ -29,7 +29,8 @@ namespace AddaDiLeonardo.Views
         {
             try
             {
-                await Navigation.PushModalAsync(new TappaPonte());
+                var TappaPonte = new TappaPonte();
+                await Navigation.PushModalAsync(TappaPonte);
             }
             catch (Exception ex)
             {
