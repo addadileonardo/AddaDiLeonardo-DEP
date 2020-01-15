@@ -9,12 +9,12 @@ using Xamarin.Forms.Xaml;
 
 namespace AddaDiLeonardo.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class HomePage : ContentPage
-	{
-		public HomePage ()
-		{
-			InitializeComponent ();
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class HomePage : ContentPage
+    {
+        public HomePage()
+        {
+            InitializeComponent();
 
             //To update: source of image (incorporate and XAML)
             background.Source = ImageSource.FromResource("AddaDiLeonardo.Images.backgroundFadeBlack.png");
@@ -25,8 +25,18 @@ namespace AddaDiLeonardo.Views
 
         }
 
+        private object syncLockTappa = new object();
+        bool isInCallTappa = false;
+
         private async void OnImageNameTapped(object sender, EventArgs args)
         {
+            lock (syncLockTappa)
+            {
+                if (isInCallTappa)
+                    return;
+                isInCallTappa = true;
+            }
+
             try
             {
                 await Navigation.PushModalAsync(new TappaPonte());
@@ -35,18 +45,43 @@ namespace AddaDiLeonardo.Views
             {
                 throw ex;
             }
+            finally
+            {
+                lock (syncLockTappa)
+                {
+                    isInCallTappa = false;
+                }
+            }
         }
+
+        private object syncLockPlayer = new object();
+        bool isInCallPlayer = false;
 
         private async void btnRiproduci_Clicked(object sender, EventArgs e)
         {
+            lock (syncLockPlayer)
+            {
+                if (isInCallPlayer)
+                    return;
+                isInCallPlayer = true;
+            }
+
             try
             {
                 await Navigation.PushModalAsync(new PlayerPage());
             }
-            catch(Exception exception)
+            catch (Exception ex)
             {
-                throw exception;
+                throw ex;
             }
+            finally
+            {
+                lock (syncLockPlayer)
+                {
+                    isInCallPlayer = false;
+                }
+            }
+
         }
     }
 }
