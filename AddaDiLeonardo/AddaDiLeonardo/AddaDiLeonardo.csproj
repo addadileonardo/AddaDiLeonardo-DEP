@@ -10,7 +10,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Files\BaseTappa\BaseHtml.html" />
+    <Compile Remove="Files\Nuova cartella1\**" />
+    <Compile Remove="Files\Nuova cartella\**" />
+    <EmbeddedResource Remove="Files\Nuova cartella1\**" />
+    <EmbeddedResource Remove="Files\Nuova cartella\**" />
+    <None Remove="Files\Nuova cartella1\**" />
+    <None Remove="Files\Nuova cartella\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Files\Ponte\Ponte_Intro.html" />
+    <None Remove="Files\Ponte\Ponte_section_1.html" />
     <None Remove="Images\backgroundFadeBlack.png" />
     <None Remove="Images\Bella.png" />
     <None Remove="Images\Centrale.jpg" />
@@ -22,6 +32,7 @@
     <None Remove="Images\Icons\circle-up.png" />
     <None Remove="Images\map.png" />
     <None Remove="Images\Ponte.jpg" />
+    <None Remove="Images\Ponte\Ponte.jpg" />
     <None Remove="Images\Prova3.png" />
     <None Remove="Images\settings.png" />
     <None Remove="Images\Tappa1\adda.jpg" />
@@ -30,7 +41,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Files\BaseTappa\BaseHtml.html" />
+    <EmbeddedResource Include="Files\Ponte\Ponte_Intro.html" />
+    <EmbeddedResource Include="Files\Ponte\Ponte_section_1.html" />
     <EmbeddedResource Include="Images\backgroundFadeBlack.png" />
     <EmbeddedResource Include="Images\Bella.png" />
     <EmbeddedResource Include="Images\Centrale.jpg" />
@@ -43,6 +55,7 @@
     <EmbeddedResource Include="Images\Icons\map.png" />
     <EmbeddedResource Include="Images\Icons\settings.png" />
     <EmbeddedResource Include="Images\Ponte.jpg" />
+    <EmbeddedResource Include="Images\Ponte\Ponte.jpg" />
     <EmbeddedResource Include="Images\Prova3.png" />
     <EmbeddedResource Include="Images\Tappa1\adda.jpg" />
     <EmbeddedResource Include="Images\Tappa_ponte.jpg" />
@@ -57,9 +70,6 @@
     <EmbeddedResource Update="CustomControls\Accordion.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\BaseTappa.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\HomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -69,11 +79,21 @@
     <EmbeddedResource Update="Views\NavPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\PlayerPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Settings.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\TappaPage.xaml">
+    <EmbeddedResource Update="Views\TappaPonte.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Files\Centrali\" />
+    <Folder Include="Files\Fiume\" />
+    <Folder Include="Files\Traghetto\" />
+    <Folder Include="Files\Rocchetta\" />
   </ItemGroup>
 </Project>

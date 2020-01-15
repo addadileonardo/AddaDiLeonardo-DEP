@@ -15,6 +15,7 @@
 				    Factor=1}" />
 
                 <Button Text="Guarda ora" BackgroundColor="Black" TextColor="White" BorderWidth="2" BorderColor="White" WidthRequest="150" HeightRequest="40" BorderRadius="10"  x:Name="btnRiproduci"
+                        Clicked="btnRiproduci_Clicked"
                     RelativeLayout.XConstraint="{ConstraintExpression
 				    Type=RelativeToParent,
 				    Property=Width,

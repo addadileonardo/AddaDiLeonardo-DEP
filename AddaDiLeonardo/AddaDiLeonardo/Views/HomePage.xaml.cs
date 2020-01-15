@@ -29,7 +29,7 @@ namespace AddaDiLeonardo.Views
         {
             try
             {
-                await Navigation.PushModalAsync(new BaseTappa());
+                await Navigation.PushModalAsync(new TappaPonte());
             }
             catch (Exception ex)
             {
@@ -37,5 +37,16 @@ namespace AddaDiLeonardo.Views
             }
         }
 
-	}
+        private async void btnRiproduci_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                await Navigation.PushModalAsync(new PlayerPage());
+            }
+            catch(Exception exception)
+            {
+                throw exception;
+            }
+        }
+    }
 }
