@@ -17,7 +17,7 @@
                         Type=RelativeToParent,
                         Property=Height,
                         Factor=1}"/>
-            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" x:Name="ImagePonte"  
+            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" ClassId="ponte" x:Name="ImagePonte"  
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToView,
                         ElementName=ImageMap,
@@ -30,8 +30,13 @@
 				        Property=Height,
 				        Factor=0.364,
                         Constant= 15 }">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                            Tapped="OnImageNameTapped"
+                            NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
             </Image>
-            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" x:Name="ImageRocchetta"  
+            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" ClassId="rocchetta" x:Name="ImageRocchetta"  
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToView,
                         ElementName=ImageMap,
@@ -44,8 +49,13 @@
 				        Property=Height,
 				        Factor=0.667,
                         Constant= 15 }">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                            Tapped="OnImageNameTapped"
+                            NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
             </Image>
-            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" x:Name="ImageTraghetto"  
+            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" ClassId="traghetto" x:Name="ImageTraghetto"  
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToView,
                         ElementName=ImageMap,
@@ -58,8 +68,13 @@
 				        Property=Height,
 				        Factor=0.150,
                         Constant= 15 }">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                            Tapped="OnImageNameTapped"
+                            NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
             </Image>
-            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" x:Name="ImageCentrali"  
+            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" ClassId="centrali" x:Name="ImageCentrali"  
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToView,
                         ElementName=ImageMap,
@@ -72,8 +87,13 @@
 				        Property=Height,
 				        Factor=0.842,
                         Constant= 15 }">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                            Tapped="OnImageNameTapped"
+                            NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
             </Image>
-            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" x:Name="ImageFiume"  
+            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" ClassId="fiume" x:Name="ImageFiume"  
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToView,
                         ElementName=ImageMap,
@@ -86,6 +106,11 @@
 				        Property=Height,
 				        Factor=0.276,
                         Constant= 15 }">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                            Tapped="OnImageNameTapped"
+                            NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
             </Image>
 
 

@@ -30,6 +30,7 @@ namespace AddaDiLeonardo.Views
 
         private async void OnImageNameTapped(object sender, EventArgs args)
         {
+
             lock (syncLockTappa)
             {
                 if (isInCallTappa)
@@ -53,6 +54,7 @@ namespace AddaDiLeonardo.Views
                     isInCallTappa = false;
                 }
             }
+
         }
 
         private object syncLockPlayer = new object();
