@@ -22,9 +22,10 @@ namespace AddaDiLeonardo.Views
 
             //Tab Pages
 
-            Children.Add(new NavigationPage(new HomePage()) { Title = "Home", BackgroundColor = Color.Black, Icon = "home.png"});
-            Children.Add(new NavigationPage(new Map()) { Title = "Mappa", BackgroundColor = Color.Black, Icon = "home.png" });
-            Children.Add(new NavigationPage(new Settings()) { Title = "Impostazioni", BackgroundColor = Color.Black, Icon = "home.png" });
+            //Children.Add(new NavigationPage(new HomePage()) { Title = "Home", BackgroundColor = Color.Black, Icon = "home.png"});
+            //Children.Add(new NavigationPage(new Map()) { Title = "Mappa", BackgroundColor = Color.Black, Icon = "home.png" });
+            //Children.Add(new NavigationPage(new Settings()) { Title = "Impostazioni", BackgroundColor = Color.Black, Icon = "home.png" });
+
             //Children.Add(new NavigationPage(new MappaPage()) { Title = "Mappa", BackgroundColor = Color.LightGreen, IconImageSource = "map.png" });
 
             NavigationPage.SetHasNavigationBar(this, false);
