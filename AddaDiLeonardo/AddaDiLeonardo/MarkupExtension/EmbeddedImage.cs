@@ -18,5 +18,6 @@ namespace AddaDiLeonardo.MarkupExtension
 
             return ImageSource.FromResource(ResourceId);
         }
+
     }
 }

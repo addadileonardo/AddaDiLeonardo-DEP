@@ -6,7 +6,7 @@
              NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView BackgroundColor="Black">
             <RelativeLayout Padding="0, 30, 0, 0">
 
                 <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.backgroundFadeBlack.png}" Aspect="Fill" x:Name="background"
@@ -29,7 +29,7 @@
 				    Factor=0.70 }" />
 
                 <!-- Dipendenza HEIGHT -> spacing (yConstraint) -->
-                    <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Fiume.jpg}" Aspect="Fill" WidthRequest="330" HeightRequest="200" x:Name="step1"  
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Fiume.jpg}" Aspect="Fill" WidthRequest="330" HeightRequest="200" x:Name="step1"  
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToParent,
 				        Property=Width,
@@ -41,12 +41,12 @@
 				        Property=Y,
 				        Factor=1,
                         Constant= 85 }">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
                             Tapped="OnImageNameTapped"
                             NumberOfTapsRequired="1" />
-                        </Image.GestureRecognizers>
-                    </Image>
+                    </Image.GestureRecognizers>
+                </Image>
                 <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Tappa_ponte.jpg}" Aspect="Fill" WidthRequest="330" HeightRequest="200" x:Name="step2"
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToParent,
