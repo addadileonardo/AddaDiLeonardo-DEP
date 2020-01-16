@@ -9,28 +9,60 @@
              x:Class="AddaDiLeonardo.Views.TappaPonte">
     <ContentPage.Content>
         <ScrollView>
-            <Grid BackgroundColor="#F3F3F7"
-                  RowSpacing="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                </Grid.RowDefinitions>
+            <StackLayout BackgroundColor="#F3F3F7" Spacing="0">
+                
+                <Image  x:Name="imgTappa" Aspect="AspectFill"></Image>
 
-                <Image Grid.Row="0" x:Name="imgTappa" Aspect="AspectFill"></Image>
+                <!--#region INTRODUCTION-->
+                
+                <StackLayout  BackgroundColor="White">
+                    <StackLayout Margin="10,10,10,10">
 
-                <WebView Grid.Row="1" x:Name="webIntro" BackgroundColor="#FAFAFA"></WebView>
-                
-                
-                
-                
+                        <Label x:Name="lblTitolo" FontSize="30" TextColor="Black" FontAttributes="Bold" Text="Ponte San Michele">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Oswald-SemiBold" />
+                                    <On Platform="Android" Value="Oswald-SemiBold.ttf#Oswald" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="0,5,0,5">
+                            <Label Text="Paderno d'Adda">
+                                <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="iOS" Value="Roboto-Light" />
+                                        <On Platform="Android" Value="Roboto-Light.ttf#Oswald" />
+                                    </OnPlatform>
+                                </Label.FontFamily>
+                            </Label>
+                            <Image x:Name="iconMarker" HeightRequest="20" Aspect="AspectFill"></Image>
+                        </StackLayout>
+
+                        <Local:CustomLabel FontSize="Medium" Text="Una delle più interessanti realizzazioni dell'ingegneria italiana nell'800, punto di unione tra le due sponde rivali dell'Adda.">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Roboto-LightItalic" />
+                                    <On Platform="Android" Value="Roboto-LightItalic.ttf#Roboto-Light" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Local:CustomLabel>
+
+
+                        <Local:CustomLabel FontSize="Medium" Text="Il Ponte San Michele, situato a Paderno d'Adda, è stato progettato dall'ingegnere svizzero Jules Röthlisberger nel 1889, come collegamento viabilistico e ferroviario tra l'area economica della bergamasca e quella milanese. La struttura e i numerosi eventi di cui è stato teatro l'hanno reso un'opera architettonica di grande importanza storica.">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Roboto-Light" />
+                                    <On Platform="Android" Value="Roboto-Light.ttf#Roboto-Light" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Local:CustomLabel>
+                    </StackLayout>
+                </StackLayout>
+                <!--#endregion-->
                 
                 <!--#region ACCORDION-->
-                <local:Accordion Grid.Row="2" Title="Il ponte nella storia">
+                <local:Accordion  Title="Il ponte nella storia">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
                         <Grid RowSpacing="5">
@@ -68,12 +100,12 @@
                                     </Label.FontFamily>
                                 </Local:CustomLabel>
                             </StackLayout>
-                            
+
                         </Grid>
                     </local:Accordion.AccordionContent>
                 </local:Accordion>
 
-                <local:Accordion Grid.Row="3" Title="La struttura">
+                <local:Accordion Title="La struttura">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
                         <StackLayout Orientation="Vertical" >
@@ -83,7 +115,7 @@
                     </local:Accordion.AccordionContent>
                 </local:Accordion>
 
-                <local:Accordion Grid.Row="4" Title="Storia e maledizione dell'ingegnere">
+                <local:Accordion  Title="Storia e maledizione dell'ingegnere">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
                         <StackLayout Orientation="Vertical">
@@ -93,7 +125,7 @@
                     </local:Accordion.AccordionContent>
                 </local:Accordion>
 
-                <local:Accordion Grid.Row="5" Title="Leonardo da Vinci">
+                <local:Accordion  Title="Leonardo da Vinci">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
                         <StackLayout Orientation="Vertical">
@@ -103,7 +135,7 @@
                     </local:Accordion.AccordionContent>
                 </local:Accordion>
 
-                <local:Accordion Grid.Row="6" Title="Curiosità">
+                <local:Accordion  Title="Curiosità">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
                         <StackLayout Orientation="Vertical">
@@ -113,8 +145,8 @@
                     </local:Accordion.AccordionContent>
                 </local:Accordion>
                 <!--#endregion-->
-
-            </Grid>
+            
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
