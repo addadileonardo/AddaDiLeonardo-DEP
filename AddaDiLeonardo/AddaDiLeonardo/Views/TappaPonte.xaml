@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:AddaDiLeonardo.CustomControls"
+             mc:Ignorable="d"
+             x:Class="AddaDiLeonardo.Views.TappaPonte">
+    <ContentPage.Content>
+        <ScrollView HorizontalOptions="FillAndExpand">
+            <Grid BackgroundColor="#F3F3F7"
+                  RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" x:Name="imgTappa" Aspect="AspectFill"></Image>
+
+                <WebView Grid.Row="1" x:Name="webIntro" BackgroundColor="#FAFAFA"></WebView>
+
+                <local:Accordion Grid.Row="2" Title="Il ponte nella storia">
+                    <local:Accordion.Indicator></local:Accordion.Indicator>
+                    <local:Accordion.AccordionContent>
+                        <Grid RowSpacing="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Image Grid.Row="0" x:Name="imgSection1" Aspect="AspectFill"></Image>
+                            <WebView Grid.Row="1" x:Name="webSection1" VerticalOptions="Fill"></WebView>
+                        </Grid>
+                    </local:Accordion.AccordionContent>
+                </local:Accordion>
+
+                <local:Accordion Grid.Row="3" Title="La struttura">
+                    <local:Accordion.Indicator></local:Accordion.Indicator>
+                    <local:Accordion.AccordionContent>
+                        <StackLayout Orientation="Vertical" >
+                            <Image x:Name="imgSection2" Aspect="AspectFill"></Image>
+                            <WebView x:Name="webSection2" BackgroundColor="White"></WebView>
+                        </StackLayout>
+                    </local:Accordion.AccordionContent>
+                </local:Accordion>
+
+                <local:Accordion Grid.Row="4" Title="Storia e maledizione dell'ingegnere">
+                    <local:Accordion.Indicator></local:Accordion.Indicator>
+                    <local:Accordion.AccordionContent>
+                        <StackLayout Orientation="Vertical">
+                            <Image x:Name="imgSection3" Aspect="AspectFill"></Image>
+                            <WebView x:Name="webSection3" BackgroundColor="White"></WebView>
+                        </StackLayout>
+                    </local:Accordion.AccordionContent>
+                </local:Accordion>
+
+                <local:Accordion Grid.Row="5" Title="Leonardo da Vinci">
+                    <local:Accordion.Indicator></local:Accordion.Indicator>
+                    <local:Accordion.AccordionContent>
+                        <StackLayout Orientation="Vertical">
+                            <Image x:Name="imgSection4" Aspect="AspectFill"></Image>
+                            <WebView x:Name="webSection4" BackgroundColor="White"></WebView>
+                        </StackLayout>
+                    </local:Accordion.AccordionContent>
+                </local:Accordion>
+
+                <local:Accordion Grid.Row="6" Title="Curiosità">
+                    <local:Accordion.Indicator></local:Accordion.Indicator>
+                    <local:Accordion.AccordionContent>
+                        <StackLayout Orientation="Vertical">
+                            <Image x:Name="imgSection5" Aspect="AspectFill"></Image>
+                            <WebView x:Name="webSection5" BackgroundColor="White"></WebView>
+                        </StackLayout>
+                    </local:Accordion.AccordionContent>
+                </local:Accordion>
+
+
+
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
