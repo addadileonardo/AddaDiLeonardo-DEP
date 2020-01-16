@@ -15,6 +15,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition/>
+                <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
 
 
@@ -26,13 +27,16 @@
             <!--Header-->
             <Grid Grid.Row="0"
                   Padding="15,15,15,15"
-                  
                   BackgroundColor="White">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+               
                 <!--Title-->
                     <Label Grid.Column="0" x:Name="_title"
                        HorizontalOptions="Start" VerticalOptions="Center" Margin="5,0,0,0"
@@ -57,7 +61,6 @@
                 <Grid.GestureRecognizers>
                     <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
                 </Grid.GestureRecognizers>
-
             </Grid>
             </Frame>
             <!--Content-->
