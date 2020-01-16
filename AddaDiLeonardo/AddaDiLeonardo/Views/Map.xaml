@@ -6,7 +6,7 @@
 
     <ContentPage.Content>
 
-        <RelativeLayout BackgroundColor="#2f492c">
+        <RelativeLayout BackgroundColor="Black">
             
             <Image Aspect="AspectFit" x:Name="ImageMap" 
                         RelativeLayout.WidthConstraint="{ConstraintExpression

@@ -1,20 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AddaDiLeonardo.MarkupExtension"
              x:Class="AddaDiLeonardo.Views.HomePage"
              NavigationPage.HasNavigationBar="False">
-    
+
     <ContentPage.Content>
         <ScrollView>
             <RelativeLayout Padding="0, 30, 0, 0">
 
-                <Image Aspect="Fill" x:Name="background"
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.backgroundFadeBlack.png}" Aspect="Fill" x:Name="background"
 			        RelativeLayout.WidthConstraint="{ConstraintExpression
 				    Type=RelativeToParent,
 			        Property=Width,
 				    Factor=1}" />
 
-                <Button Text="Guarda ora" BackgroundColor="Black" TextColor="White" BorderWidth="2" BorderColor="White" WidthRequest="150" HeightRequest="40" BorderRadius="10"  x:Name="btnRiproduci"
+                <Button Text="Guarda ora" BackgroundColor="Black" TextColor="White" BorderWidth="2" BorderColor="White" WidthRequest="150" HeightRequest="40" x:Name="btnRiproduci"
                         Clicked="btnRiproduci_Clicked"
                     RelativeLayout.XConstraint="{ConstraintExpression
 				    Type=RelativeToParent,
@@ -26,9 +27,9 @@
                     ElementName=background,
 				    Property=Height,
 				    Factor=0.70 }" />
-                
+
                 <!-- Dipendenza HEIGHT -> spacing (yConstraint) -->
-                <Image Aspect="Fill" WidthRequest="330" HeightRequest="200" x:Name="step1"  
+                    <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Fiume.jpg}" Aspect="Fill" WidthRequest="330" HeightRequest="200" x:Name="step1"  
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToParent,
 				        Property=Width,
@@ -40,13 +41,13 @@
 				        Property=Y,
 				        Factor=1,
                         Constant= 85 }">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
                             Tapped="OnImageNameTapped"
                             NumberOfTapsRequired="1" />
-                    </Image.GestureRecognizers>
-                </Image>
-                <Image Aspect="Fill" WidthRequest="330" HeightRequest="200" x:Name="step2"
+                        </Image.GestureRecognizers>
+                    </Image>
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Tappa_ponte.jpg}" Aspect="Fill" WidthRequest="330" HeightRequest="200" x:Name="step2"
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToParent,
 				        Property=Width,
@@ -64,7 +65,7 @@
                             NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Aspect="Fill" WidthRequest="330" HeightRequest="200" x:Name="step3"
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Centrale.jpg}" Aspect="Fill" WidthRequest="330" HeightRequest="200" x:Name="step3"
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToParent,
 				        Property=Width,
@@ -82,7 +83,7 @@
                             NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Aspect="Fill" WidthRequest="330" HeightRequest="200" x:Name="step4"
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Vergine.jpg}" Aspect="Fill" WidthRequest="330" HeightRequest="200" x:Name="step4"
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToParent,
 				        Property=Width,
