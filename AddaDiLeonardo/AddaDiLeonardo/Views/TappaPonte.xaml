@@ -4,10 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:AddaDiLeonardo.CustomControls"
+             xmlns:Local="clr-namespace:AddaDiLeonardo"
              mc:Ignorable="d"
              x:Class="AddaDiLeonardo.Views.TappaPonte">
     <ContentPage.Content>
-        <ScrollView HorizontalOptions="FillAndExpand">
+        <ScrollView>
             <Grid BackgroundColor="#F3F3F7"
                   RowSpacing="0">
                 <Grid.RowDefinitions>
@@ -23,7 +24,12 @@
                 <Image Grid.Row="0" x:Name="imgTappa" Aspect="AspectFill"></Image>
 
                 <WebView Grid.Row="1" x:Name="webIntro" BackgroundColor="#FAFAFA"></WebView>
-
+                
+                
+                
+                
+                
+                <!--#region ACCORDION-->
                 <local:Accordion Grid.Row="2" Title="Il ponte nella storia">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
@@ -32,8 +38,37 @@
                                 <RowDefinition></RowDefinition>
                                 <RowDefinition Height="Auto"></RowDefinition>
                             </Grid.RowDefinitions>
-                            <Image Grid.Row="0" x:Name="imgSection1" Aspect="AspectFill"></Image>
-                            <WebView Grid.Row="1" x:Name="webSection1" VerticalOptions="Fill"></WebView>
+                            <Image Grid.Row="0"  x:Name="imgSection1" Aspect="AspectFill"></Image>
+                            <!--<WebView Grid.Row="1"  x:Name="webSection1"></WebView>-->
+                            <StackLayout Grid.Row="1" Margin="10,0,10,10" >
+                                <Local:CustomLabel  FontSize="Medium" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium sit amet felis eu iaculis. Aliquam condimentum metus a felis luctus dignissim ac a est. Proin rhoncus ligula blandit, egestas lectus eget, dignissim ligula. Nunc tellus nunc, auctor sed ex vitae, feugiat iaculis tortor. Morbi ullamcorper tempus eros eu molestie. Aliquam erat volutpat. Donec sed fringilla ligula, vel euismod enim. Suspendisse non nunc pellentesque, pretium mi ut, suscipit tellus. Nulla tincidunt libero dui, laoreet ornare leo auctor non. In fermentum erat non ligula tempor faucibus. Vivamus at maximus justo. Nam lacinia lobortis nisi et volutpat. Quisque et lectus et velit convallis dapibus. Nunc lacinia vitae magna lacinia venenatis. Aliquam in nunc lacus.">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="iOS" Value="Roboto-Light" />
+                                            <On Platform="Android" Value="Roboto-Light.ttf#Roboto-Light" />
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Local:CustomLabel>
+                                <Image  x:Name="imgSection1_1" Aspect="AspectFill"></Image>
+                                <Local:CustomLabel FontSize="Medium" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium sit amet felis eu iaculis. Aliquam condimentum metus a felis luctus dignissim ac a est. Proin rhoncus ligula blandit, egestas lectus eget, dignissim ligula. Nunc tellus nunc, auctor sed ex vitae, feugiat iaculis tortor. Morbi ullamcorper tempus eros eu molestie. Aliquam erat volutpat. Donec sed fringilla ligula, vel euismod enim. Suspendisse non nunc pellentesque, pretium mi ut, suscipit tellus. Nulla tincidunt libero dui, laoreet ornare leo auctor non. In fermentum erat non ligula tempor faucibus. Vivamus at maximus justo. Nam lacinia lobortis nisi et volutpat. Quisque et lectus et velit convallis dapibus. Nunc lacinia vitae magna lacinia venenatis. Aliquam in nunc lacus.">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="iOS" Value="Roboto-Light" />
+                                            <On Platform="Android" Value="Roboto-Light.ttf#Roboto-Light" />
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Local:CustomLabel>
+                                <Image  x:Name="imgSection1_2" Aspect="AspectFill"></Image>
+                                <Local:CustomLabel  FontSize="Medium" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium sit amet felis eu iaculis. Aliquam condimentum metus a felis luctus dignissim ac a est. Proin rhoncus ligula blandit, egestas lectus eget, dignissim ligula. Nunc tellus nunc, auctor sed ex vitae, feugiat iaculis tortor. Morbi ullamcorper tempus eros eu molestie. Aliquam erat volutpat. Donec sed fringilla ligula, vel euismod enim. Suspendisse non nunc pellentesque, pretium mi ut, suscipit tellus. Nulla tincidunt libero dui, laoreet ornare leo auctor non. In fermentum erat non ligula tempor faucibus. Vivamus at maximus justo. Nam lacinia lobortis nisi et volutpat. Quisque et lectus et velit convallis dapibus. Nunc lacinia vitae magna lacinia venenatis. Aliquam in nunc lacus.">
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="iOS" Value="Roboto-Light" />
+                                            <On Platform="Android" Value="Roboto-Light.ttf#Roboto-Light" />
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Local:CustomLabel>
+                            </StackLayout>
+                            
                         </Grid>
                     </local:Accordion.AccordionContent>
                 </local:Accordion>
@@ -77,9 +112,7 @@
                         </StackLayout>
                     </local:Accordion.AccordionContent>
                 </local:Accordion>
-
-
-
+                <!--#endregion-->
 
             </Grid>
         </ScrollView>
