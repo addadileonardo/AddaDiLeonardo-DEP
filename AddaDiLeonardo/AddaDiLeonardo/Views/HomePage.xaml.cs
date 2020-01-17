@@ -17,11 +17,11 @@ namespace AddaDiLeonardo.Views
             InitializeComponent();
 
             //To update: source of image (incorporate and XAML)
-            background.Source = ImageSource.FromResource("AddaDiLeonardo.Images.backgroundFadeBlack.png");
-            step1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Fiume.jpg");
-            step2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa_ponte.jpg");
-            step3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Centrale.jpg");
-            step4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Vergine.jpg");
+            //background.Source = ImageSource.FromResource("AddaDiLeonardo.Images.backgroundFadeBlack.png");
+            //step1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Fiume.jpg");
+            //step2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa_ponte.jpg");
+            //step3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Centrale.jpg");
+            //step4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Vergine.jpg");
 
         }
 
@@ -30,6 +30,7 @@ namespace AddaDiLeonardo.Views
 
         private async void OnImageNameTapped(object sender, EventArgs args)
         {
+
             lock (syncLockTappa)
             {
                 if (isInCallTappa)
@@ -53,6 +54,7 @@ namespace AddaDiLeonardo.Views
                     isInCallTappa = false;
                 }
             }
+
         }
 
         private object syncLockPlayer = new object();
