@@ -96,6 +96,15 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\Oswald-Bold.ttf" />
+    <BundleResource Include="Resources\Oswald-Light.ttf" />
+    <BundleResource Include="Resources\Oswald-Regular.ttf" />
+    <BundleResource Include="Resources\Oswald-SemiBold.ttf" />
+    <BundleResource Include="Resources\Roboto-Italic.ttf" />
+    <BundleResource Include="Resources\Roboto-Light.ttf" />
+    <BundleResource Include="Resources\Roboto-LightItalic.ttf" />
+    <BundleResource Include="Resources\Roboto-Regular.ttf" />
+    <BundleResource Include="Resources\Roboto-ThinItalic.ttf" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

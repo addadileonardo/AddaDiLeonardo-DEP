@@ -9,48 +9,66 @@
              x:Class="AddaDiLeonardo.Views.TappaPonte">
     <ContentPage.Content>
         <ScrollView>
-            <Grid BackgroundColor="#F3F3F7"
-                  RowSpacing="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                    <RowDefinition Height="Auto"></RowDefinition>
-                </Grid.RowDefinitions>
+            <StackLayout BackgroundColor="#F3F3F7" Spacing="0">
+                
+                <Image  x:Name="imgTappa" Aspect="AspectFill"></Image>
 
-                <Image Grid.Row="0" x:Name="imgTappa" Aspect="AspectFill"></Image>
+                <!--#region INTRODUCTION-->
+                
+                <StackLayout  BackgroundColor="White">
+                    <StackLayout Margin="10,10,10,10">
 
-                <WebView Grid.Row="1" x:Name="webIntro" BackgroundColor="#FAFAFA"></WebView>
-                
-                
-                
-                
+                        <Label x:Name="lblTitolo" FontSize="30" TextColor="Black" FontAttributes="Bold">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Oswald-SemiBold" />
+                                    <On Platform="Android" Value="Oswald-SemiBold.ttf#Oswald" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="0,5,0,5">
+                            <Label Text="Paderno d'Adda">
+                                <Label.FontFamily>
+                                    <OnPlatform x:TypeArguments="x:String">
+                                        <On Platform="iOS" Value="Roboto-Light" />
+                                        <On Platform="Android" Value="Roboto-Light.ttf#Oswald" />
+                                    </OnPlatform>
+                                </Label.FontFamily>
+                            </Label>
+                            <Image x:Name="iconMarker" HeightRequest="20" Aspect="AspectFill"></Image>
+                        </StackLayout>
+
+                        <Local:CustomLabel x:Name="lblSottotitolo" FontSize="Medium" >
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Roboto-LightItalic" />
+                                    <On Platform="Android" Value="Roboto-LightItalic.ttf#Roboto-Light" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Local:CustomLabel>
+
+
+                        <Local:CustomLabel x:Name="lblDescrizione" FontSize="Medium" >
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Roboto-Light" />
+                                    <On Platform="Android" Value="Roboto-Light.ttf#Roboto-Light" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Local:CustomLabel>
+                    </StackLayout>
+                </StackLayout>
+                <!--#endregion-->
                 
                 <!--#region ACCORDION-->
-                <local:Accordion Grid.Row="2" Title="Il ponte nella storia">
+                <local:Accordion  Title="Il ponte nella storia">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
-                        <Grid RowSpacing="5">
-                            <Grid.RowDefinitions>
-                                <RowDefinition></RowDefinition>
-                                <RowDefinition Height="Auto"></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <Image Grid.Row="0"  x:Name="imgSection1" Aspect="AspectFill"></Image>
-                            <!--<WebView Grid.Row="1"  x:Name="webSection1"></WebView>-->
-                            <StackLayout Grid.Row="1" Margin="10,0,10,10" >
-                                <Local:CustomLabel  FontSize="Medium" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium sit amet felis eu iaculis. Aliquam condimentum metus a felis luctus dignissim ac a est. Proin rhoncus ligula blandit, egestas lectus eget, dignissim ligula. Nunc tellus nunc, auctor sed ex vitae, feugiat iaculis tortor. Morbi ullamcorper tempus eros eu molestie. Aliquam erat volutpat. Donec sed fringilla ligula, vel euismod enim. Suspendisse non nunc pellentesque, pretium mi ut, suscipit tellus. Nulla tincidunt libero dui, laoreet ornare leo auctor non. In fermentum erat non ligula tempor faucibus. Vivamus at maximus justo. Nam lacinia lobortis nisi et volutpat. Quisque et lectus et velit convallis dapibus. Nunc lacinia vitae magna lacinia venenatis. Aliquam in nunc lacus.">
-                                    <Label.FontFamily>
-                                        <OnPlatform x:TypeArguments="x:String">
-                                            <On Platform="iOS" Value="Roboto-Light" />
-                                            <On Platform="Android" Value="Roboto-Light.ttf#Roboto-Light" />
-                                        </OnPlatform>
-                                    </Label.FontFamily>
-                                </Local:CustomLabel>
-                                <Image  x:Name="imgSection1_1" Aspect="AspectFill"></Image>
-                                <Local:CustomLabel FontSize="Medium" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium sit amet felis eu iaculis. Aliquam condimentum metus a felis luctus dignissim ac a est. Proin rhoncus ligula blandit, egestas lectus eget, dignissim ligula. Nunc tellus nunc, auctor sed ex vitae, feugiat iaculis tortor. Morbi ullamcorper tempus eros eu molestie. Aliquam erat volutpat. Donec sed fringilla ligula, vel euismod enim. Suspendisse non nunc pellentesque, pretium mi ut, suscipit tellus. Nulla tincidunt libero dui, laoreet ornare leo auctor non. In fermentum erat non ligula tempor faucibus. Vivamus at maximus justo. Nam lacinia lobortis nisi et volutpat. Quisque et lectus et velit convallis dapibus. Nunc lacinia vitae magna lacinia venenatis. Aliquam in nunc lacus.">
+                        <StackLayout Spacing="5">
+                            <Image x:Name="imgSection1" Aspect="AspectFill"></Image>
+                            <StackLayout Margin="10,0,10,10" >
+                                <Local:CustomLabel x:Name="lblSection1_1" FontSize="Medium">
                                     <Label.FontFamily>
                                         <OnPlatform x:TypeArguments="x:String">
                                             <On Platform="iOS" Value="Roboto-Light" />
@@ -59,7 +77,16 @@
                                     </Label.FontFamily>
                                 </Local:CustomLabel>
                                 <Image  x:Name="imgSection1_2" Aspect="AspectFill"></Image>
-                                <Local:CustomLabel  FontSize="Medium" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium sit amet felis eu iaculis. Aliquam condimentum metus a felis luctus dignissim ac a est. Proin rhoncus ligula blandit, egestas lectus eget, dignissim ligula. Nunc tellus nunc, auctor sed ex vitae, feugiat iaculis tortor. Morbi ullamcorper tempus eros eu molestie. Aliquam erat volutpat. Donec sed fringilla ligula, vel euismod enim. Suspendisse non nunc pellentesque, pretium mi ut, suscipit tellus. Nulla tincidunt libero dui, laoreet ornare leo auctor non. In fermentum erat non ligula tempor faucibus. Vivamus at maximus justo. Nam lacinia lobortis nisi et volutpat. Quisque et lectus et velit convallis dapibus. Nunc lacinia vitae magna lacinia venenatis. Aliquam in nunc lacus.">
+                                <Local:CustomLabel x:Name="lblSection1_2" FontSize="Medium" >
+                                    <Label.FontFamily>
+                                        <OnPlatform x:TypeArguments="x:String">
+                                            <On Platform="iOS" Value="Roboto-Light" />
+                                            <On Platform="Android" Value="Roboto-Light.ttf#Roboto-Light" />
+                                        </OnPlatform>
+                                    </Label.FontFamily>
+                                </Local:CustomLabel>
+                                <Image  x:Name="imgSection1_3" Aspect="AspectFill"></Image>
+                                <Local:CustomLabel x:Name="lblSection1_3" FontSize="Medium">
                                     <Label.FontFamily>
                                         <OnPlatform x:TypeArguments="x:String">
                                             <On Platform="iOS" Value="Roboto-Light" />
@@ -68,53 +95,49 @@
                                     </Label.FontFamily>
                                 </Local:CustomLabel>
                             </StackLayout>
-                            
-                        </Grid>
+
+                        </StackLayout>
                     </local:Accordion.AccordionContent>
                 </local:Accordion>
 
-                <local:Accordion Grid.Row="3" Title="La struttura">
+                <local:Accordion Title="La struttura">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
                         <StackLayout Orientation="Vertical" >
                             <Image x:Name="imgSection2" Aspect="AspectFill"></Image>
-                            <WebView x:Name="webSection2" BackgroundColor="White"></WebView>
                         </StackLayout>
                     </local:Accordion.AccordionContent>
                 </local:Accordion>
 
-                <local:Accordion Grid.Row="4" Title="Storia e maledizione dell'ingegnere">
+                <local:Accordion  Title="Storia e maledizione dell'ingegnere">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
                         <StackLayout Orientation="Vertical">
                             <Image x:Name="imgSection3" Aspect="AspectFill"></Image>
-                            <WebView x:Name="webSection3" BackgroundColor="White"></WebView>
                         </StackLayout>
                     </local:Accordion.AccordionContent>
                 </local:Accordion>
 
-                <local:Accordion Grid.Row="5" Title="Leonardo da Vinci">
+                <local:Accordion  Title="Leonardo da Vinci">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
                         <StackLayout Orientation="Vertical">
                             <Image x:Name="imgSection4" Aspect="AspectFill"></Image>
-                            <WebView x:Name="webSection4" BackgroundColor="White"></WebView>
                         </StackLayout>
                     </local:Accordion.AccordionContent>
                 </local:Accordion>
 
-                <local:Accordion Grid.Row="6" Title="Curiosità">
+                <local:Accordion  Title="Curiosità">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
                         <StackLayout Orientation="Vertical">
                             <Image x:Name="imgSection5" Aspect="AspectFill"></Image>
-                            <WebView x:Name="webSection5" BackgroundColor="White"></WebView>
                         </StackLayout>
                     </local:Accordion.AccordionContent>
                 </local:Accordion>
                 <!--#endregion-->
-
-            </Grid>
+            
+            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
