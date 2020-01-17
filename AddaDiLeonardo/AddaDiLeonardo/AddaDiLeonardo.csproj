@@ -13,6 +13,7 @@
     <None Remove="Images\backgroundFadeBlack.png" />
     <None Remove="Images\Bella.png" />
     <None Remove="Images\Centrale.jpg" />
+    <None Remove="Images\Centrali\Centrale_Bertini.jpg" />
     <None Remove="Images\Fiume.jpg" />
     <None Remove="Images\home.png" />
     <None Remove="Images\Icons\arrow.png" />
@@ -37,6 +38,7 @@
     <EmbeddedResource Include="Images\backgroundFadeBlack.png" />
     <EmbeddedResource Include="Images\Bella.png" />
     <EmbeddedResource Include="Images\Centrale.jpg" />
+    <EmbeddedResource Include="Images\Centrali\Centrale_Bertini.jpg" />
     <EmbeddedResource Include="Images\Fiume.jpg" />
     <EmbeddedResource Include="Images\Icons\arrow.png" />
     <EmbeddedResource Include="Images\Icons\arrow2.png" />
@@ -77,6 +79,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Settings.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\TappaCentrali.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\TappaPonte.xaml">
