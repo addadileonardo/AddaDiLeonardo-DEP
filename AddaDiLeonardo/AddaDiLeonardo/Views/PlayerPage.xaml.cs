@@ -20,7 +20,6 @@ namespace AddaDiLeonardo.Views
             {
                 Html = $"<html><div  style=\"background-color:lightblue; height='300px'; width='{App.ScreenWidth - 10}px';\"> a </div></html>"
             };
-
         }
     }
 }
