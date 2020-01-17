@@ -28,6 +28,7 @@
     <None Remove="Images\Ponte.jpg" />
     <None Remove="Images\Ponte\Ponte.jpg" />
     <None Remove="Images\Prova3.png" />
+    <None Remove="Images\Rocchetta\Rocchetta.jpg" />
     <None Remove="Images\settings.png" />
     <None Remove="Images\Tappa1\adda.jpg" />
     <None Remove="Images\Tappa_ponte.jpg" />
@@ -53,6 +54,7 @@
     <EmbeddedResource Include="Images\Ponte.jpg" />
     <EmbeddedResource Include="Images\Ponte\Ponte.jpg" />
     <EmbeddedResource Include="Images\Prova3.png" />
+    <EmbeddedResource Include="Images\Rocchetta\Rocchetta.jpg" />
     <EmbeddedResource Include="Images\Tappa1\adda.jpg" />
     <EmbeddedResource Include="Images\Tappa_ponte.jpg" />
     <EmbeddedResource Include="Images\Vergine.jpg" />
@@ -85,6 +87,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\TappaPonte.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\TappaRocchetta.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
