@@ -6,13 +6,9 @@
              mc:Ignorable="d"
              x:Class="AddaDiLeonardo.Views.PlayerPage">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="GreenYellow">
-            <WebView x:Name="WebViewer"
-                HeightRequest="300" Margin="5,5,5,5">
-                
-            </WebView>
-            <Label Text="Titolo" FontSize="Large" />
-            <Label Text="Descrizione"/>
-        </StackLayout>
+        <WebView x:Name="WebViewer" BackgroundColor="Black"
+                Margin="-9,-9,-9,-9" >
+
+        </WebView>
     </ContentPage.Content>
 </ContentPage>
