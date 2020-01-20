@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Xamarin.Forms;
+using AddaDiLeonardo.Views;
 
 namespace AddaDiLeonardo.Droid
 {
@@ -20,7 +22,6 @@ namespace AddaDiLeonardo.Droid
             //screen size --> https://stackoverflow.com/a/47634359
             App.ScreenHeight = (int)(Resources.DisplayMetrics.HeightPixels / Resources.DisplayMetrics.Density);
             App.ScreenWidth = (int)(Resources.DisplayMetrics.WidthPixels / Resources.DisplayMetrics.Density);
-
             //fulscreen
             this.Window.AddFlags(WindowManagerFlags.Fullscreen);
 

@@ -23,7 +23,6 @@ namespace AddaDiLeonardo.Views
             {
                 Html = $"<html style=\"background-color:black;\"><iframe width=\"{App.ScreenWidth}\" height=\"{App.ScreenHeight - 7}\" src = \"https://www.youtube.com/embed/J3pF2jkQ4vc?fs=0&rel=0\" frameBorder=\"0\"></ iframe ></html>"
             };
-
         }
     }
 }
