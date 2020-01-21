@@ -16,11 +16,10 @@ namespace AddaDiLeonardo.Views
         public Settings()
         {
             InitializeComponent();
+
+            BindingContext = Application.Current;
+
         }
 
-        private void LinguaPicker_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string lingua = LinguaPicker.SelectedItem.ToString();
-        }
     }
 }
