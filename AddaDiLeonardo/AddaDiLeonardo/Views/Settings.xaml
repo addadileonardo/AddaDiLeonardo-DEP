@@ -4,10 +4,29 @@
              x:Class="AddaDiLeonardo.Views.Settings"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <RelativeLayout>
+            
+            <Picker Title="Seleziona una lingua" BackgroundColor="White" TextColor="Black" x:Name="LinguaPicker" SelectedIndexChanged="LinguaPicker_SelectedIndexChanged"
+                    RelativeLayout.XConstraint="{ConstraintExpression
+				    Type=RelativeToParent,
+				    Property=Width,
+				    Factor= 0,
+                    Constant= 0 }"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+				    Type=RelativeToParent,
+				    Property=Height,
+				    Factor=0.70 }"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Width,
+                    Factor=1}">
+                <Picker.Items>
+                    <x:String>Italiano</x:String>
+                    <x:String>Inglese</x:String>
+                    <x:String>Francese</x:String>
+                </Picker.Items>
+            </Picker>
+            
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -9,12 +9,19 @@ using Xamarin.Forms.Xaml;
 
 namespace AddaDiLeonardo.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Settings : ContentPage
-	{
-		public Settings ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Settings : ContentPage
+    {
+
+        public Settings()
+        {
+            InitializeComponent();
+
+        }
+
+        private void LinguaPicker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string lingua = LinguaPicker.SelectedItem.ToString();
+        }
+    }
 }
