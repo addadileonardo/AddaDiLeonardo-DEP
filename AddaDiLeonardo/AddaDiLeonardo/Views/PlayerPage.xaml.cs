@@ -16,9 +16,12 @@ namespace AddaDiLeonardo.Views
         {
             InitializeComponent();
 
+            WebViewer.HeightRequest = App.ScreenHeight;
+            WebViewer.WidthRequest = App.ScreenWidth;
+
             WebViewer.Source = new HtmlWebViewSource()
             {
-                Html = $"<html><div  style=\"background-color:lightblue; height='300px'; width='{App.ScreenWidth - 10}px';\"> a </div></html>"
+                Html = $"<html style=\"background-color:black;\"><iframe width=\"{App.ScreenWidth}\" height=\"{App.ScreenHeight - 7}\" src = \"https://www.youtube.com/embed/J3pF2jkQ4vc?fs=0&rel=0\" frameBorder=\"0\"></ iframe ></html>"
             };
         }
     }
