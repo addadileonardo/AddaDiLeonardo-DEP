@@ -41,7 +41,7 @@ namespace AddaDiLeonardo.Views
                 switch (((Image)sender).ClassId) {
 
                     case "traghetto":
-                        var TappaTraghetto = new TappaPonte();
+                        var TappaTraghetto = new TappaTraghetto();
                         await Navigation.PushModalAsync(TappaTraghetto);
                         break;
 
@@ -51,7 +51,7 @@ namespace AddaDiLeonardo.Views
                         break;
 
                     case "rocchetta":
-                        var TappaRocchetta = new TappaPonte();
+                        var TappaRocchetta = new TappaRocchetta();
                         await Navigation.PushModalAsync(TappaRocchetta);
                         break;
 
@@ -61,7 +61,7 @@ namespace AddaDiLeonardo.Views
                         break;
 
                     case "centrali":
-                        var TappaCentrali = new TappaPonte();
+                        var TappaCentrali = new TappaCentrali();
                         await Navigation.PushModalAsync(TappaCentrali);
                         break;
                 }

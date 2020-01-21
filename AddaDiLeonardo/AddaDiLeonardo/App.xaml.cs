@@ -8,6 +8,8 @@ namespace AddaDiLeonardo
 {
     public partial class App : Application
     {
+        private const string LanguageKey = "Lingua";
+
         public App()
         {
             InitializeComponent();
@@ -31,6 +33,21 @@ namespace AddaDiLeonardo
         protected override void OnResume()
         {
             // Handle when your app resumes
+        }
+
+        public int Lingua
+        {
+            get
+            {
+                if (Properties.ContainsKey(LanguageKey))
+                    return (int)Properties[LanguageKey];
+
+                return 0;
+            }
+            set
+            {
+                Properties[LanguageKey] = value;
+            }
         }
     }
 }

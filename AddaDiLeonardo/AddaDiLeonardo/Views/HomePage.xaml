@@ -7,7 +7,7 @@
 
     <ContentPage.Content>
         <ScrollView BackgroundColor="Black">
-            <RelativeLayout Padding="0, 30, 0, 0">
+            <RelativeLayout Padding="0, 0, 0, 30">
 
                 <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.backgroundFadeBlack.png}" Aspect="Fill" x:Name="background"
 			        RelativeLayout.WidthConstraint="{ConstraintExpression
