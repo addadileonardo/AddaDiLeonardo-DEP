@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace AddaDiLeonardo.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Settings : ContentPage
+    public partial class Settings : ContentPage  //LINGUA: indice:lingua -> 0:italiano, 1:inglese, 2:francese
     {
 
         public Settings()

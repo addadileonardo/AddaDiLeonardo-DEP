@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <RelativeLayout>
             
-            <Picker Title="Seleziona una lingua" BackgroundColor="White" TextColor="Black" x:Name="LinguaPicker" SelectedIndex="{Binding Lingua}"
+            <Picker Title="Seleziona una lingua" BackgroundColor="White" TextColor="Black" x:Name="LinguaPicker" SelectedIndex="{Binding Lingua}" 
                     RelativeLayout.XConstraint="{ConstraintExpression
 				    Type=RelativeToParent,
 				    Property=Width,
