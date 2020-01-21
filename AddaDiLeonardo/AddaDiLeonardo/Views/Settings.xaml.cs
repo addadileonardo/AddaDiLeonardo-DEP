@@ -16,7 +16,6 @@ namespace AddaDiLeonardo.Views
         public Settings()
         {
             InitializeComponent();
-
         }
 
         private void LinguaPicker_SelectedIndexChanged(object sender, EventArgs e)
