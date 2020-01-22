@@ -10,7 +10,16 @@ namespace AddaDiLeonardo.Views
         public TappaPonte()
         {
             InitializeComponent();
-            
+
+            var db = App.Database;
+
+            //db.CreateTable();
+
+            int r = db.SaveItemAsync(new Database.Classes.Tappa()).Result;
+
+            var tappe = db.GetItemsAsync().Result;
+
+            string type = tappe.GetType().Name;
                                                      
             #region INTRODUZIONE
 

@@ -1,0 +1,9 @@
+﻿
+DATABASE <Lingua>
+	class Tappa
+		string Titolo
+		string Sottotitolo
+		string Descrizione
+		class Sezione
+			string Titolo
+			dictionary<key,string> contenuto
