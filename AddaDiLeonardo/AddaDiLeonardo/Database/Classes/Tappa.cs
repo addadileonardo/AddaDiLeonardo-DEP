@@ -1,9 +1,11 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace AddaDiLeonardo.Database.Classes
 {
+    [Table( nameof(Tappa))]
     public class Tappa
     {
         public int ID { get; set; }
@@ -13,9 +15,6 @@ namespace AddaDiLeonardo.Database.Classes
         public string Sottotitolo { get; set; }
 
         public string Descrizione { get; set; }
-
-        public List<Sezione> Sezioni { get; set; } = new List<Sezione>();
-
 
     }
 }

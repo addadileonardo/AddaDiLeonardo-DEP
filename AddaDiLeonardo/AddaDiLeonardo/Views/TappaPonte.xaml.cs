@@ -1,4 +1,5 @@
-﻿using AddaDiLeonardo.Services;
+﻿using AddaDiLeonardo.Database.Classes;
+using AddaDiLeonardo.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,13 +14,23 @@ namespace AddaDiLeonardo.Views
 
             var db = App.Database;
 
-            //db.CreateTable();
+            Tappa tappa1 = new Tappa() { ID = 99, Titolo = "Tappa Test", Sottotitolo = "Test", Descrizione = "Test per provare i database" };
+            Sezione sezione1 = new Sezione() { ID = 991, IDTappa = 99, Titolo = "Sezione1" };
+            Contenuto contenuto1 = new Contenuto() { ID = 9911, IDSezione = 991, Indice = 1, Contentuto = "Contenuto 1 della sezione 1 della tappa 1" };
 
-            int r = db.SaveItemAsync(new Database.Classes.Tappa()).Result;
+            //var t = db.CreateTableTappa().Result;
+            //var s = db.CreateTableSezione().Result;
+            //var c = db.CreateTableContenuto().Result;
 
-            var tappe = db.GetItemsAsync().Result;
+            var list = db.GetAllTablesAsync().Result;
 
-            string type = tappe.GetType().Name;
+            //var nt = db.SaveContenutoAsync(contenuto1).Result;
+            //var ns = db.SaveSezioneAsync(sezione1).Result;
+            //var nc = db.SaveTappaAsync(tappa1).Result;
+
+            var tappe = db.GetTappaAsync().Result;
+            var sezione = db.GetSezioneAsync().Result;
+            var contenuto = db.GetContenutoAsync().Result;
                                                      
             #region INTRODUZIONE
 

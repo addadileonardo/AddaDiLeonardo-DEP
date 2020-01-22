@@ -37,30 +37,53 @@ namespace AddaDiLeonardo.Database
 
         //Methods
 
-        public void CreateTable()
+        //===== TABLES ====
+
+        public async Task<CreateTableResult> CreateTableTappa()
         {
-            _ = Database.CreateTableAsync<Tappa>().Result;
+            return await Database.CreateTableAsync<Tappa>().ConfigureAwait(false);
         }
 
-        public Task<List<Tappa>> GetItemsAsync()
+        public async Task<CreateTableResult> CreateTableSezione()
+        {
+            return await Database.CreateTableAsync<Sezione>().ConfigureAwait(false);
+        }
+
+        public async Task<CreateTableResult> CreateTableContenuto()
+        {
+            return await Database.CreateTableAsync<Contenuto>().ConfigureAwait(false);
+        }
+
+        public async Task DeleteTables()
+        {
+            await Database.DropTableAsync<Tappa>().ConfigureAwait(false);
+            await Database.DropTableAsync<Sezione>().ConfigureAwait(false);
+            await Database.DropTableAsync<Contenuto>().ConfigureAwait(false);
+        }
+
+        public async Task<List<TableName>> GetAllTablesAsync()
+        {
+            string queryString = $"SELECT name FROM sqlite_master WHERE type = 'table'";
+            return await Database.QueryAsync<TableName>(queryString).ConfigureAwait(false);
+        }
+
+        //=================
+
+        //=== Tappa ====
+
+        public Task<List<Tappa>> GetTappaAsync()
         {
             return Database.Table<Tappa>().ToListAsync();
         }
 
-        //public Task<List<Tappa>> GetItemsNotDoneAsync()
-        //{
-        //    // SQL queries are also possible
-        //    return Database.QueryAsync<Tappa>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
-        //}
-
-        public Task<Tappa> GetItemAsync(int id)
+        public Task<Tappa> GetTappaAsync(int id)
         {
             return Database.Table<Tappa>().Where(i => i.ID == id).FirstOrDefaultAsync();
         }
 
-        public Task<int> SaveItemAsync(Tappa item)
+        public Task<int> SaveTappaAsync(Tappa item)
         {
-            if (item.ID != 0)
+            if (item.ID /*!*/== 0)
             {
                 return Database.UpdateAsync(item);
             }
@@ -70,9 +93,80 @@ namespace AddaDiLeonardo.Database
             }
         }
 
-        public Task<int> DeleteItemAsync(Tappa item)
+        public Task<int> DeleteTappaAsync(Tappa item)
         {
             return Database.DeleteAsync(item);
         }
+
+        //=====================
+
+        //=== Sezione ====
+
+        public Task<List<Sezione>> GetSezioneAsync()
+        {
+            return Database.Table<Sezione>().ToListAsync();
+        }
+
+        public Task<Sezione> GetSezioneAsync(int id)
+        {
+            return Database.Table<Sezione>().Where(i => i.ID == id).FirstOrDefaultAsync();
+        }
+
+        public Task<int> SaveSezioneAsync(Sezione item)
+        {
+            if (item.ID /*!*/== 0)
+            {
+                return Database.UpdateAsync(item);
+            }
+            else
+            {
+                return Database.InsertAsync(item);
+            }
+        }
+
+        public Task<int> DeleteSezioneAsync(Sezione item)
+        {
+            return Database.DeleteAsync(item);
+        }
+
+        //=====================
+
+        //=== Contenuto ====
+
+        public Task<List<Contenuto>> GetContenutoAsync()
+        {
+            return Database.Table<Contenuto>().ToListAsync();
+        }
+
+        public Task<Contenuto> GetContenutoAsync(int id)
+        {
+            return Database.Table<Contenuto>().Where(i => i.ID == id).FirstOrDefaultAsync();
+        }
+
+        public Task<int> SaveContenutoAsync(Contenuto item)
+        {
+            if (item.ID /*!*/== 0)
+            {
+                return Database.UpdateAsync(item);
+            }
+            else
+            {
+                return Database.InsertAsync(item);
+            }
+        }
+
+        public Task<int> DeleteContenutoAsync(Contenuto item)
+        {
+            return Database.DeleteAsync(item);
+        }
+
+        //=====================
+
+    }
+
+    public class TableName
+    {
+        public TableName() { }
+        public string name { get; set; }
     }
 }
