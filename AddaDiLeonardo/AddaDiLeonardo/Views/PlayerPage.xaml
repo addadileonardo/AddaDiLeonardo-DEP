@@ -3,12 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:AddaDiLeonardo"
              mc:Ignorable="d"
              x:Class="AddaDiLeonardo.Views.PlayerPage">
     <ContentPage.Content>
-        <WebView x:Name="WebViewer" BackgroundColor="Black"
+        <!--WebView x:Name="WebViewer" BackgroundColor="Black"
                 Margin="-9,-9,-9,-9" >
 
-        </WebView>
+        </-->
+        <local:VideoPlayer SourceUrl="http://amssamples.streaming.mediaservices.windows.net/683f7e47-bd83-4427-b0a3-26a6c4547782/BigBuckBunny.ism/manifest"/>
     </ContentPage.Content>
 </ContentPage>
