@@ -107,9 +107,9 @@ namespace AddaDiLeonardo.Database
             return Database.Table<Sezione>().ToListAsync();
         }
 
-        public Task<Sezione> GetSezioneAsync(int id)
+        public Task<List<Sezione>> GetSezioneAsync(int idtappa)
         {
-            return Database.Table<Sezione>().Where(i => i.ID == id).FirstOrDefaultAsync();
+            return Database.Table<Sezione>().Where(i => i.IDTappa == idtappa).ToListAsync();
         }
 
         public Task<int> SaveSezioneAsync(Sezione item)
@@ -138,9 +138,9 @@ namespace AddaDiLeonardo.Database
             return Database.Table<Contenuto>().ToListAsync();
         }
 
-        public Task<Contenuto> GetContenutoAsync(int id)
+        public Task<List<Contenuto>> GetContenutoAsync(int idsezione)
         {
-            return Database.Table<Contenuto>().Where(i => i.ID == id).FirstOrDefaultAsync();
+            return Database.Table<Contenuto>().Where(i => i.IDSezione == idsezione).ToListAsync();
         }
 
         public Task<int> SaveContenutoAsync(Contenuto item)
