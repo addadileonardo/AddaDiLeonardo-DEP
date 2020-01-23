@@ -40,10 +40,11 @@ namespace AddaDiLeonardo.Database
 
         //Methods
 
-        public async Task<List<object>> GetTesto()
+        public async Task<object> GetTesto()
         {
-            string query = "Select Testo FROM Contenuto";
-            return await Database.QueryAsync<object>(query).ConfigureAwait(false);
+            string query = "Select * FROM Contenuto";
+            var r = await Database.GetTableInfoAsync("Contenuto");
+            return r;
         }
 
         //===== TABLES ====
