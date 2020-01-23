@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using Xamarin.Forms;
 using AddaDiLeonardo.Views;
+using LibVLCSharp.Forms.Shared;
 
 namespace AddaDiLeonardo.Droid
 {
@@ -26,6 +27,8 @@ namespace AddaDiLeonardo.Droid
             this.Window.AddFlags(WindowManagerFlags.Fullscreen);
 
             base.OnCreate(savedInstanceState);
+
+            LibVLCSharpFormsRenderer.Init();
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
