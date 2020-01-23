@@ -62,7 +62,7 @@
                 <!--#endregion-->
                 
                 <!--#region ACCORDION-->
-                <local:Accordion  Title="Il ponte nella storia">
+                <local:Accordion x:Name="Accordion0"  Title="">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
                         <StackLayout Spacing="5">

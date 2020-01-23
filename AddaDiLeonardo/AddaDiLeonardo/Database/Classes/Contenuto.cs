@@ -14,6 +14,6 @@ namespace AddaDiLeonardo.Database.Classes
 
         public int Indice { get; set; }
 
-        public string Contentuto { get; set; }
+        public string Testo { get; set; }
     }
 }
