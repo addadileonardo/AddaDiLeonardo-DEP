@@ -1,4 +1,5 @@
-﻿using AddaDiLeonardo.Views;
+﻿using AddaDiLeonardo.Database;
+using AddaDiLeonardo.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -19,6 +20,19 @@ namespace AddaDiLeonardo
 
         public static int ScreenHeight { get; set; }
         public static int ScreenWidth { get; set; }
+
+        private static LanguageDatabase database;
+        public static LanguageDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new LanguageDatabase();
+                }
+                return database;
+            }
+        }
 
         protected override void OnStart()
         {
