@@ -10,6 +10,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddaDiLeonardo", "AddaDiLeonardo\AddaDiLeonardo\AddaDiLeonardo.csproj", "{2BF3F056-2EF6-4D49-806B-A611DA90C51D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{DCCFB186-E4A1-4DBA-8649-E6D13EA65B9F}"
+	ProjectSection(SolutionItems) = preProject
+		Database\Italian.db3 = Database\Italian.db3
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
