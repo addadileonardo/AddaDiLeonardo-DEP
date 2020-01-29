@@ -55,13 +55,13 @@ namespace AddaDiLeonardo.Views
                         break;
 
                     case "step3":
-                        var Tappa3 = new TappaPonte();
-                        await Navigation.PushModalAsync(Tappa3);
+                        var TappaRocchetta = new TappaRocchetta();
+                        await Navigation.PushModalAsync(TappaRocchetta);
                         break;
 
                     case "step4":
-                        var Tappa4 = new TappaPonte();
-                        await Navigation.PushModalAsync(Tappa4);
+                        var TappaCentrali = new TappaCentrali();
+                        await Navigation.PushModalAsync(TappaCentrali);
                         break;
                 }
 
