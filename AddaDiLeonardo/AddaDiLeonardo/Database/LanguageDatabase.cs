@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace AddaDiLeonardo.Database
 {
@@ -12,14 +13,16 @@ namespace AddaDiLeonardo.Database
     {
         static readonly Lazy<SQLiteAsyncConnection> lazyInitializer = new Lazy<SQLiteAsyncConnection>(() =>
         {
-            return new SQLiteAsyncConnection(DatabaseConstants.DatabasePath, DatabaseConstants.Flags);
+            return DependencyService.Get<IDBInterface>().CreateConnection(DBName);
         });
 
         static SQLiteAsyncConnection Database => lazyInitializer.Value;
+        static string DBName = "Italian.db3";
         static bool initialized = false;
 
-        public LanguageDatabase()
+        public LanguageDatabase(string dbName)
         {
+            DBName = dbName;
             InitializeAsync().SafeFireAndForget(false);
         }
 
@@ -36,6 +39,13 @@ namespace AddaDiLeonardo.Database
         }
 
         //Methods
+
+        public async Task<object> GetTesto()
+        {
+            string query = "Select * FROM Contenuto";
+            var r = await Database.GetTableInfoAsync("Contenuto");
+            return r;
+        }
 
         //===== TABLES ====
 

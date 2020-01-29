@@ -11,6 +11,8 @@ namespace AddaDiLeonardo
     {
         private const string LanguageKey = "Lingua";
 
+        private static readonly string[] DBNames = new string[3] { "Italian.db3", "English.db3", "French.db3" };
+
         public App()
         {
             InitializeComponent();
@@ -28,7 +30,7 @@ namespace AddaDiLeonardo
             {
                 if (database == null)
                 {
-                    database = new LanguageDatabase();
+                    database = new LanguageDatabase(DBNames[0]);
                 }
                 return database;
             }
