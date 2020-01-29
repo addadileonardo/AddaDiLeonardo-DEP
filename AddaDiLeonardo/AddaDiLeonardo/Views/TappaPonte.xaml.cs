@@ -32,7 +32,7 @@ namespace AddaDiLeonardo.Views
             //Contenuti = db.GetContenutoAsync(Sezioni[0].ID).Result;
 
 
-            var r = db.GetTesto().Result;
+            //var r = db.GetTesto().Result;
 
             #region INTRODUZIONE
 
