@@ -16,7 +16,7 @@
                 <!--#region INTRODUCTION-->
                 
                 <StackLayout  BackgroundColor="White">
-                    <StackLayout Margin="10,10,10,10">
+                    <StackLayout Margin="20,20,20,20">
 
                         <Label x:Name="lblTitolo" FontSize="30" TextColor="Black" FontAttributes="Bold">
                             <Label.FontFamily>
@@ -39,7 +39,7 @@
                             <Image x:Name="iconMarker" HeightRequest="20" Aspect="AspectFill"></Image>
                         </StackLayout>
 
-                        <Local:CustomLabel x:Name="lblSottotitolo" FontSize="Medium" >
+                        <Local:CustomLabel x:Name="lblSottotitolo" FontSize="Medium" LineHeight="1.15" Margin="0,0,0,5">
                             <Label.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
                                     <On Platform="iOS" Value="Roboto-LightItalic" />
@@ -49,7 +49,7 @@
                         </Local:CustomLabel>
 
 
-                        <Local:CustomLabel x:Name="lblDescrizione" FontSize="Medium" >
+                        <Local:CustomLabel x:Name="lblDescrizione" FontSize="Medium" LineHeight="1.15">
                             <Label.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
                                     <On Platform="iOS" Value="Roboto-Light" />
@@ -67,8 +67,8 @@
                     <local:Accordion.AccordionContent>
                         <StackLayout Spacing="5">
                             <Image x:Name="imgSection1" Aspect="AspectFill"></Image>
-                            <StackLayout Margin="10,0,10,10" >
-                                <Local:CustomLabel x:Name="lblSection1_1" FontSize="Medium">
+                            <StackLayout Margin="15,0,15,10" >
+                                <Local:CustomLabel x:Name="lblSection1_1" FontSize="Medium" LineHeight="1.15">
                                     <Label.FontFamily>
                                         <OnPlatform x:TypeArguments="x:String">
                                             <On Platform="iOS" Value="Roboto-Light" />
@@ -77,7 +77,7 @@
                                     </Label.FontFamily>
                                 </Local:CustomLabel>
                                 <Image  x:Name="imgSection1_2" Aspect="AspectFill"></Image>
-                                <Local:CustomLabel x:Name="lblSection1_2" FontSize="Medium" >
+                                <Local:CustomLabel x:Name="lblSection1_2" FontSize="Medium" LineHeight="1.15">
                                     <Label.FontFamily>
                                         <OnPlatform x:TypeArguments="x:String">
                                             <On Platform="iOS" Value="Roboto-Light" />
@@ -86,7 +86,7 @@
                                     </Label.FontFamily>
                                 </Local:CustomLabel>
                                 <Image  x:Name="imgSection1_3" Aspect="AspectFill"></Image>
-                                <Local:CustomLabel x:Name="lblSection1_3" FontSize="Medium">
+                                <Local:CustomLabel x:Name="lblSection1_3" FontSize="Medium" LineHeight="1.15">
                                     <Label.FontFamily>
                                         <OnPlatform x:TypeArguments="x:String">
                                             <On Platform="iOS" Value="Roboto-Light" />

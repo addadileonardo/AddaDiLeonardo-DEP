@@ -37,7 +37,7 @@ namespace AddaDiLeonardo.CustomControls
             set => SetValue(IndicatorProperty, value);
         }
 
-        Image Img = new Image() { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow2.png"), Margin = new Thickness(0,5,0,0), WidthRequest = 20 };
+        Image Img = new Image() { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.arrow2.png"), Margin = new Thickness(0,15,0,0), WidthRequest = 20 };
 
         public static readonly BindableProperty IsOpenProperty = BindableProperty.Create(nameof(IsOpen), typeof(bool), typeof(Accordion), false, propertyChanged: IsOpenChanged);
         public bool IsOpen
