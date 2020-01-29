@@ -29,7 +29,7 @@
 				    Factor=0.70 }" />
 
                 <!-- Dipendenza HEIGHT -> spacing (yConstraint) -->
-                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Vergine.jpg}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" x:Name="step1"  
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Vergine.jpg}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step1" x:Name="step1"  
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToParent,
 				        Property=Width,
