@@ -1,4 +1,5 @@
-﻿using AddaDiLeonardo.Views;
+﻿using AddaDiLeonardo.Database;
+using AddaDiLeonardo.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -10,6 +11,8 @@ namespace AddaDiLeonardo
     {
         private const string LanguageKey = "Lingua";
 
+        private static readonly string[] DBNames = new string[3] { "Italian.db3", "English.db3", "French.db3" };
+
         public App()
         {
             InitializeComponent();
@@ -19,6 +22,19 @@ namespace AddaDiLeonardo
 
         public static int ScreenHeight { get; set; }
         public static int ScreenWidth { get; set; }
+
+        private static LanguageDatabase database;
+        public static LanguageDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new LanguageDatabase(DBNames[0]);
+                }
+                return database;
+            }
+        }
 
         protected override void OnStart()
         {

@@ -1,4 +1,7 @@
-﻿using AddaDiLeonardo.Services;
+﻿using AddaDiLeonardo.Database.Classes;
+using AddaDiLeonardo.Services;
+using System.Collections.Generic;
+using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,26 +13,48 @@ namespace AddaDiLeonardo.Views
         public TappaPonte()
         {
             InitializeComponent();
-            
-                                                     
+
+            int IDTappa = 1;
+            Tappa tappa;
+            List<Sezione> Sezioni;
+            List<Contenuto> Contenuti;
+
+
+            var db = App.Database;
+
+            var list = db.GetAllTablesAsync().Result;
+
+            tappa = db.GetTappaAsync(IDTappa).Result;
+            Sezioni = db.GetSezioneAsync(IDTappa).Result;
+
+            //var result = db.GetTesto();
+            //per ogni sezioni leggi i contenuti
+            //Contenuti = db.GetContenutoAsync(Sezioni[0].ID).Result;
+
+
+            var r = db.GetTesto().Result;
+
             #region INTRODUZIONE
 
             imgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Ponte.Ponte.jpg");
             iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.marker.png");
-            lblTitolo.Text = "Ponte San Michele";
-            lblSottotitolo.Text = "Una delle più interessanti realizzazioni dell'ingegneria italiana nell'800, punto di unione tra le due sponde rivali dell'Adda.";
-            lblDescrizione.Text = "Il Ponte San Michele, situato a Paderno d'Adda, è stato progettato dall'ingegnere svizzero Jules Röthlisberger nel 1889, come collegamento viabilistico e ferroviario tra l'area economica della bergamasca e quella milanese. La struttura e i numerosi eventi di cui è stato teatro l'hanno reso un'opera architettonica di grande importanza storica.";
+            lblTitolo.Text = tappa.Titolo;
+            lblSottotitolo.Text = tappa.Sottotitolo;
+            lblDescrizione.Text = tappa.Descrizione;
 
             #endregion
 
             #region SECTION 1
-         
+
+            Accordion0.Title = Sezioni[0].Titolo;
+            Contenuti = db.GetContenutoAsync(Sezioni[0].ID).Result.OrderBy(c => c.Indice).ToList();
+
             imgSection1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa1.adda.jpg");
-            lblSection1_1.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium sit amet felis eu iaculis. Aliquam condimentum metus a felis luctus dignissim ac a est. Proin rhoncus ligula blandit, egestas lectus eget, dignissim ligula. Nunc tellus nunc, auctor sed ex vitae, feugiat iaculis tortor. Morbi ullamcorper tempus eros eu molestie. Aliquam erat volutpat. Donec sed fringilla ligula, vel euismod enim. Suspendisse non nunc pellentesque, pretium mi ut, suscipit tellus. Nulla tincidunt libero dui, laoreet ornare leo auctor non. In fermentum erat non ligula tempor faucibus. Vivamus at maximus justo. Nam lacinia lobortis nisi et volutpat. Quisque et lectus et velit convallis dapibus. Nunc lacinia vitae magna lacinia venenatis. Aliquam in nunc lacus.";
+            lblSection1_1.Text = Contenuti[0].Testo;
             imgSection1_2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa1.adda.jpg");
-            lblSection1_2.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium sit amet felis eu iaculis. Aliquam condimentum metus a felis luctus dignissim ac a est. Proin rhoncus ligula blandit, egestas lectus eget, dignissim ligula. Nunc tellus nunc, auctor sed ex vitae, feugiat iaculis tortor. Morbi ullamcorper tempus eros eu molestie. Aliquam erat volutpat. Donec sed fringilla ligula, vel euismod enim. Suspendisse non nunc pellentesque, pretium mi ut, suscipit tellus. Nulla tincidunt libero dui, laoreet ornare leo auctor non. In fermentum erat non ligula tempor faucibus. Vivamus at maximus justo. Nam lacinia lobortis nisi et volutpat. Quisque et lectus et velit convallis dapibus. Nunc lacinia vitae magna lacinia venenatis. Aliquam in nunc lacus.";
+            lblSection1_2.Text = Contenuti[1].Testo;
             imgSection1_3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa1.adda.jpg");
-            lblSection1_3.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium sit amet felis eu iaculis. Aliquam condimentum metus a felis luctus dignissim ac a est. Proin rhoncus ligula blandit, egestas lectus eget, dignissim ligula. Nunc tellus nunc, auctor sed ex vitae, feugiat iaculis tortor. Morbi ullamcorper tempus eros eu molestie. Aliquam erat volutpat. Donec sed fringilla ligula, vel euismod enim. Suspendisse non nunc pellentesque, pretium mi ut, suscipit tellus. Nulla tincidunt libero dui, laoreet ornare leo auctor non. In fermentum erat non ligula tempor faucibus. Vivamus at maximus justo. Nam lacinia lobortis nisi et volutpat. Quisque et lectus et velit convallis dapibus. Nunc lacinia vitae magna lacinia venenatis. Aliquam in nunc lacus.";
+            lblSection1_3.Text = Contenuti[2].Testo;
 
             #endregion
 
