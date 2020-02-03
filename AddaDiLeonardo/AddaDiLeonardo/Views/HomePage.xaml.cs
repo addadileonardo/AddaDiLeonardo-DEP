@@ -40,8 +40,31 @@ namespace AddaDiLeonardo.Views
 
             try
             {
-                var TappaPonte = new TappaPonte();
-                await Navigation.PushModalAsync(TappaPonte);
+
+                switch (((Image)sender).ClassId)
+                {
+
+                    case "step1":
+                        var TappaTraghetto = new TappaTraghetto();
+                        await Navigation.PushModalAsync(TappaTraghetto);
+                        break;
+
+                    case "step2":
+                        var TappaPonte = new TappaPonte();
+                        await Navigation.PushModalAsync(TappaPonte);
+                        break;
+
+                    case "step3":
+                        var TappaRocchetta = new TappaRocchetta();
+                        await Navigation.PushModalAsync(TappaRocchetta);
+                        break;
+
+                    case "step4":
+                        var TappaCentrali = new TappaCentrali();
+                        await Navigation.PushModalAsync(TappaCentrali);
+                        break;
+                }
+
             }
             catch (Exception ex)
             {
