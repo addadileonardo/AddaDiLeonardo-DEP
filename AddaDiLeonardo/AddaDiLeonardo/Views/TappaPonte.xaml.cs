@@ -37,7 +37,7 @@ namespace AddaDiLeonardo.Views
             #region INTRODUZIONE
 
             imgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Ponte.Ponte.jpg");
-            iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.marker.png");
+            iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.pin.png");
             lblTitolo.Text = tappa.Titolo;
             lblSottotitolo.Text = tappa.Sottotitolo;
             lblDescrizione.Text = tappa.Descrizione;

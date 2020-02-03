@@ -14,9 +14,11 @@
                 <Image  x:Name="imgTappa" Aspect="AspectFill"></Image>
 
                 <!--#region INTRODUCTION-->
-                
+
                 <StackLayout  BackgroundColor="White">
-                    <StackLayout Margin="20,20,20,20">
+                    
+                    
+                    <StackLayout Margin="20,0,20,20">
 
                         <Label x:Name="lblTitolo" FontSize="30" TextColor="Black" FontAttributes="Bold">
                             <Label.FontFamily>
@@ -26,37 +28,39 @@
                                 </OnPlatform>
                             </Label.FontFamily>
                         </Label>
-
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="0,5,0,5">
+                        
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="0,0,0,0">
+                            <Image x:Name="iconMarker" HeightRequest="20" Aspect="AspectFill"></Image>
                             <Label Text="Paderno d'Adda">
                                 <Label.FontFamily>
                                     <OnPlatform x:TypeArguments="x:String">
                                         <On Platform="iOS" Value="Roboto-Light" />
-                                        <On Platform="Android" Value="Roboto-Light.ttf#Oswald" />
+                                        <On Platform="Android" Value="Roboto-Light.ttf#Roboto" />
                                     </OnPlatform>
                                 </Label.FontFamily>
                             </Label>
-                            <Image x:Name="iconMarker" HeightRequest="20" Aspect="AspectFill"></Image>
+                           
                         </StackLayout>
 
-                        <Local:CustomLabel x:Name="lblSottotitolo" FontSize="Medium" LineHeight="1.15" Margin="0,0,0,5">
+
+                        <Label x:Name="lblSottotitolo" FontSize="16" LineHeight="1.0" Margin="0,15,0,5">
                             <Label.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
                                     <On Platform="iOS" Value="Roboto-LightItalic" />
                                     <On Platform="Android" Value="Roboto-LightItalic.ttf#Roboto-Light" />
                                 </OnPlatform>
                             </Label.FontFamily>
-                        </Local:CustomLabel>
+                        </Label>
 
 
-                        <Local:CustomLabel x:Name="lblDescrizione" FontSize="Medium" LineHeight="1.15">
+                        <Label x:Name="lblDescrizione" FontSize="Medium" LineHeight="1.10">
                             <Label.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
                                     <On Platform="iOS" Value="Roboto-Light" />
                                     <On Platform="Android" Value="Roboto-Light.ttf#Roboto-Light" />
                                 </OnPlatform>
                             </Label.FontFamily>
-                        </Local:CustomLabel>
+                        </Label>
                     </StackLayout>
                 </StackLayout>
                 <!--#endregion-->
