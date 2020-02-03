@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AddaDiLeonardo.Database.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,13 @@ namespace AddaDiLeonardo.Views
         public TappaRocchetta()
         {
             InitializeComponent();
+
+            int IDTappa = 2;
+            Tappa tappa;
+            List<Sezione> Sezioni;
+            List<Contenuto> Contenuti;
+
+
 
             #region INTRODUZIONE
 
