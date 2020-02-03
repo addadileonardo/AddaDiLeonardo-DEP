@@ -7,16 +7,8 @@
              x:Class="AddaDiLeonardo.CustomControls.Accordion"
              x:Name="_accordion">
   <ContentView.Content>
-      <!--<StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>-->
 
-        <Grid RowSpacing="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"></RowDefinition>
-            </Grid.RowDefinitions>
-
+        <StackLayout Orientation="Vertical">
 
             <Frame BackgroundColor="White"
                    CornerRadius="7"
@@ -24,20 +16,9 @@
                    Padding="0,0,0,0"
                    Margin="5,5,5,0">
             <!--Header-->
-            <Grid Grid.Row="0"
-                  Padding="15,15,15,15"
-                  BackgroundColor="White">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition Height="Auto"></RowDefinition>
-                    </Grid.RowDefinitions>
-               
+                <StackLayout Padding="15,15,15,15" BackgroundColor="White" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <!--Title-->
-                    <Label Grid.Column="0" x:Name="_title"
+                    <Label  x:Name="_title"
                        HorizontalOptions="Start" VerticalOptions="Center" Margin="5,0,0,0"
                        Text="{Binding Source={x:Reference _accordion}, Path=Title}"
                        FontSize="Large" TextColor="Black">
@@ -48,38 +29,34 @@
                             </OnPlatform>
                         </Label.FontFamily>
                     </Label>
-                
-                <!--Indicator-->
-                <ContentView Grid.Column="1" x:Name="_indicator"
-                             HorizontalOptions="End" VerticalOptions="Center" Margin="0,10,0,0"
+                    <!--Indicator-->
+                <ContentView  x:Name="_indicator"
+                             HorizontalOptions="EndAndExpand" VerticalOptions="Center" Margin="0,10,0,0"
                              Content="{Binding Source={x:Reference _accordion}, Path=Indicator}">
                     
                 </ContentView>
 
                 <!--TapHandler-->
-                <Grid.GestureRecognizers>
+                <StackLayout.GestureRecognizers>
                     <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
-                </Grid.GestureRecognizers>
-            </Grid>
+                </StackLayout.GestureRecognizers>
+
+                </StackLayout>
             </Frame>
             <!--Content-->
 
-            <Grid Grid.Row="1" Margin="5,0,5,10" x:Name="_content"
-                       >
-                    <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
+            <StackLayout  Margin="5,0,5,10" x:Name="_content">
                 <Frame BorderColor="White"
                    CornerRadius="7"
                    HasShadow="False"
                    Padding="0,0,0,0">
-                    <ContentView Grid.Row="0"  BackgroundColor="White" Content="{Binding Source={x:Reference _accordion}, Path=AccordionContent}"   >
+                    <ContentView   BackgroundColor="White" Content="{Binding Source={x:Reference _accordion}, Path=AccordionContent}"   >
                     </ContentView>
                 </Frame>
-            </Grid>
-                
+            </StackLayout>
 
-        </Grid>
+        </StackLayout>
+
       
       
   </ContentView.Content>
