@@ -109,7 +109,9 @@
     <BundleResource Include="Resources\FontAwesome5Brands.otf" />
     <BundleResource Include="Resources\FontAwesome5Regular.otf" />
     <BundleResource Include="Resources\FontAwesome5Solid.otf" />
-    <BundleResource Include="Resources\Italian.db3" />
+    <BundleResource Include="Resources\Italian.db3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
