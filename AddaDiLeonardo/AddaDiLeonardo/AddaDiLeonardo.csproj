@@ -42,8 +42,12 @@
     <None Remove="Images\Icons\marker.png" />
     <None Remove="Images\Icons\pin.png" />
     <None Remove="Images\map.png" />
+    <None Remove="Images\Map\centrale.png" />
     <None Remove="Images\Map\MappaRaul.png" />
+    <None Remove="Images\Map\ponte.png" />
     <None Remove="Images\Map\rectanglePosition.png" />
+    <None Remove="Images\Map\santuario.png" />
+    <None Remove="Images\Map\traghetto.png" />
     <None Remove="Images\marker.png" />
     <None Remove="Images\settings.png" />
   </ItemGroup>
@@ -86,8 +90,12 @@
     <EmbeddedResource Include="Images\Icons\marker.png" />
     <EmbeddedResource Include="Images\Icons\pin.png" />
     <EmbeddedResource Include="Images\Icons\settings.png" />
+    <EmbeddedResource Include="Images\Map\centrale.png" />
     <EmbeddedResource Include="Images\Map\MappaRaul.png" />
+    <EmbeddedResource Include="Images\Map\ponte.png" />
     <EmbeddedResource Include="Images\Map\rectanglePosition.png" />
+    <EmbeddedResource Include="Images\Map\santuario.png" />
+    <EmbeddedResource Include="Images\Map\traghetto.png" />
   </ItemGroup>
 
   <ItemGroup>

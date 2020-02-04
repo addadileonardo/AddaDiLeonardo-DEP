@@ -16,11 +16,11 @@ namespace AddaDiLeonardo.Views
 		{
 			InitializeComponent ();
 			ImageMap.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Map.MappaRaul.png");
-			ImagePonte.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Map.rectanglePosition.png"); 
-			ImageCentrali.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Map.rectanglePosition.png");
+			ImagePonte.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Map.ponte.png"); 
+			ImageCentrali.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Map.centrale.png");
 			ImageFiume.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Map.rectanglePosition.png");
-			ImageRocchetta.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Map.rectanglePosition.png");
-			ImageTraghetto.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Map.rectanglePosition.png");
+			ImageRocchetta.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Map.santuario.png");
+			ImageTraghetto.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Map.traghetto.png");
 		}
 
         private object syncLockTappa = new object();
