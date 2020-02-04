@@ -52,6 +52,19 @@
                             </Label.FontFamily>
                         </Label>
 
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span FontAttributes="Bold" ForegroundColor="Black" Text="Grassetto   ">
+                                    </Span>
+                                    <Span FontAttributes="None">
+                                        <Span.Text>
+                                            Normale
+                                        </Span.Text>
+                                    </Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
 
                         <Label x:Name="lblDescrizione" FontSize="Medium" LineHeight="1.10">
                             <Label.FontFamily>
