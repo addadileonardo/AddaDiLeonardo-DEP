@@ -58,7 +58,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Images\backgroundFadeBlack.png" />
+    <EmbeddedResource Include="Images\Home\backgroundFadeBlack.png" />
     <EmbeddedResource Include="Images\Centrale.jpg" />
     <EmbeddedResource Include="Images\Centrali\Centrale_Bertini.jpg" />
     <EmbeddedResource Include="Images\Fiume.jpg" />
