@@ -17,7 +17,7 @@
                         Type=RelativeToParent,
                         Property=Height,
                         Factor=1}"/>
-            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" ClassId="ponte" x:Name="ImagePonte"  
+            <Image Aspect="AspectFill" WidthRequest="45" HeightRequest="45" ClassId="ponte" x:Name="ImagePonte"  
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToView,
                         ElementName=ImageMap,
@@ -36,7 +36,7 @@
                             NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
             </Image>
-            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" ClassId="rocchetta" x:Name="ImageRocchetta"  
+            <Image Aspect="AspectFill" WidthRequest="45" HeightRequest="45" ClassId="rocchetta" x:Name="ImageRocchetta"  
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToView,
                         ElementName=ImageMap,
@@ -55,12 +55,12 @@
                             NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
             </Image>
-            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" ClassId="traghetto" x:Name="ImageTraghetto"  
+            <Image Aspect="AspectFill" WidthRequest="45" HeightRequest="45" ClassId="traghetto" x:Name="ImageTraghetto"  
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToView,
                         ElementName=ImageMap,
 				        Property=Width,
-				        Factor=0.317,
+				        Factor=0.31,
                         Constant= 15}"
                         RelativeLayout.YConstraint="{ConstraintExpression
 				        Type=RelativeToView,
@@ -74,12 +74,12 @@
                             NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
             </Image>
-            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" ClassId="centrali" x:Name="ImageCentrali"  
+            <Image Aspect="AspectFill" WidthRequest="45" HeightRequest="45" ClassId="centrali" x:Name="ImageCentrali"  
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToView,
                         ElementName=ImageMap,
 				        Property=Width,
-				        Factor=0.649,
+				        Factor=0.64,
                         Constant= 15}"
                         RelativeLayout.YConstraint="{ConstraintExpression
 				        Type=RelativeToView,
@@ -93,26 +93,6 @@
                             NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
             </Image>
-            <Image Aspect="AspectFill" WidthRequest="30" HeightRequest="30" ClassId="fiume" x:Name="ImageFiume"  
-                        RelativeLayout.XConstraint="{ConstraintExpression
-				        Type=RelativeToView,
-                        ElementName=ImageMap,
-				        Property=Width,
-				        Factor=0.312,
-                        Constant= 15}"
-                        RelativeLayout.YConstraint="{ConstraintExpression
-				        Type=RelativeToView,
-                        ElementName=ImageMap,
-				        Property=Height,
-				        Factor=0.276,
-                        Constant= 15 }">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer
-                            Tapped="OnImageNameTapped"
-                            NumberOfTapsRequired="1" />
-                </Image.GestureRecognizers>
-            </Image>
-
 
 
         </RelativeLayout>
