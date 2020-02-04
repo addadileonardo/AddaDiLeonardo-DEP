@@ -15,6 +15,12 @@
     <None Remove="Images\Centrali\Centrale_Bertini.jpg" />
     <None Remove="Images\Fiume.jpg" />
     <None Remove="Images\home.png" />
+    <None Remove="Images\Home\backgroundv1.jpg" />
+    <None Remove="Images\Home\Play.png" />
+    <None Remove="Images\Home\rocchetta1.png" />
+    <None Remove="Images\Home\rocchetta2.png" />
+    <None Remove="Images\Home\rocchetta3.png" />
+    <None Remove="Images\Home\rocchetta4.png" />
     <None Remove="Images\Icons\arrow.png" />
     <None Remove="Images\Icons\arrow2.png" />
     <None Remove="Images\Icons\circle-down.png" />
@@ -34,10 +40,6 @@
     <None Remove="Images\Rocchetta\leonardo.jpeg" />
     <None Remove="Images\Rocchetta\rocchetta-ga.jpg" />
     <None Remove="Images\Rocchetta\Rocchetta.jpg" />
-    <None Remove="Images\Rocchetta\rocchetta1.png" />
-    <None Remove="Images\Rocchetta\rocchetta2.png" />
-    <None Remove="Images\Rocchetta\rocchetta3.png" />
-    <None Remove="Images\Rocchetta\rocchetta4.png" />
     <None Remove="Images\Rocchetta\rocchetta_1.jpg" />
     <None Remove="Images\Rocchetta\tre_corni.jpeg" />
     <None Remove="Images\Rocchetta\tre_corni_privata.jpg" />
@@ -49,12 +51,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Images\Home\backgroundv1.jpg" />
+    <EmbeddedResource Include="Images\Home\Play.png" />
+    <EmbeddedResource Include="Images\Home\rocchetta1.png" />
+    <EmbeddedResource Include="Images\Home\rocchetta2.png" />
+    <EmbeddedResource Include="Images\Home\rocchetta3.png" />
+    <EmbeddedResource Include="Images\Home\rocchetta4.png" />
     <EmbeddedResource Include="Images\Rocchetta\fiume_1.jpeg" />
     <EmbeddedResource Include="Images\Rocchetta\fiume_2.jpeg" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Images\backgroundFadeBlack.png" />
+    <EmbeddedResource Include="Images\Home\backgroundFadeBlack.png" />
     <EmbeddedResource Include="Images\Centrale.jpg" />
     <EmbeddedResource Include="Images\Centrali\Centrale_Bertini.jpg" />
     <EmbeddedResource Include="Images\Fiume.jpg" />
@@ -76,10 +84,6 @@
     <EmbeddedResource Include="Images\Rocchetta\leonardo.jpeg" />
     <EmbeddedResource Include="Images\Rocchetta\rocchetta-ga.jpg" />
     <EmbeddedResource Include="Images\Rocchetta\Rocchetta.jpg" />
-    <EmbeddedResource Include="Images\Rocchetta\rocchetta1.png" />
-    <EmbeddedResource Include="Images\Rocchetta\rocchetta2.png" />
-    <EmbeddedResource Include="Images\Rocchetta\rocchetta3.png" />
-    <EmbeddedResource Include="Images\Rocchetta\rocchetta4.png" />
     <EmbeddedResource Include="Images\Rocchetta\rocchetta_1.jpg" />
     <EmbeddedResource Include="Images\Rocchetta\tre_corni.jpeg" />
     <EmbeddedResource Include="Images\Rocchetta\tre_corni_privata.jpg" />
