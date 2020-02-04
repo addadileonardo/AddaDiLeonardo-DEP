@@ -10,6 +10,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Content\Rocchetta\img_tappa.jpg" />
+    <None Remove="Content\Rocchetta\Sezione_1\fiume_1.jpeg" />
+    <None Remove="Content\Rocchetta\Sezione_1\fiume_2.jpeg" />
+    <None Remove="Content\Rocchetta\Sezione_1\fiume_3.JPG" />
+    <None Remove="Content\Rocchetta\Sezione_1\fiume_4.jpeg" />
+    <None Remove="Content\Rocchetta\Sezione_2\Rocchetta_1.jpeg" />
+    <None Remove="Content\Rocchetta\Sezione_2\Rocchetta_2.JPG" />
+    <None Remove="Content\Rocchetta\Sezione_2\Rocchetta_3.jpg" />
+    <None Remove="Content\Rocchetta\Sezione_2\Rocchetta_4.jpg" />
+    <None Remove="Content\Rocchetta\Sezione_2\Rocchetta_5.jpg" />
+    <None Remove="Content\Rocchetta\Sezione_2\Rocchetta_ga.jpg" />
+    <None Remove="Content\Rocchetta\Sezione_2\Rocchetta_Leonardo.jpeg" />
+    <None Remove="Content\Rocchetta\Sezione_3\TreCorni_1.jpeg" />
+    <None Remove="Content\Rocchetta\Sezione_3\TreCorni_2.jpg" />
+    <None Remove="Content\Rocchetta\Sezione_3\TreCorni_3.jpg" />
+    <None Remove="Content\Rocchetta\Sezione_3\Vergine.jpg" />
+    <None Remove="Content\Rocchetta\Sezione_4\Vergine.jpg" />
     <None Remove="Images\backgroundFadeBlack.png" />
     <None Remove="Images\Centrale.jpg" />
     <None Remove="Images\Centrali\Centrale_Bertini.jpg" />
@@ -51,12 +68,31 @@
   </ItemGroup>
 
   <ItemGroup>
+
+    <EmbeddedResource Include="Content\Rocchetta\img_tappa.jpg" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_1\fiume_1.jpeg" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_1\fiume_2.jpeg" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_1\fiume_3.JPG" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_1\fiume_4.jpeg" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_2\Rocchetta_ga.jpg" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_2\Rocchetta_1.jpeg" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_2\Rocchetta_2.JPG" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_2\Rocchetta_3.jpg" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_2\Rocchetta_4.jpg" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_2\Rocchetta_5.jpg" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_2\Rocchetta_Leonardo.jpeg" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_4\TreCorni_1.jpeg" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_4\TreCorni_2.jpg" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_4\TreCorni_3.jpg" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_4\Vergine.jpg" />
+
     <EmbeddedResource Include="Images\Home\backgroundv1.jpg" />
     <EmbeddedResource Include="Images\Home\Play.png" />
     <EmbeddedResource Include="Images\Home\rocchetta1.png" />
     <EmbeddedResource Include="Images\Home\rocchetta2.png" />
     <EmbeddedResource Include="Images\Home\rocchetta3.png" />
     <EmbeddedResource Include="Images\Home\rocchetta4.png" />
+
     <EmbeddedResource Include="Images\Rocchetta\fiume_1.jpeg" />
     <EmbeddedResource Include="Images\Rocchetta\fiume_2.jpeg" />
   </ItemGroup>
@@ -134,5 +170,10 @@
     <EmbeddedResource Update="Views\TappaTraghetto.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Content\Rocchetta\Sezione_3\" />
+    <Folder Include="Content\Rocchetta\Sezione_5\" />
   </ItemGroup>
 </Project>

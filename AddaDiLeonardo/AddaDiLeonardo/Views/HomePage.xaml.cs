@@ -94,7 +94,7 @@ namespace AddaDiLeonardo.Views
 
             try
             {
-                await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1PJ5AqNfCRwfOWWrZ-l9Gp6GOSILWVhDV"));
+                await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1-ybKXJo6ZUxK-OAVCftXiX0gq7IOpbQB"));
             }
             catch (Exception ex)
             {
