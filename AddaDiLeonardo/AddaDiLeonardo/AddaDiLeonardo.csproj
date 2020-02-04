@@ -30,11 +30,15 @@
     <None Remove="Images\backgroundFadeBlack.png" />
     <None Remove="Images\home.png" />
     <None Remove="Images\Home\backgroundv1.jpg" />
+    <None Remove="Images\Home\centrale.png" />
     <None Remove="Images\Home\Play.png" />
+    <None Remove="Images\Home\ponte.png" />
+    <None Remove="Images\Home\rocchetta.png" />
     <None Remove="Images\Home\rocchetta1.png" />
     <None Remove="Images\Home\rocchetta2.png" />
     <None Remove="Images\Home\rocchetta3.png" />
     <None Remove="Images\Home\rocchetta4.png" />
+    <None Remove="Images\Home\traghetto.png" />
     <None Remove="Images\Icons\arrow.png" />
     <None Remove="Images\Icons\arrow2.png" />
     <None Remove="Images\Icons\circle-down.png" />
@@ -76,7 +80,11 @@
     <EmbeddedResource Include="Content\Rocchetta\Sezione_4\Vergine.jpg" />
 
     <EmbeddedResource Include="Images\Home\backgroundv1.jpg" />
+
+    <EmbeddedResource Include="Images\Home\centrale.png" />
     <EmbeddedResource Include="Images\Home\Play.png" />
+    <EmbeddedResource Include="Images\Home\ponte.png" />
+    <EmbeddedResource Include="Images\Home\rocchetta.png" />
     <EmbeddedResource Include="Images\Home\rocchetta1.png" />
     <EmbeddedResource Include="Images\Home\rocchetta2.png" />
     <EmbeddedResource Include="Images\Home\rocchetta3.png" />
@@ -85,6 +93,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Images\Home\backgroundFadeBlack.png" />
+    <EmbeddedResource Include="Images\Home\traghetto.png" />
     <EmbeddedResource Include="Images\Icons\arrow.png" />
     <EmbeddedResource Include="Images\Icons\arrow2.png" />
     <EmbeddedResource Include="Images\Icons\circle-down.png" />
