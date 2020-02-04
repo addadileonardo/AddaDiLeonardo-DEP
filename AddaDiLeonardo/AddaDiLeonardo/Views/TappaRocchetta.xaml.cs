@@ -46,20 +46,22 @@ namespace AddaDiLeonardo.Views
             //titolo: poetica del fiume, richiamo a sacro e femminile
             stackContenuto_0.Children.Add(new CustomLabelTitle { Text = Contenuti[0].Testo });
             //primo paragrafo
-            stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[1].Testo });
-            stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[2].Testo });
-            stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[3].Testo });
+
+            //stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[1].Testo });
+            stackContenuto_0.Children.Add(FormattaContenuto(Contenuti[1].Testo));
+            stackContenuto_0.Children.Add(FormattaContenuto(Contenuti[2].Testo));
+            stackContenuto_0.Children.Add(FormattaContenuto(Contenuti[3].Testo));
 
             
             //titolo: Il fiume, dinamico e sacro
             stackContenuto_0.Children.Add(new CustomLabelTitle { Text = Contenuti[4].Testo });
             stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Rocchetta.fiume_1.jpeg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0,10,0,10) });
             //secondo paragrafo
-            stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[5].Testo });
-            stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[6].Testo });
-            stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[7].Testo });
-            stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[8].Testo });
-            stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[9].Testo });
+            stackContenuto_0.Children.Add(FormattaContenuto(Contenuti[5].Testo));
+            stackContenuto_0.Children.Add(FormattaContenuto(Contenuti[6].Testo));
+            stackContenuto_0.Children.Add(FormattaContenuto(Contenuti[7].Testo));
+            stackContenuto_0.Children.Add(FormattaContenuto(Contenuti[8].Testo));
+            stackContenuto_0.Children.Add(FormattaContenuto(Contenuti[9].Testo));
             #endregion
 
             #region SECTION 2
@@ -129,6 +131,50 @@ namespace AddaDiLeonardo.Views
             imgSection5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa1.adda.jpg");
 
             #endregion
+        }
+
+
+        /*
+         * !!Attenzione!!
+         * Qualunque cosa succeda al mondo o all'universo intero,
+         * non devi assolutamente toccare ciò che si trova oltre questo commento.
+         * Chiunque osi toccare questo pezzo di codice sarà maledetto a vita e
+         * non avrà mai pace eterna.
+         * Nel caso il codice smetta di funzionare puoi considerare il resto della
+         * tua vita come inutile e dovrai aspettare un'intelligenza extraterrestre
+         * o superiore per trovare un'altra soluzione.
+         * 
+         * Grazie, buona giornata.
+         */
+        private CustomLabel FormattaContenuto(string contenuto)
+        {
+            CustomLabel label = new CustomLabel();
+            FormattedString formatted = new FormattedString();
+            if (contenuto.Contains("**"))
+            {
+                string[] splits = contenuto.Split('*');
+                for (int x = 0; x < splits.Length; x++)
+                {
+                    Span span = new Span() { Text = splits[x] };
+                    if (x == 0 || x == splits.Length - 1)
+                    {
+                        formatted.Spans.Add(span);
+                        continue;
+                    }
+
+                    if (splits[x - 1] == "" && splits[x + 1] == "")
+                    {
+                        span.FontAttributes = FontAttributes.Bold;
+                        span.ForegroundColor = Color.Black;
+                    }
+                    formatted.Spans.Add(span);
+                }
+                label.FormattedText = formatted;
+            }
+            else
+                label.Text = contenuto;
+
+            return label;
         }
     }
 }
