@@ -29,7 +29,7 @@
 				    Factor=0.70 }" />
 
                 <!-- Dipendenza HEIGHT -> spacing (yConstraint) -->
-                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Rocchetta.rocchetta3.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step1" x:Name="step1"  
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.rocchetta3.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step1" x:Name="step1"  
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToParent,
 				        Property=Width,
@@ -47,7 +47,7 @@
                             NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Rocchetta.rocchetta3.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step2" x:Name="step2"
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.rocchetta3.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step2" x:Name="step2"
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToParent,
 				        Property=Width,
@@ -65,7 +65,7 @@
                             NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Rocchetta.rocchetta3.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step3" x:Name="step3"
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.rocchetta3.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step3" x:Name="step3"
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToParent,
 				        Property=Width,
@@ -83,7 +83,7 @@
                             NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Rocchetta.rocchetta3.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step4" x:Name="step4"
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.rocchetta3.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step4" x:Name="step4"
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToParent,
 				        Property=Width,
