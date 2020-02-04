@@ -7,9 +7,9 @@
 
     <ContentPage.Content>
         <ScrollView BackgroundColor="Black">
-            <RelativeLayout Padding="0, 0, 0, 30">
+            <RelativeLayout Padding="0, 0, 0, 60">
 
-                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.backgroundv1.jpg}" Aspect="AspectFill" x:Name="background"
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.background.png}" Aspect="AspectFill" x:Name="background"
 			        RelativeLayout.WidthConstraint="{ConstraintExpression
 				    Type=RelativeToParent,
 			        Property=Width,
@@ -42,7 +42,7 @@
 				    Type=RelativeToView,
                     ElementName=background,
 				    Property=Height,
-				    Factor=0.64 }" />
+				    Factor=0.69 }" />
 
                 <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.Play.png}" WidthRequest="20" HeightRequest="20" x:Name="Play"
                     RelativeLayout.XConstraint="{ConstraintExpression
@@ -54,8 +54,8 @@
 				    Type=RelativeToView,
                     ElementName=background,
 				    Property=Height,
-				    Factor=0.66 }" >
-                    <Image.GestureRecognizers>
+				    Factor=0.707 }" >
+                <Image.GestureRecognizers>
                         <TapGestureRecognizer
                             Tapped="btnRiproduci_Clicked"
                             NumberOfTapsRequired="1" />

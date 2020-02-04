@@ -29,6 +29,7 @@
     <None Remove="Content\Rocchetta\Sezione_4\Vergine.jpg" />
     <None Remove="Images\backgroundFadeBlack.png" />
     <None Remove="Images\home.png" />
+    <None Remove="Images\Home\background.png" />
     <None Remove="Images\Home\backgroundv1.jpg" />
     <None Remove="Images\Home\centrale.png" />
     <None Remove="Images\Home\Play.png" />
@@ -78,6 +79,7 @@
     <EmbeddedResource Include="Content\Rocchetta\Sezione_4\TreCorni_2.jpg" />
     <EmbeddedResource Include="Content\Rocchetta\Sezione_4\TreCorni_3.jpg" />
     <EmbeddedResource Include="Content\Rocchetta\Sezione_4\Vergine.jpg" />
+    <EmbeddedResource Include="Images\Home\background.png" />
 
     <EmbeddedResource Include="Images\Home\backgroundv1.jpg" />
 
@@ -92,7 +94,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Images\Home\backgroundFadeBlack.png" />
     <EmbeddedResource Include="Images\Home\traghetto.png" />
     <EmbeddedResource Include="Images\Icons\arrow.png" />
     <EmbeddedResource Include="Images\Icons\arrow2.png" />
