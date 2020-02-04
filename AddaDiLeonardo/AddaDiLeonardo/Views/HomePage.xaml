@@ -7,7 +7,7 @@
 
     <ContentPage.Content>
         <ScrollView BackgroundColor="Black">
-            <RelativeLayout Padding="0, 0, 0, 60">
+            <RelativeLayout Padding="0, 0, 0, 40">
 
                 <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.background.png}" Aspect="AspectFill" x:Name="background"
 			        RelativeLayout.WidthConstraint="{ConstraintExpression
@@ -15,7 +15,7 @@
 			        Property=Width,
 				    Factor=1}" />
 
-                <BoxView CornerRadius="60,0,0,0" x:Name="Bianco" HeightRequest="250" BackgroundColor="#F8F8F8" 
+                <BoxView CornerRadius="60,0,0,0" x:Name="box" HeightRequest="250" BackgroundColor="#F8F8F8" 
                     RelativeLayout.YConstraint="{ConstraintExpression
                     Type=RelativeToView,
                     ElementName=background,
@@ -71,10 +71,10 @@
                         Constant= -165}"
                         RelativeLayout.YConstraint="{ConstraintExpression
 				        Type=RelativeToView,
-                        ElementName=btnRiproduci,
+                        ElementName=box,
 				        Property=Y,
 				        Factor=1,
-                        Constant= 85 }">
+                        Constant= 30 }">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer
                             Tapped="OnImageNameTapped"
