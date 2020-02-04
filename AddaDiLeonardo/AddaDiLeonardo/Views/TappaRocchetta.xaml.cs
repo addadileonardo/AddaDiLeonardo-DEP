@@ -139,10 +139,10 @@ namespace AddaDiLeonardo.Views
             stackContenuto_4.Children.Add(new CustomLabelTitle { Text = Contenuti[0].Testo });
             stackContenuto_4.Children.Add(new CustomLabel { Text = Contenuti[1].Testo });
             stackContenuto_4.Children.Add(new CustomLabel { Text = Contenuti[2].Testo });
-            //riccioli
+            //stackContenuto_4.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_5.Riccioli.png"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 10, 0, 10) });
             stackContenuto_4.Children.Add(new CustomLabelTitle { Text = Contenuti[3].Testo });
             stackContenuto_4.Children.Add(new CustomLabel { Text = Contenuti[4].Testo });
-
+            //stackContenuto_4.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_5.Grotta.png"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 10, 0, 10) });
             stackContenuto_4.Children.Add(new CustomLabel { Text = Contenuti[5].Testo });
 
             stackContenuto_4.Children.Add(new CustomLabelTitle { Text = Contenuti[6].Testo });
@@ -167,6 +167,7 @@ namespace AddaDiLeonardo.Views
          * o superiore per trovare un'altra soluzione.
          * 
          * Grazie, buona giornata.
+         * RR
          */
         private CustomLabel FormattaContenuto(string contenuto)
         {
@@ -197,6 +198,35 @@ namespace AddaDiLeonardo.Views
                 label.Text = contenuto;
 
             return label;
+        }
+
+        private object syncLockPlayer = new object();
+        bool isInCallPlayer = false;
+
+        private async void imgTappa_Clicked(object sender, EventArgs e)
+        {
+            lock (syncLockPlayer)
+            {
+                if (isInCallPlayer)
+                    return;
+                isInCallPlayer = true;
+            }
+
+            try
+            {
+                await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1-ybKXJo6ZUxK-OAVCftXiX0gq7IOpbQB"));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                lock (syncLockPlayer)
+                {
+                    isInCallPlayer = false;
+                }
+            }
         }
     }
 }

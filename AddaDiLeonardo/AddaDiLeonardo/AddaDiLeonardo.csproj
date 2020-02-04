@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Content\Rocchetta\imgTappa.png" />
     <None Remove="Content\Rocchetta\img_tappa.jpg" />
     <None Remove="Content\Rocchetta\Sezione_1\fiume_1.jpeg" />
     <None Remove="Content\Rocchetta\Sezione_1\fiume_2.jpeg" />
@@ -27,6 +28,8 @@
     <None Remove="Content\Rocchetta\Sezione_3\TreCorni_3.jpg" />
     <None Remove="Content\Rocchetta\Sezione_3\Vergine.jpg" />
     <None Remove="Content\Rocchetta\Sezione_4\Vergine.jpg" />
+    <None Remove="Content\Rocchetta\Sezione_5\Grotta.png" />
+    <None Remove="Content\Rocchetta\Sezione_5\Riccioli.png" />
     <None Remove="Images\backgroundFadeBlack.png" />
     <None Remove="Images\Centrale.jpg" />
     <None Remove="Images\Centrali\Centrale_Bertini.jpg" />
@@ -69,6 +72,8 @@
 
   <ItemGroup>
 
+    <EmbeddedResource Include="Content\Rocchetta\imgTappa.png" />
+
     <EmbeddedResource Include="Content\Rocchetta\img_tappa.jpg" />
     <EmbeddedResource Include="Content\Rocchetta\Sezione_1\fiume_1.jpeg" />
     <EmbeddedResource Include="Content\Rocchetta\Sezione_1\fiume_2.jpeg" />
@@ -85,6 +90,8 @@
     <EmbeddedResource Include="Content\Rocchetta\Sezione_4\TreCorni_2.jpg" />
     <EmbeddedResource Include="Content\Rocchetta\Sezione_4\TreCorni_3.jpg" />
     <EmbeddedResource Include="Content\Rocchetta\Sezione_4\Vergine.jpg" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_5\Grotta.png" />
+    <EmbeddedResource Include="Content\Rocchetta\Sezione_5\Riccioli.png" />
 
     <EmbeddedResource Include="Images\Home\backgroundv1.jpg" />
     <EmbeddedResource Include="Images\Home\Play.png" />
@@ -174,6 +181,5 @@
 
   <ItemGroup>
     <Folder Include="Content\Rocchetta\Sezione_3\" />
-    <Folder Include="Content\Rocchetta\Sezione_5\" />
   </ItemGroup>
 </Project>
