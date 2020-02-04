@@ -9,27 +9,55 @@
         <ScrollView BackgroundColor="Black">
             <RelativeLayout Padding="0, 0, 0, 30">
 
-                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.backgroundFadeBlack.png}" Aspect="AspectFill" x:Name="background"
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.backgroundv1.jpg}" Aspect="AspectFill" x:Name="background"
 			        RelativeLayout.WidthConstraint="{ConstraintExpression
 				    Type=RelativeToParent,
 			        Property=Width,
 				    Factor=1}" />
 
-                <Button Text="Guarda ora" BackgroundColor="Black" TextColor="White" BorderWidth="2" CornerRadius="10" BorderColor="White" WidthRequest="150" HeightRequest="40" x:Name="btnRiproduci"
-                        Clicked="btnRiproduci_Clicked"
+                <BoxView CornerRadius="60,0,0,0" x:Name="Bianco" HeightRequest="250" BackgroundColor="#F8F8F8" 
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=background,
+                    Property=Height,
+                    Factor=1,
+                    Constant=-140}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Width,
+                    Factor=1}"
+                    RelativeLayout.HeightConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Height,
+                    Factor=1}"/>
+
+                <Button Text="Riproduci" BackgroundColor="Transparent" TextColor="White"  CornerRadius="20"  WidthRequest="150" HeightRequest="40" x:Name="btnRiproduci"
+                    Clicked="btnRiproduci_Clicked"
                     RelativeLayout.XConstraint="{ConstraintExpression
 				    Type=RelativeToParent,
 				    Property=Width,
 				    Factor=0.5,
-                    Constant= -75}"
+                    Constant= 30}"
                     RelativeLayout.YConstraint="{ConstraintExpression
 				    Type=RelativeToView,
                     ElementName=background,
 				    Property=Height,
-				    Factor=0.70 }" />
+				    Factor=0.64 }" />
+
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.Play.png}" WidthRequest="20" HeightRequest="20" x:Name="Play"
+                    RelativeLayout.XConstraint="{ConstraintExpression
+				    Type=RelativeToParent,
+				    Property=Width,
+				    Factor=0.5,
+                    Constant= 147}"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+				    Type=RelativeToView,
+                    ElementName=background,
+				    Property=Height,
+				    Factor=0.66 }" />
 
                 <!-- Dipendenza HEIGHT -> spacing (yConstraint) -->
-                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.rocchetta3.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step1" x:Name="step1"  
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.rocchetta1.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step1" x:Name="step1"  
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToParent,
 				        Property=Width,
@@ -47,7 +75,8 @@
                             NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.rocchetta3.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step2" x:Name="step2"
+                
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.rocchetta2.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step2" x:Name="step2"
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToParent,
 				        Property=Width,
@@ -65,7 +94,7 @@
                             NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.rocchetta3.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step3" x:Name="step3"
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.rocchetta1.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step3" x:Name="step3"
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToParent,
 				        Property=Width,
@@ -83,7 +112,7 @@
                             NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
                 </Image>
-                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.rocchetta3.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step4" x:Name="step4"
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.rocchetta2.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step4" x:Name="step4"
                         RelativeLayout.XConstraint="{ConstraintExpression
 				        Type=RelativeToParent,
 				        Property=Width,
