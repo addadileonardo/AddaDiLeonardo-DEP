@@ -7,7 +7,7 @@
 
     <ContentPage.Content>
         <ScrollView BackgroundColor="Black">
-            <RelativeLayout Padding="0, 0, 0, 40">
+            <RelativeLayout Padding="0, 0, 0, 50">
 
                 <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.background.png}" Aspect="AspectFill" x:Name="background"
 			        RelativeLayout.WidthConstraint="{ConstraintExpression
@@ -74,7 +74,7 @@
                         ElementName=box,
 				        Property=Y,
 				        Factor=1,
-                        Constant= 30 }">
+                        Constant= 40 }">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer
                             Tapped="OnImageNameTapped"
