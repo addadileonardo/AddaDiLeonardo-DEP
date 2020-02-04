@@ -60,7 +60,7 @@
 				        Type=RelativeToView,
                         ElementName=ImageMap,
 				        Property=Width,
-				        Factor=0.317,
+				        Factor=0.31,
                         Constant= 15}"
                         RelativeLayout.YConstraint="{ConstraintExpression
 				        Type=RelativeToView,
@@ -79,7 +79,7 @@
 				        Type=RelativeToView,
                         ElementName=ImageMap,
 				        Property=Width,
-				        Factor=0.649,
+				        Factor=0.64,
                         Constant= 15}"
                         RelativeLayout.YConstraint="{ConstraintExpression
 				        Type=RelativeToView,
@@ -93,26 +93,6 @@
                             NumberOfTapsRequired="1" />
                 </Image.GestureRecognizers>
             </Image>
-            <Image Aspect="AspectFill" WidthRequest="50" HeightRequest="50" ClassId="fiume" x:Name="ImageFiume"  
-                        RelativeLayout.XConstraint="{ConstraintExpression
-				        Type=RelativeToView,
-                        ElementName=ImageMap,
-				        Property=Width,
-				        Factor=0.312,
-                        Constant= 15}"
-                        RelativeLayout.YConstraint="{ConstraintExpression
-				        Type=RelativeToView,
-                        ElementName=ImageMap,
-				        Property=Height,
-				        Factor=0.276,
-                        Constant= 15 }">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer
-                            Tapped="OnImageNameTapped"
-                            NumberOfTapsRequired="1" />
-                </Image.GestureRecognizers>
-            </Image>
-
 
 
         </RelativeLayout>

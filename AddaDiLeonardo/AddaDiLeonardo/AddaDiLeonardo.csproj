@@ -43,11 +43,15 @@
     <None Remove="Images\Icons\pin.png" />
     <None Remove="Images\map.png" />
     <None Remove="Images\Map\centrale.png" />
+    <None Remove="Images\Map\centraleW.png" />
     <None Remove="Images\Map\MappaRaul.png" />
     <None Remove="Images\Map\ponte.png" />
+    <None Remove="Images\Map\ponteW.png" />
     <None Remove="Images\Map\rectanglePosition.png" />
     <None Remove="Images\Map\santuario.png" />
+    <None Remove="Images\Map\santuarioW.png" />
     <None Remove="Images\Map\traghetto.png" />
+    <None Remove="Images\Map\traghettoW.png" />
     <None Remove="Images\marker.png" />
     <None Remove="Images\settings.png" />
   </ItemGroup>
@@ -93,9 +97,12 @@
     <EmbeddedResource Include="Images\Map\centrale.png" />
     <EmbeddedResource Include="Images\Map\MappaRaul.png" />
     <EmbeddedResource Include="Images\Map\ponte.png" />
+    <EmbeddedResource Include="Images\Map\ponteW.png" />
     <EmbeddedResource Include="Images\Map\rectanglePosition.png" />
     <EmbeddedResource Include="Images\Map\santuario.png" />
+    <EmbeddedResource Include="Images\Map\santuarioW.png" />
     <EmbeddedResource Include="Images\Map\traghetto.png" />
+    <EmbeddedResource Include="Images\Map\traghettoW.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -144,5 +151,9 @@
   <ItemGroup>
     <Folder Include="Content\Rocchetta\Sezione_3\" />
     <Folder Include="Content\Rocchetta\Sezione_5\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Map\centraleW.png" />
   </ItemGroup>
 </Project>
