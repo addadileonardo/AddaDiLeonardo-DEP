@@ -130,6 +130,9 @@
                     <local:Accordion.AccordionContent>
                         <StackLayout Orientation="Vertical" Spacing="5">
                             <Image x:Name="imgSection5" Aspect="AspectFill"></Image>
+                            <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_4">
+
+                            </StackLayout>
                         </StackLayout>
                     </local:Accordion.AccordionContent>
                 </local:Accordion>
