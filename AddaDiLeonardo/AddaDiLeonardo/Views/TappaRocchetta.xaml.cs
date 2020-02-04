@@ -22,31 +22,111 @@ namespace AddaDiLeonardo.Views
             List<Sezione> Sezioni;
             List<Contenuto> Contenuti;
 
+            var db = App.Database;
 
+            tappa = db.GetTappaAsync(IDTappa).Result;
+            Sezioni = db.GetSezioneAsync(IDTappa).Result;
 
             #region INTRODUZIONE
 
-            imgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Rocchetta.IMG_9730.JPG");
-            iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.marker.png");
-            lblTitolo.Text = "Vergine delle rocce e Rocchetta";
-            lblSottotitolo.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium sit amet felis eu iaculis. Aliquam condimentum metus a felis luctus";
-            lblDescrizione.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium sit amet felis eu iaculis. Aliquam condimentum metus a felis luctus dignissim ac a est. Proin rhoncus ligula blandit, egestas lectus eget, dignissim ligula. Nunc tellus nunc, auctor sed ex vitae, feugiat iaculis tortor. Morbi ullamcorper tempus eros eu molestie. Aliquam erat volutpat. Donec sed fringilla ligula, vel euismod enim. Suspendisse non nunc pellentesque, pretium mi ut, suscipit tellus. Nulla tincidunt libero dui, laoreet ornare leo auctor non. In fermentum erat non ligula tempor faucibus. Vivamus at maximus justo. Nam lacinia lobortis nisi et volutpat. Quisque et lectus et velit convallis dapibus. Nunc lacinia vitae magna lacinia venenatis. Aliquam in nunc lacus.";
+            imgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Rocchetta.img_tappa.jpg");
+            iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.pin.png");
+            lblTitolo.Text = tappa.Titolo;
+            lblSottotitolo.Text = tappa.Sottotitolo;
+            lblDescrizione.Text = tappa.Descrizione;
 
             #endregion
 
             #region SECTION 1
 
-            //Accordion0.Title = Sezioni[0].Titolo;
-            //Contenuti = db.GetContenutoAsync(Sezioni[0].ID).Result.OrderBy(c => c.Indice).ToList();
+            Accordion0.Title = Sezioni[0].Titolo;
+            Contenuti = db.GetContenutoAsync(Sezioni[0].ID).Result.OrderBy(c => c.Indice).ToList();
 
-            imgSection1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa1.adda.jpg");
-            lblSection1_1.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium sit amet felis eu iaculis. Aliquam condimentum metus a felis luctus dignissim ac a est. Proin rhoncus ligula blandit, egestas lectus eget, dignissim ligula. Nunc tellus nunc, auctor sed ex vitae, feugiat iaculis tortor. Morbi ullamcorper tempus eros eu molestie. Aliquam erat volutpat. Donec sed fringilla ligula, vel euismod enim. Suspendisse non nunc pellentesque, pretium mi ut, suscipit tellus. Nulla tincidunt libero dui, laoreet ornare leo auctor non. In fermentum erat non ligula tempor faucibus. Vivamus at maximus justo. Nam lacinia lobortis nisi et volutpat. Quisque et lectus et velit convallis dapibus. Nunc lacinia vitae magna lacinia venenatis. Aliquam in nunc lacus.";
+            imgSection1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Rocchetta.fiume_3.JPG");
+            //titolo: poetica del fiume, richiamo a sacro e femminile
+            stackContenuto_0.Children.Add(new CustomLabelTitle { Text = Contenuti[0].Testo });
+            //primo paragrafo
+            stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[1].Testo });
+            stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[2].Testo });
+            stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[3].Testo });
 
+            
+            //titolo: Il fiume, dinamico e sacro
+            stackContenuto_0.Children.Add(new CustomLabelTitle { Text = Contenuti[4].Testo });
+            stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Rocchetta.fiume_1.jpeg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0,10,0,10) });
+            //secondo paragrafo
+            stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[5].Testo });
+            stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[6].Testo });
+            stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[7].Testo });
+            stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[8].Testo });
+            stackContenuto_0.Children.Add(new CustomLabel { Text = Contenuti[9].Testo });
             #endregion
 
             #region SECTION 2
 
-            imgSection2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa1.adda.jpg");
+            Accordion1.Title = Sezioni[1].Titolo;
+            Contenuti = db.GetContenutoAsync(Sezioni[1].ID).Result.OrderBy(c => c.Indice).ToList();
+
+            imgSection2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Rocchetta.rocchetta_1.jpg");
+            //titolo:La rocchetta luogo sacro e militare
+            stackContenuto_1.Children.Add(new CustomLabelTitle { Text = Contenuti[0].Testo });
+            stackContenuto_1.Children.Add(new CustomLabel { Text = Contenuti[1].Testo });
+            stackContenuto_1.Children.Add(new CustomLabel { Text = Contenuti[2].Testo });
+            stackContenuto_1.Children.Add(new CustomLabel { Text = Contenuti[3].Testo });
+
+            //titolo: L'origine e la storia
+            stackContenuto_1.Children.Add(new CustomLabelTitle { Text = Contenuti[4].Testo });
+            stackContenuto_1.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Rocchetta.rocchetta-ga.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 10, 0, 10) });
+            stackContenuto_1.Children.Add(new CustomLabel { Text = Contenuti[5].Testo });
+            stackContenuto_1.Children.Add(new CustomLabel { Text = Contenuti[6].Testo });
+            stackContenuto_1.Children.Add(new CustomLabel { Text = Contenuti[7].Testo });
+            stackContenuto_1.Children.Add(new CustomLabel { Text = Contenuti[8].Testo });
+            stackContenuto_1.Children.Add(new CustomLabel { Text = Contenuti[9].Testo });
+
+            #endregion
+
+            #region SECTION 3
+
+            Accordion2.Title = Sezioni[2].Titolo;
+            Contenuti = db.GetContenutoAsync(Sezioni[2].ID).Result.OrderBy(c => c.Indice).ToList();
+
+            //imgSection3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa1.adda.jpg"); //NO IMMAGINE??
+            stackContenuto_2.Children.Add(new CustomLabelTitle { Text = Contenuti[0].Testo });
+            stackContenuto_2.Children.Add(new CustomLabel { Text = Contenuti[1].Testo });
+            stackContenuto_2.Children.Add(new CustomLabel { Text = Contenuti[2].Testo });
+            stackContenuto_2.Children.Add(new CustomLabel { Text = Contenuti[3].Testo });
+            stackContenuto_2.Children.Add(new CustomLabel { Text = Contenuti[4].Testo });
+
+            #endregion
+
+            #region SECTION 4
+
+            Accordion3.Title = Sezioni[3].Titolo;
+            Contenuti = db.GetContenutoAsync(Sezioni[3].ID).Result.OrderBy(c => c.Indice).ToList();
+
+            imgSection4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Rocchetta.tre_corni_privata.jpg");
+            //titolo:Racconto del dipinto
+            stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[0].Testo });
+            stackContenuto_3.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Rocchetta.verg_rocce.jpg"), Aspect=Aspect.AspectFit, Margin = new Thickness(0,10,0,10) });
+            stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[1].Testo, FontSize=15});
+
+            stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[2].Testo });
+            stackContenuto_3.Children.Add(new CustomLabelTitle { Text = Contenuti[3].Testo });
+            stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[4].Testo });
+            stackContenuto_3.Children.Add(new CustomLabelTitle { Text = Contenuti[5].Testo });
+            stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[6].Testo });
+            stackContenuto_3.Children.Add(new CustomLabelTitle { Text = Contenuti[7].Testo });
+            stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[8].Testo });
+            stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[9].Testo });
+            stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[10].Testo , FontAttributes = FontAttributes.Italic});
+            #endregion
+
+            #region SECTION 5
+
+            Accordion4.Title = Sezioni[4].Titolo;
+            Contenuti = db.GetContenutoAsync(Sezioni[4].ID).Result.OrderBy(c => c.Indice).ToList();
+
+            imgSection5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa1.adda.jpg");
 
             #endregion
         }
