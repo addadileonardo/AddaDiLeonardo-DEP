@@ -18,7 +18,7 @@ namespace AddaDiLeonardo.iOS
             base.OnElementChanged(e);
             if(Control!=null)
             {
-                Control.TextAlignment = UITextAlignment.Justified;
+                //Control.TextAlignment = UITextAlignment.Justified;
             }
         }
     }

@@ -28,7 +28,7 @@ namespace AddaDiLeonardo.Droid
             base.OnElementChanged(e);
             if (Control != null)
             {
-                Control.JustificationMode = Android.Text.JustificationMode.InterWord;
+                //Control.JustificationMode = Android.Text.JustificationMode.InterWord;
             }
         }
     }

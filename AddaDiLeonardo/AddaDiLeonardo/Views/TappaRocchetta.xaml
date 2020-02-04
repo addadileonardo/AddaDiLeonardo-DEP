@@ -8,91 +8,123 @@
              mc:Ignorable="d"
              x:Class="AddaDiLeonardo.Views.TappaRocchetta">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout>
 
             <Image  x:Name="imgTappa" Aspect="AspectFill"></Image>
 
             <!--#region INTRODUCTION-->
 
-            <StackLayout  BackgroundColor="White">
-                <StackLayout Margin="10,10,10,10">
+                <StackLayout  BackgroundColor="White">
 
-                    <Label x:Name="lblTitolo" FontSize="30" TextColor="Black" FontAttributes="Bold">
-                        <Label.FontFamily>
-                            <OnPlatform x:TypeArguments="x:String">
-                                <On Platform="iOS" Value="Oswald-SemiBold" />
-                                <On Platform="Android" Value="Oswald-SemiBold.ttf#Oswald" />
-                            </OnPlatform>
-                        </Label.FontFamily>
-                    </Label>
 
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="0,5,0,5">
-                        <Label Text="Paderno d'Adda">
+                    <StackLayout Margin="20,0,20,20">
+
+                        <Label x:Name="lblTitolo" FontSize="30" TextColor="Black" FontAttributes="Bold">
                             <Label.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
-                                    <On Platform="iOS" Value="Roboto-Light" />
-                                    <On Platform="Android" Value="Roboto-Light.ttf#Oswald" />
+                                    <On Platform="iOS" Value="Oswald-SemiBold" />
+                                    <On Platform="Android" Value="Oswald-SemiBold.ttf#Oswald" />
                                 </OnPlatform>
                             </Label.FontFamily>
                         </Label>
-                        <Image x:Name="iconMarker" HeightRequest="20" Aspect="AspectFill"></Image>
-                    </StackLayout>
 
-                    <Local:CustomLabel x:Name="lblSottotitolo" FontSize="Medium" >
-                        <Label.FontFamily>
-                            <OnPlatform x:TypeArguments="x:String">
-                                <On Platform="iOS" Value="Roboto-LightItalic" />
-                                <On Platform="Android" Value="Roboto-LightItalic.ttf#Roboto-Light" />
-                            </OnPlatform>
-                        </Label.FontFamily>
-                    </Local:CustomLabel>
-
-
-                    <Local:CustomLabel x:Name="lblDescrizione" FontSize="Medium" >
-                        <Label.FontFamily>
-                            <OnPlatform x:TypeArguments="x:String">
-                                <On Platform="iOS" Value="Roboto-Light" />
-                                <On Platform="Android" Value="Roboto-Light.ttf#Roboto-Light" />
-                            </OnPlatform>
-                        </Label.FontFamily>
-                    </Local:CustomLabel>
-                </StackLayout>
-            </StackLayout>
-            <!--#endregion-->
-
-            <!--#region ACCORDION-->
-            <local:Accordion  Title="Sezione 1">
-                <local:Accordion.Indicator></local:Accordion.Indicator>
-                <local:Accordion.AccordionContent>
-                    <StackLayout Spacing="5">
-                        <Image x:Name="imgSection1" Aspect="AspectFill"></Image>
-                        <StackLayout Margin="10,0,10,10" >
-                            <Local:CustomLabel x:Name="lblSection1_1" FontSize="Medium">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="0,0,0,0">
+                            <Image x:Name="iconMarker" HeightRequest="20" Aspect="AspectFill"></Image>
+                            <Label Text="Paderno d'Adda">
                                 <Label.FontFamily>
                                     <OnPlatform x:TypeArguments="x:String">
                                         <On Platform="iOS" Value="Roboto-Light" />
-                                        <On Platform="Android" Value="Roboto-Light.ttf#Roboto-Light" />
+                                        <On Platform="Android" Value="Roboto-Light.ttf#Roboto" />
                                     </OnPlatform>
                                 </Label.FontFamily>
-                            </Local:CustomLabel>
+                            </Label>
+
                         </StackLayout>
 
-                    </StackLayout>
-                </local:Accordion.AccordionContent>
-            </local:Accordion>
 
-            <local:Accordion Title="Sezione 2">
+                        <Label x:Name="lblSottotitolo" FontSize="16" LineHeight="1.0" Margin="0,15,0,5">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Roboto-LightItalic" />
+                                    <On Platform="Android" Value="Roboto-LightItalic.ttf#Roboto-Light" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+
+
+                        <Label x:Name="lblDescrizione" FontSize="Medium" LineHeight="1.10">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Roboto-Light" />
+                                    <On Platform="Android" Value="Roboto-Light.ttf#Roboto-Light" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+                <!--#endregion-->
+
+            <!--#region ACCORDION-->
+                <local:Accordion x:Name="Accordion0"  Title="">
                 <local:Accordion.Indicator></local:Accordion.Indicator>
                 <local:Accordion.AccordionContent>
                     <StackLayout Orientation="Vertical" >
-                        <Image x:Name="imgSection2" Aspect="AspectFill"></Image>
+                        <Image x:Name="imgSection1" Aspect="AspectFill"></Image>
+                        <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_0" >
+                        </StackLayout>
                     </StackLayout>
                 </local:Accordion.AccordionContent>
             </local:Accordion>
-            <!--#endregion-->
+
+                <local:Accordion x:Name="Accordion1"  Title="">
+                <local:Accordion.Indicator></local:Accordion.Indicator>
+                <local:Accordion.AccordionContent>
+                        <StackLayout Orientation="Vertical" Spacing="5">
+                        <Image x:Name="imgSection2" Aspect="AspectFill"></Image>
+                            <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_1" >
+                            </StackLayout>
+                        </StackLayout>
+                </local:Accordion.AccordionContent>
+            </local:Accordion>
+
+                <local:Accordion x:Name="Accordion2"  Title="">
+                    <local:Accordion.Indicator></local:Accordion.Indicator>
+                    <local:Accordion.AccordionContent>
+                        <StackLayout Orientation="Vertical" Spacing="5">
+                            <Image x:Name="imgSection3" Aspect="AspectFill"></Image>
+                            <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_2">
+                                
+                            </StackLayout>
+                        </StackLayout>
+                    </local:Accordion.AccordionContent>
+                </local:Accordion>
+
+                <local:Accordion x:Name="Accordion3"  Title="">
+                    <local:Accordion.Indicator></local:Accordion.Indicator>
+                    <local:Accordion.AccordionContent>
+                        <StackLayout Orientation="Vertical" Spacing="5">
+                            <Image x:Name="imgSection4" Aspect="AspectFill"></Image>
+                            <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_3">
+
+                            </StackLayout>
+                        </StackLayout>
+                    </local:Accordion.AccordionContent>
+                </local:Accordion>
+
+                <local:Accordion x:Name="Accordion4"  Title="">
+                    <local:Accordion.Indicator></local:Accordion.Indicator>
+                    <local:Accordion.AccordionContent>
+                        <StackLayout Orientation="Vertical" Spacing="5">
+                            <Image x:Name="imgSection5" Aspect="AspectFill"></Image>
+                        </StackLayout>
+                    </local:Accordion.AccordionContent>
+                </local:Accordion>
+                <!--#endregion-->
 
 
 
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
