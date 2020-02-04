@@ -9,9 +9,9 @@
              x:Class="AddaDiLeonardo.Views.TappaRocchetta">
     <ContentPage.Content>
         <ScrollView>
-        <StackLayout>
+        <StackLayout Spacing="0">
 
-            <Image  x:Name="imgTappa" Aspect="AspectFill"></Image>
+            <ImageButton  x:Name="imgTappa" Aspect="AspectFill" Clicked="imgTappa_Clicked"></ImageButton>
 
             <!--#region INTRODUCTION-->
 
@@ -52,19 +52,6 @@
                             </Label.FontFamily>
                         </Label>
 
-                        <Label>
-                            <Label.FormattedText>
-                                <FormattedString>
-                                    <Span FontAttributes="Bold" ForegroundColor="Black" Text="Grassetto   ">
-                                    </Span>
-                                    <Span FontAttributes="None">
-                                        <Span.Text>
-                                            Normale
-                                        </Span.Text>
-                                    </Span>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label>
 
                         <Label x:Name="lblDescrizione" FontSize="Medium" LineHeight="1.10">
                             <Label.FontFamily>
