@@ -54,7 +54,13 @@
 				    Type=RelativeToView,
                     ElementName=background,
 				    Property=Height,
-				    Factor=0.66 }" />
+				    Factor=0.66 }" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="btnRiproduci_Clicked"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
 
                 <!-- Dipendenza HEIGHT -> spacing (yConstraint) -->
                 <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.rocchetta1.png}" Aspect="AspectFit" WidthRequest="330" HeightRequest="200" ClassId="step1" x:Name="step1"  
