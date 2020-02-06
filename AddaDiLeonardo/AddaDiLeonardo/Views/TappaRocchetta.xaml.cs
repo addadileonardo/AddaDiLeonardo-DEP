@@ -1,8 +1,10 @@
-﻿using AddaDiLeonardo.Database.Classes;
+﻿using AddaDiLeonardo.CustomControls;
+using AddaDiLeonardo.Database.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -26,6 +28,10 @@ namespace AddaDiLeonardo.Views
 
             tappa = db.GetTappaAsync(IDTappa).Result;
             Sezioni = db.GetSezioneAsync(IDTappa).Result;
+
+            accordions = new List<Accordion>() { Accordion0, Accordion1, Accordion2, Accordion3, Accordion4 };
+            foreach (Accordion accordion in accordions)
+                accordion.AccordionOpened += accordionEvent;
 
             #region INTRODUZIONE
 
@@ -162,6 +168,22 @@ namespace AddaDiLeonardo.Views
             #endregion
         }
 
+        static List<Accordion> accordions;
+        private void accordionEvent(object sender, EventArgs e)
+        {
+            accordions.Remove((Accordion)sender);
+            foreach (Accordion accordion in accordions)
+                if (accordion.IsOpen)
+                    accordion.IsOpen = !accordion.IsOpen;
+            accordions.Add((Accordion)sender);
+            Thread.Sleep((int)Accordion.AnimationDuration);
+            ScrollTop(((Accordion)sender).AccordionName);
+        }
+
+        private void ScrollTop(string elementname)
+        {
+            this.Scroll.ScrollToAsync(this.FindByName<Element>(elementname), ScrollToPosition.Start, true);
+        }
 
         private CustomLabel FormattaContenuto(string contenuto)
         {
