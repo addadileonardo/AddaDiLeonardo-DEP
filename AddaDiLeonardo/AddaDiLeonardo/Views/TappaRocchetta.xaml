@@ -19,28 +19,28 @@
                 <StackLayout  BackgroundColor="White">
 
 
-                    <StackLayout Margin="20,0,20,20">
+                    <StackLayout Margin="20,25,20,20">
 
-                        <Label x:Name="lblTitolo" FontSize="30" TextColor="Black" FontAttributes="Bold">
+                        <Label x:Name="lblTitolo" FontSize="28" TextColor="Black">
                             <Label.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
-                                    <On Platform="iOS" Value="Oswald-SemiBold" />
-                                    <On Platform="Android" Value="Oswald-SemiBold.ttf#Oswald" />
+                                    <On Platform="iOS" Value="RobotoCondensed-Bold" />
+                                    <On Platform="Android" Value="RobotoCondensed-Bold.ttf#RobotoCondensed-Bold" />
                                 </OnPlatform>
                             </Label.FontFamily>
                         </Label>
 
-                        <Label x:Name="lblSottotitolo" FontSize="20" LineHeight="1.0" Margin="0,0,0,20" TextColor="Black">
+                        <Label x:Name="lblSottotitolo" FontSize="26" Margin="0,0,0,25" TextColor="Black">
                             <Label.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
-                                    <On Platform="iOS" Value="Roboto-Regular" />
-                                    <On Platform="Android" Value="Roboto-Regular.ttf#Roboto-Regular" />
+                                    <On Platform="iOS" Value="RobotoCondensed-Light" />
+                                    <On Platform="Android" Value="RobotoCondensed-Light.ttf#Font/RobotoCondensed-Light" />
                                 </OnPlatform>
                             </Label.FontFamily>
                         </Label>
 
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="0,0,0,0">
-                            <Image x:Name="iconMarker" HeightRequest="20" Aspect="AspectFill"></Image>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Start" Margin="0,0,0,25">
+                            <Image x:Name="iconMarker" Aspect="AspectFit"></Image>
                             <Label Text="Paderno d'Adda">
                                 <Label.FontFamily>
                                     <OnPlatform x:TypeArguments="x:String">
@@ -53,7 +53,7 @@
                         </StackLayout>
 
 
-                        <Label x:Name="lblDescrizione" FontSize="Medium" LineHeight="1.10" Margin="0,0,0,20">
+                        <Label x:Name="lblDescrizione" FontSize="Medium" LineHeight="1.10" Margin="0,0,0,25">
                             <Label.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
                                     <On Platform="iOS" Value="Roboto-Light" />
@@ -68,13 +68,13 @@
                 <!--#endregion-->
 
             <!--#region ACCORDION-->
-                <local:Accordion x:Name="Accordion0"  Title="" BGColor="LightGray">
+                <local:Accordion x:Name="Accordion0"  Title="" BGColor="#F6F6F6">
                 <local:Accordion.Indicator></local:Accordion.Indicator>
                 <local:Accordion.AccordionContent>
                     <StackLayout Orientation="Vertical" >
-                       
-                        <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_0" >
-                                <Image x:Name="imgSection1" Aspect="AspectFill"></Image>
+                            <Image x:Name="imgSection1" Aspect="AspectFill"></Image>
+                            <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_0" >
+                                
                             </StackLayout>
                     </StackLayout>
                 </local:Accordion.AccordionContent>
@@ -83,20 +83,20 @@
                 <local:Accordion x:Name="Accordion1"  Title="">
                 <local:Accordion.Indicator></local:Accordion.Indicator>
                 <local:Accordion.AccordionContent>
-                        <StackLayout Orientation="Vertical" Spacing="5">
-                        <Image x:Name="imgSection2" Aspect="AspectFill"></Image>
-                            <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_1" >
+                        <StackLayout Orientation="Vertical">
+                            <Image x:Name="imgSection2" Aspect="AspectFill"></Image>
+                            <StackLayout Margin="15,0,10,10" x:Name="stackContenuto_1" >
                             </StackLayout>
                         </StackLayout>
                 </local:Accordion.AccordionContent>
             </local:Accordion>
 
-                <local:Accordion x:Name="Accordion2"  Title="" BGColor="LightGray">
+                <local:Accordion x:Name="Accordion2"  Title="" BGColor="#F6F6F6">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
-                        <StackLayout Orientation="Vertical" Spacing="5">
+                        <StackLayout Orientation="Vertical">
                             <Image x:Name="imgSection3" Aspect="AspectFill"></Image>
-                            <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_2">
+                            <StackLayout Margin="15,0,10,10" x:Name="stackContenuto_2">
                                 
                             </StackLayout>
                         </StackLayout>
@@ -106,21 +106,21 @@
                 <local:Accordion x:Name="Accordion3"  Title="">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
-                        <StackLayout Orientation="Vertical" Spacing="5">
+                        <StackLayout Orientation="Vertical">
                             <Image x:Name="imgSection4" Aspect="AspectFill"></Image>
-                            <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_3">
+                            <StackLayout Margin="15,0,10,10" x:Name="stackContenuto_3">
 
                             </StackLayout>
                         </StackLayout>
                     </local:Accordion.AccordionContent>
                 </local:Accordion>
 
-                <local:Accordion x:Name="Accordion4"  Title="" BGColor="LightGray">
+                <local:Accordion x:Name="Accordion4"  Title="" BGColor="#F6F6F6">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
-                        <StackLayout Orientation="Vertical" Spacing="5">
+                        <StackLayout Orientation="Vertical">
                             <Image x:Name="imgSection5" Aspect="AspectFill"></Image>
-                            <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_4">
+                            <StackLayout Margin="15,0,10,10" x:Name="stackContenuto_4">
 
                             </StackLayout>
                         </StackLayout>

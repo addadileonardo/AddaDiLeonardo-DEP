@@ -30,16 +30,19 @@ namespace AddaDiLeonardo.Views
             #region INTRODUZIONE
 
             imgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.img_tappa.jpg");
-            iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.pin.png");
-            lblTitolo.Text = tappa.Titolo;
-            lblSottotitolo.Text = tappa.Sottotitolo;
+            iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
+            //lblTitolo.Text = tappa.Titolo;
+            lblTitolo.Text = "SANTUARIO DELLA ROCCHETTA E VERGINE DELLE ROCCE";
+            //lblSottotitolo.Text = tappa.Sottotitolo;
+            lblSottotitolo.Text = "LE SACRE RADICI";
             lblDescrizione.Text = tappa.Descrizione;
 
             #endregion
 
             #region SECTION 1
 
-            Accordion0.Title = Sezioni[0].Titolo;
+            //Accordion0.Title = Sezioni[0].Titolo;
+            Accordion0.Title = "FEMMINILITÀ E SACRALITÀ DEL FIUME";
             Contenuti = db.GetContenutoAsync(Sezioni[0].ID).Result.OrderBy(c => c.Indice).ToList();
 
             imgSection1.Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_1.fiume_2.jpeg");
@@ -68,7 +71,8 @@ namespace AddaDiLeonardo.Views
 
             #region SECTION 2
 
-            Accordion1.Title = Sezioni[1].Titolo;
+            //Accordion1.Title = Sezioni[1].Titolo;
+            Accordion1.Title = "LA ROCCHETTA: LUOGO SACRO E MILITARE";
             Contenuti = db.GetContenutoAsync(Sezioni[1].ID).Result.OrderBy(c => c.Indice).ToList();
 
             imgSection2.Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_2.Rocchetta_2.JPG");
@@ -94,7 +98,8 @@ namespace AddaDiLeonardo.Views
 
             #region SECTION 3
 
-            Accordion2.Title = Sezioni[2].Titolo;
+            //Accordion2.Title = Sezioni[2].Titolo;
+            Accordion2.Title = "SOSPESI TRA IL SACRO E IL PROFANO";
             Contenuti = db.GetContenutoAsync(Sezioni[2].ID).Result.OrderBy(c => c.Indice).ToList();
 
             //imgSection3.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa1.adda.jpg"); //NO IMMAGINE??
@@ -108,7 +113,8 @@ namespace AddaDiLeonardo.Views
 
             #region SECTION 4
 
-            Accordion3.Title = Sezioni[3].Titolo;
+            //Accordion3.Title = Sezioni[3].Titolo;
+            Accordion3.Title = "LA VERGINE DELLE ROCCE DI LEONARDO";
             Contenuti = db.GetContenutoAsync(Sezioni[3].ID).Result.OrderBy(c => c.Indice).ToList();
 
             imgSection4.Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_4.TreCorni_1.jpeg");
@@ -132,7 +138,8 @@ namespace AddaDiLeonardo.Views
 
             #region SECTION 5
 
-            Accordion4.Title = Sezioni[4].Titolo;
+            //Accordion4.Title = Sezioni[4].Titolo;
+            Accordion4.Title = "CURIOSITÀ";
             Contenuti = db.GetContenutoAsync(Sezioni[4].ID).Result.OrderBy(c => c.Indice).ToList();
 
             imgSection5.Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_2.Rocchetta_2.JPG");
