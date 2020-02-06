@@ -134,18 +134,6 @@ namespace AddaDiLeonardo.Views
         }
 
 
-        /*
-         * !!Attenzione!!
-         * Qualunque cosa succeda al mondo o all'universo intero,
-         * non devi assolutamente toccare ciò che si trova oltre questo commento.
-         * Chiunque osi toccare questo pezzo di codice sarà maledetto a vita e
-         * non avrà mai pace eterna.
-         * Nel caso il codice smetta di funzionare puoi considerare il resto della
-         * tua vita come inutile e dovrai aspettare un'intelligenza extraterrestre
-         * o superiore per trovare un'altra soluzione.
-         * 
-         * Grazie, buona giornata.
-         */
         private CustomLabel FormattaContenuto(string contenuto)
         {
             CustomLabel label = new CustomLabel();
