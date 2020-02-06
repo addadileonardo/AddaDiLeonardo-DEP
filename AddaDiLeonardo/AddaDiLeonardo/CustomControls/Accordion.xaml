@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="AddaDiLeonardo.CustomControls.Accordion"
              x:Name="_accordion">
-  <ContentView.Content>
+    <ContentView.Content>
 
         <StackLayout Orientation="Vertical" Margin="0,5,0,0">
 
@@ -17,7 +17,7 @@
                    Margin="5,5,5,0">
                 <!--Header-->
                 <StackLayout Padding="15,15,15,15" BackgroundColor="{Binding Source={x:Reference _accordion}, Path=BGColor}" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                <!--Title-->
+                    <!--Title-->
                     <Label  x:Name="_title"
                        HorizontalOptions="Start" VerticalOptions="Center" Margin="5,0,0,0"
                        Text="{Binding Source={x:Reference _accordion}, Path=Title}"
@@ -30,29 +30,31 @@
                         </Label.FontFamily>
                     </Label>
                     <!--Indicator-->
-                <ContentView  x:Name="_indicator"
+                    <ContentView  x:Name="_indicator"
                              HorizontalOptions="EndAndExpand" VerticalOptions="Center" Margin="0,10,0,0"
                              Content="{Binding Source={x:Reference _accordion}, Path=Indicator}">
-                    
-                </ContentView>
 
-                <!--TapHandler-->
-                <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
-                </StackLayout.GestureRecognizers>
+                    </ContentView>
+
+                    <!--TapHandler-->
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
+                    </StackLayout.GestureRecognizers>
 
                 </StackLayout>
 
-            <!--Content-->
+                <!--Content-->
 
-            <StackLayout  Margin="0,0,0,5" x:Name="_content">
-                    <ContentView   BackgroundColor="White" Content="{Binding Source={x:Reference _accordion}, Path=AccordionContent}"   >
+                <StackLayout  Margin="0,0,0,5" x:Name="_content">
+                    <ContentView   BackgroundColor="White" Content="{Binding Source={x:Reference _accordion}, Path=AccordionContent}">
                     </ContentView>
-            </StackLayout>
+                </StackLayout>
 
+            </Frame>
+                
         </StackLayout>
 
-      
-      
-  </ContentView.Content>
+        
+
+    </ContentView.Content>
 </ContentView>
