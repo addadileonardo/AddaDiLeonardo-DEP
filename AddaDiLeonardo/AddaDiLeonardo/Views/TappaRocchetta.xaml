@@ -11,7 +11,8 @@
         <ScrollView>
         <StackLayout Spacing="0">
 
-            <ImageButton  x:Name="imgTappa" Aspect="AspectFill" Clicked="imgTappa_Clicked"></ImageButton>
+                <!--<Button Text="close" Clicked="Button_Clicked"></Button>-->
+                <ImageButton  x:Name="imgTappa" Aspect="AspectFill" Clicked="imgTappa_Clicked"></ImageButton>
 
             <!--#region INTRODUCTION-->
 
@@ -25,6 +26,15 @@
                                 <OnPlatform x:TypeArguments="x:String">
                                     <On Platform="iOS" Value="Oswald-SemiBold" />
                                     <On Platform="Android" Value="Oswald-SemiBold.ttf#Oswald" />
+                                </OnPlatform>
+                            </Label.FontFamily>
+                        </Label>
+
+                        <Label x:Name="lblSottotitolo" FontSize="20" LineHeight="1.0" Margin="0,0,0,20" TextColor="Black">
+                            <Label.FontFamily>
+                                <OnPlatform x:TypeArguments="x:String">
+                                    <On Platform="iOS" Value="Roboto-Regular" />
+                                    <On Platform="Android" Value="Roboto-Regular.ttf#Roboto-Regular" />
                                 </OnPlatform>
                             </Label.FontFamily>
                         </Label>
@@ -43,17 +53,7 @@
                         </StackLayout>
 
 
-                        <Label x:Name="lblSottotitolo" FontSize="16" LineHeight="1.0" Margin="0,15,0,5">
-                            <Label.FontFamily>
-                                <OnPlatform x:TypeArguments="x:String">
-                                    <On Platform="iOS" Value="Roboto-LightItalic" />
-                                    <On Platform="Android" Value="Roboto-LightItalic.ttf#Roboto-Light" />
-                                </OnPlatform>
-                            </Label.FontFamily>
-                        </Label>
-
-
-                        <Label x:Name="lblDescrizione" FontSize="Medium" LineHeight="1.10">
+                        <Label x:Name="lblDescrizione" FontSize="Medium" LineHeight="1.10" Margin="0,0,0,20">
                             <Label.FontFamily>
                                 <OnPlatform x:TypeArguments="x:String">
                                     <On Platform="iOS" Value="Roboto-Light" />
@@ -61,6 +61,8 @@
                                 </OnPlatform>
                             </Label.FontFamily>
                         </Label>
+
+                        
                     </StackLayout>
                 </StackLayout>
                 <!--#endregion-->
@@ -70,9 +72,10 @@
                 <local:Accordion.Indicator></local:Accordion.Indicator>
                 <local:Accordion.AccordionContent>
                     <StackLayout Orientation="Vertical" >
-                        <Image x:Name="imgSection1" Aspect="AspectFill"></Image>
+                       
                         <StackLayout Margin="10,0,10,10" x:Name="stackContenuto_0" >
-                        </StackLayout>
+                                <Image x:Name="imgSection1" Aspect="AspectFill"></Image>
+                            </StackLayout>
                     </StackLayout>
                 </local:Accordion.AccordionContent>
             </local:Accordion>
