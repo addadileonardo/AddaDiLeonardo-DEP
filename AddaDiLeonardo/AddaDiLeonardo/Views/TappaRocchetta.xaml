@@ -68,7 +68,7 @@
                 <!--#endregion-->
 
             <!--#region ACCORDION-->
-                <local:Accordion x:Name="Accordion0"  Title="">
+                <local:Accordion x:Name="Accordion0"  Title="" BGColor="LightGray">
                 <local:Accordion.Indicator></local:Accordion.Indicator>
                 <local:Accordion.AccordionContent>
                     <StackLayout Orientation="Vertical" >
@@ -91,7 +91,7 @@
                 </local:Accordion.AccordionContent>
             </local:Accordion>
 
-                <local:Accordion x:Name="Accordion2"  Title="">
+                <local:Accordion x:Name="Accordion2"  Title="" BGColor="LightGray">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
                         <StackLayout Orientation="Vertical" Spacing="5">
@@ -115,7 +115,7 @@
                     </local:Accordion.AccordionContent>
                 </local:Accordion>
 
-                <local:Accordion x:Name="Accordion4"  Title="">
+                <local:Accordion x:Name="Accordion4"  Title="" BGColor="LightGray">
                     <local:Accordion.Indicator></local:Accordion.Indicator>
                     <local:Accordion.AccordionContent>
                         <StackLayout Orientation="Vertical" Spacing="5">
