@@ -91,7 +91,7 @@ namespace AddaDiLeonardo.CustomControls
         {
             _content.IsVisible = true;
             await Task.WhenAll(
-                _content.TranslateTo(0, 5, AnimationDuration),
+                _content.TranslateTo(0, 0, AnimationDuration),
                 Img.TranslateTo(-20, 0, AnimationDuration),
                 IndicatorOpen(),
                 _indicator.RotateTo(0, AnimationDuration),
@@ -108,7 +108,7 @@ namespace AddaDiLeonardo.CustomControls
         async void Close()
         {
             await Task.WhenAll(
-                _content.TranslateTo(0, -5, AnimationDuration),
+                _content.TranslateTo(0, 0, AnimationDuration),
                 Img.TranslateTo(10, 0, AnimationDuration),
                 IndicatorClose(),
                 _indicator.RotateTo(-180, AnimationDuration),
