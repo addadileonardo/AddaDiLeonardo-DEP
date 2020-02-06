@@ -30,6 +30,7 @@
     <None Remove="Content\Rocchetta\Sezione_4\Vergine.jpg" />
     <None Remove="Content\Rocchetta\Sezione_5\Grotta.png" />
     <None Remove="Content\Rocchetta\Sezione_5\Riccioli.png" />
+    <None Remove="Content\testgif.gif" />
     <None Remove="Images\backgroundFadeBlack.png" />
     <None Remove="Images\home.png" />
     <None Remove="Images\Home\background.png" />
@@ -84,6 +85,7 @@
     <EmbeddedResource Include="Content\Rocchetta\Sezione_4\TreCorni_2.jpg" />
     <EmbeddedResource Include="Content\Rocchetta\Sezione_4\TreCorni_3.jpg" />
     <EmbeddedResource Include="Content\Rocchetta\Sezione_4\Vergine.jpg" />
+    <EmbeddedResource Include="Content\testgif.gif" />
 
     <EmbeddedResource Include="Images\Home\background.png" />
 

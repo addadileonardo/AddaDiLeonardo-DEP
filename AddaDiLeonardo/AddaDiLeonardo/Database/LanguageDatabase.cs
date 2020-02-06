@@ -42,7 +42,7 @@ namespace AddaDiLeonardo.Database
 
         public async Task<object> GetTesto()
         {
-            string query = "Select * FROM Contenuto";
+            //string query = "Select * FROM Contenuto";
             var r = await Database.GetTableInfoAsync("Contenuto");
             return r;
         }
