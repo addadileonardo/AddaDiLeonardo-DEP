@@ -8,15 +8,15 @@
              x:Name="_accordion">
   <ContentView.Content>
 
-        <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Vertical" Margin="0,5,0,0">
 
             <Frame BackgroundColor="White"
                    CornerRadius="7"
                    HasShadow="False"
                    Padding="0,0,0,0"
                    Margin="5,5,5,0">
-            <!--Header-->
-                <StackLayout Padding="15,15,15,15" BackgroundColor="White" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <!--Header-->
+                <StackLayout Padding="15,15,15,15" BackgroundColor="{Binding Source={x:Reference _accordion}, Path=BGColor}" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <!--Title-->
                     <Label  x:Name="_title"
                        HorizontalOptions="Start" VerticalOptions="Center" Margin="5,0,0,0"
@@ -42,17 +42,12 @@
                 </StackLayout.GestureRecognizers>
 
                 </StackLayout>
-            </Frame>
+
             <!--Content-->
 
-            <StackLayout  Margin="5,0,5,10" x:Name="_content">
-                <Frame BorderColor="White"
-                   CornerRadius="7"
-                   HasShadow="False"
-                   Padding="0,0,0,0">
+            <StackLayout  Margin="0,0,0,5" x:Name="_content">
                     <ContentView   BackgroundColor="White" Content="{Binding Source={x:Reference _accordion}, Path=AccordionContent}"   >
                     </ContentView>
-                </Frame>
             </StackLayout>
 
         </StackLayout>

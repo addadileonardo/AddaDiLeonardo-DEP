@@ -55,9 +55,9 @@ namespace AddaDiLeonardo.Views
             
             //titolo: Il fiume, dinamico e sacro
             stackContenuto_0.Children.Add(new CustomLabelTitle { Text = Contenuti[4].Testo });
-            stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_1.fiume_1.jpeg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0,10,0,10) });
             //secondo paragrafo
             stackContenuto_0.Children.Add(FormattaContenuto(Contenuti[5].Testo));
+            stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_1.fiume_1.jpeg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 10, 0, 10) });
             stackContenuto_0.Children.Add(FormattaContenuto(Contenuti[6].Testo));
             stackContenuto_0.Children.Add(FormattaContenuto(Contenuti[7].Testo));
             stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_1.fiume_4.jpeg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 10, 0, 10) });
@@ -156,19 +156,6 @@ namespace AddaDiLeonardo.Views
         }
 
 
-        /*
-         * !!Attenzione!!
-         * Qualunque cosa succeda al mondo o all'universo intero,
-         * non devi assolutamente toccare ciò che si trova oltre questo commento.
-         * Chiunque osi toccare questo pezzo di codice sarà maledetto a vita e
-         * non avrà mai pace eterna.
-         * Nel caso il codice smetta di funzionare puoi considerare il resto della
-         * tua vita come inutile e dovrai aspettare un'intelligenza extraterrestre
-         * o superiore per trovare un'altra soluzione.
-         * 
-         * Grazie, buona giornata.
-         * RR
-         */
         private CustomLabel FormattaContenuto(string contenuto)
         {
             CustomLabel label = new CustomLabel();
@@ -178,7 +165,9 @@ namespace AddaDiLeonardo.Views
                 string[] splits = contenuto.Split('*');
                 for (int x = 0; x < splits.Length; x++)
                 {
-                    Span span = new Span() { Text = splits[x] };
+                    Span span = new Span() { Text = splits[x], 
+                        FontFamily = Device.RuntimePlatform == Device.iOS ? "Roboto-Light" : Device.RuntimePlatform == Device.Android ? "Roboto-Light.ttf#Roboto" : "Assets/Roboto-Light.ttf#Roboto",
+                        FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
                     if (x == 0 || x == splits.Length - 1)
                     {
                         formatted.Spans.Add(span);
@@ -188,7 +177,8 @@ namespace AddaDiLeonardo.Views
                     if (splits[x - 1] == "" && splits[x + 1] == "")
                     {
                         span.FontAttributes = FontAttributes.Bold;
-                        span.ForegroundColor = Color.Black;
+                        span.FontFamily = Device.RuntimePlatform == Device.iOS ? "Roboto-Regular" : Device.RuntimePlatform == Device.Android ? "Roboto-Regular.ttf#Roboto" : "Assets/Roboto-Regular.ttf#Roboto";
+                        //span.ForegroundColor = Color.Black;
                     }
                     formatted.Spans.Add(span);
                 }
@@ -228,5 +218,10 @@ namespace AddaDiLeonardo.Views
                 }
             }
         }
+
+        //private void Button_Clicked(object sender, EventArgs e)
+        //{
+        //    Navigation.PopModalAsync();
+        //}
     }
 }
