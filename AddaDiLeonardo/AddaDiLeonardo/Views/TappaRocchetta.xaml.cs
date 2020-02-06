@@ -156,7 +156,6 @@ namespace AddaDiLeonardo.Views
         }
 
 
-
         private CustomLabel FormattaContenuto(string contenuto)
         {
             CustomLabel label = new CustomLabel();
