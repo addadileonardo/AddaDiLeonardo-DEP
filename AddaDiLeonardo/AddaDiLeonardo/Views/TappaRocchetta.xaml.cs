@@ -29,7 +29,7 @@ namespace AddaDiLeonardo.Views
 
             #region INTRODUZIONE
 
-            imgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Rocchetta.img_tappa.jpg");
+            imgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.img_tappa.jpg");
             iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.pin.png");
             lblTitolo.Text = tappa.Titolo;
             lblSottotitolo.Text = tappa.Sottotitolo;
@@ -42,7 +42,7 @@ namespace AddaDiLeonardo.Views
             Accordion0.Title = Sezioni[0].Titolo;
             Contenuti = db.GetContenutoAsync(Sezioni[0].ID).Result.OrderBy(c => c.Indice).ToList();
 
-            imgSection1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Rocchetta.fiume_3.JPG");
+            imgSection1.Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_1.fiume_2.jpeg");
             //titolo: poetica del fiume, richiamo a sacro e femminile
             stackContenuto_0.Children.Add(new CustomLabelTitle { Text = Contenuti[0].Testo });
             //primo paragrafo
@@ -55,13 +55,15 @@ namespace AddaDiLeonardo.Views
             
             //titolo: Il fiume, dinamico e sacro
             stackContenuto_0.Children.Add(new CustomLabelTitle { Text = Contenuti[4].Testo });
-            stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Rocchetta.fiume_1.jpeg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0,10,0,10) });
             //secondo paragrafo
             stackContenuto_0.Children.Add(FormattaContenuto(Contenuti[5].Testo));
+            stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_1.fiume_1.jpeg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 10, 0, 10) });
             stackContenuto_0.Children.Add(FormattaContenuto(Contenuti[6].Testo));
             stackContenuto_0.Children.Add(FormattaContenuto(Contenuti[7].Testo));
+            stackContenuto_0.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_1.fiume_4.jpeg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 10, 0, 10) });
             stackContenuto_0.Children.Add(FormattaContenuto(Contenuti[8].Testo));
             stackContenuto_0.Children.Add(FormattaContenuto(Contenuti[9].Testo));
+
             #endregion
 
             #region SECTION 2
@@ -69,7 +71,7 @@ namespace AddaDiLeonardo.Views
             Accordion1.Title = Sezioni[1].Titolo;
             Contenuti = db.GetContenutoAsync(Sezioni[1].ID).Result.OrderBy(c => c.Indice).ToList();
 
-            imgSection2.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Rocchetta.rocchetta_1.jpg");
+            imgSection2.Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_2.Rocchetta_2.JPG");
             //titolo:La rocchetta luogo sacro e militare
             stackContenuto_1.Children.Add(new CustomLabelTitle { Text = Contenuti[0].Testo });
             stackContenuto_1.Children.Add(new CustomLabel { Text = Contenuti[1].Testo });
@@ -78,11 +80,14 @@ namespace AddaDiLeonardo.Views
 
             //titolo: L'origine e la storia
             stackContenuto_1.Children.Add(new CustomLabelTitle { Text = Contenuti[4].Testo });
-            stackContenuto_1.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Rocchetta.rocchetta-ga.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 10, 0, 10) });
+            stackContenuto_1.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_2.Rocchetta_3.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 10, 0, 10) });
             stackContenuto_1.Children.Add(new CustomLabel { Text = Contenuti[5].Testo });
+            stackContenuto_1.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_2.Rocchetta_ga.jpg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 10, 0, 10) });
             stackContenuto_1.Children.Add(new CustomLabel { Text = Contenuti[6].Testo });
             stackContenuto_1.Children.Add(new CustomLabel { Text = Contenuti[7].Testo });
+            stackContenuto_1.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_2.Rocchetta_1.jpeg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 10, 0, 10) });
             stackContenuto_1.Children.Add(new CustomLabel { Text = Contenuti[8].Testo });
+            stackContenuto_1.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_2.Rocchetta_Leonardo.jpeg"), Aspect = Aspect.AspectFill, Margin = new Thickness(0, 10, 0, 10) });
             stackContenuto_1.Children.Add(new CustomLabel { Text = Contenuti[9].Testo });
 
             #endregion
@@ -106,20 +111,22 @@ namespace AddaDiLeonardo.Views
             Accordion3.Title = Sezioni[3].Titolo;
             Contenuti = db.GetContenutoAsync(Sezioni[3].ID).Result.OrderBy(c => c.Indice).ToList();
 
-            imgSection4.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Rocchetta.tre_corni_privata.jpg");
+            imgSection4.Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_4.TreCorni_1.jpeg");
             //titolo:Racconto del dipinto
             stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[0].Testo });
-            stackContenuto_3.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Images.Rocchetta.verg_rocce.jpg"), Aspect=Aspect.AspectFit, Margin = new Thickness(0,10,0,10) });
+            stackContenuto_3.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_4.Vergine.jpg"), Aspect=Aspect.AspectFit, Margin = new Thickness(0,10,0,10) });
             stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[1].Testo, FontSize=15});
 
             stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[2].Testo });
+            stackContenuto_3.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_4.TreCorni_3.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 10, 0, 10) });
             stackContenuto_3.Children.Add(new CustomLabelTitle { Text = Contenuti[3].Testo });
             stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[4].Testo });
             stackContenuto_3.Children.Add(new CustomLabelTitle { Text = Contenuti[5].Testo });
             stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[6].Testo });
+            stackContenuto_3.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_4.TreCorni_2.jpg"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 10, 0, 10) });
             stackContenuto_3.Children.Add(new CustomLabelTitle { Text = Contenuti[7].Testo });
             stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[8].Testo });
-            stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[9].Testo });
+            //stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[9].Testo }); //è sbagliato!!!!
             stackContenuto_3.Children.Add(new CustomLabel { Text = Contenuti[10].Testo , FontAttributes = FontAttributes.Italic});
             #endregion
 
@@ -128,7 +135,22 @@ namespace AddaDiLeonardo.Views
             Accordion4.Title = Sezioni[4].Titolo;
             Contenuti = db.GetContenutoAsync(Sezioni[4].ID).Result.OrderBy(c => c.Indice).ToList();
 
-            imgSection5.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa1.adda.jpg");
+            imgSection5.Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_2.Rocchetta_2.JPG");
+            stackContenuto_4.Children.Add(new CustomLabelTitle { Text = Contenuti[0].Testo });
+            stackContenuto_4.Children.Add(new CustomLabel { Text = Contenuti[1].Testo });
+            stackContenuto_4.Children.Add(new CustomLabel { Text = Contenuti[2].Testo });
+            //stackContenuto_4.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_5.Riccioli.png"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 10, 0, 10) });
+            stackContenuto_4.Children.Add(new CustomLabelTitle { Text = Contenuti[3].Testo });
+            stackContenuto_4.Children.Add(new CustomLabel { Text = Contenuti[4].Testo });
+            //stackContenuto_4.Children.Add(new Image { Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.Sezione_5.Grotta.png"), Aspect = Aspect.AspectFit, Margin = new Thickness(0, 10, 0, 10) });
+            stackContenuto_4.Children.Add(new CustomLabel { Text = Contenuti[5].Testo });
+
+            stackContenuto_4.Children.Add(new CustomLabelTitle { Text = Contenuti[6].Testo });
+            stackContenuto_4.Children.Add(new CustomLabel { Text = Contenuti[7].Testo });
+
+            stackContenuto_4.Children.Add(new CustomLabelTitle { Text = Contenuti[8].Testo });
+            stackContenuto_4.Children.Add(new CustomLabel { Text = Contenuti[9].Testo });
+            stackContenuto_4.Children.Add(new CustomLabel { Text = Contenuti[10].Testo });
 
             #endregion
         }
@@ -143,7 +165,9 @@ namespace AddaDiLeonardo.Views
                 string[] splits = contenuto.Split('*');
                 for (int x = 0; x < splits.Length; x++)
                 {
-                    Span span = new Span() { Text = splits[x] };
+                    Span span = new Span() { Text = splits[x], 
+                        FontFamily = Device.RuntimePlatform == Device.iOS ? "Roboto-Light" : Device.RuntimePlatform == Device.Android ? "Roboto-Light.ttf#Roboto" : "Assets/Roboto-Light.ttf#Roboto",
+                        FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)) };
                     if (x == 0 || x == splits.Length - 1)
                     {
                         formatted.Spans.Add(span);
@@ -153,7 +177,8 @@ namespace AddaDiLeonardo.Views
                     if (splits[x - 1] == "" && splits[x + 1] == "")
                     {
                         span.FontAttributes = FontAttributes.Bold;
-                        span.ForegroundColor = Color.Black;
+                        span.FontFamily = Device.RuntimePlatform == Device.iOS ? "Roboto-Regular" : Device.RuntimePlatform == Device.Android ? "Roboto-Regular.ttf#Roboto" : "Assets/Roboto-Regular.ttf#Roboto";
+                        //span.ForegroundColor = Color.Black;
                     }
                     formatted.Spans.Add(span);
                 }
@@ -164,5 +189,39 @@ namespace AddaDiLeonardo.Views
 
             return label;
         }
+
+        private object syncLockPlayer = new object();
+        bool isInCallPlayer = false;
+
+        private async void imgTappa_Clicked(object sender, EventArgs e)
+        {
+            lock (syncLockPlayer)
+            {
+                if (isInCallPlayer)
+                    return;
+                isInCallPlayer = true;
+            }
+
+            try
+            {
+                await Navigation.PushModalAsync(new PlayerPage("https://drive.google.com/uc?export=download&id=1-ybKXJo6ZUxK-OAVCftXiX0gq7IOpbQB"));
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                lock (syncLockPlayer)
+                {
+                    isInCallPlayer = false;
+                }
+            }
+        }
+
+        //private void Button_Clicked(object sender, EventArgs e)
+        //{
+        //    Navigation.PopModalAsync();
+        //}
     }
 }
