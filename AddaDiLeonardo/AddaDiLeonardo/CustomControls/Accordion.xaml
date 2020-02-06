@@ -15,8 +15,8 @@
                    HasShadow="False"
                    Padding="0,0,0,0"
                    Margin="5,5,5,0">
-            <!--Header-->
-                <StackLayout Padding="15,15,15,15" BackgroundColor="White" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <!--Header-->
+                <StackLayout Padding="15,15,15,15" BackgroundColor="{Binding Source={x:Reference _accordion}, Path=BGColor}" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <!--Title-->
                     <Label  x:Name="_title"
                        HorizontalOptions="Start" VerticalOptions="Center" Margin="5,0,0,0"
