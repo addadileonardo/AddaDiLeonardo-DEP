@@ -7,8 +7,7 @@
              xmlns:shared="clr-namespace:LibVLCSharp.Forms.Shared;assembly=LibVLCSharp.Forms"
              mc:Ignorable="d"
              x:Class="AddaDiLeonardo.Views.PlayerPage"
-             Appearing="ContentPage_Appearing"
-             Disappearing="ContentPage_Disappearing">
+             Appearing="ContentPage_Appearing">
     <ContentPage.Content>
         <shared:MediaPlayerElement x:Name="myvideo" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></shared:MediaPlayerElement>
     </ContentPage.Content>

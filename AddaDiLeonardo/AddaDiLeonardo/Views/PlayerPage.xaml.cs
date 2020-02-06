@@ -21,9 +21,14 @@ namespace AddaDiLeonardo.Views
             _link = link;
         }
 
-        private void ContentPage_Disappearing(object sender, EventArgs e)
+        //private void ContentPage_Disappearing(object sender, EventArgs e)
+        //{
+        //        myvideo.MediaPlayer.Stop();
+        //}
+
+        protected override void OnDisappearing()
         {
-                myvideo.MediaPlayer.Stop();
+            myvideo.MediaPlayer.Stop();
         }
 
         private void ContentPage_Appearing(object sender, EventArgs e)
