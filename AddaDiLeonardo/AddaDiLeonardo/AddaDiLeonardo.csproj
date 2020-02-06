@@ -48,6 +48,10 @@
     <None Remove="Images\Icons\arrow2.png" />
     <None Remove="Images\Icons\circle-down.png" />
     <None Remove="Images\Icons\circle-up.png" />
+    <None Remove="Images\Icons\Icon-Place.png" />
+    <None Remove="Images\Icons\Icon-Place_@2x.png" />
+    <None Remove="Images\Icons\Icon-Place_@3x.png" />
+    <None Remove="Images\Icons\Icon-Place_@4x.png" />
     <None Remove="Images\Icons\marker.png" />
     <None Remove="Images\Icons\pin.png" />
     <None Remove="Images\map.png" />
@@ -112,6 +116,10 @@
     <EmbeddedResource Include="Images\Icons\circle-down.png" />
     <EmbeddedResource Include="Images\Icons\circle-up.png" />
     <EmbeddedResource Include="Images\Icons\home.png" />
+    <EmbeddedResource Include="Images\Icons\Icon-Place_%402x.png" />
+    <EmbeddedResource Include="Images\Icons\Icon-Place_%403x.png" />
+    <EmbeddedResource Include="Images\Icons\Icon-Place_%404x.png" />
+    <EmbeddedResource Include="Images\Icons\Icon-Place.png" />
     <EmbeddedResource Include="Images\Icons\map.png" />
     <EmbeddedResource Include="Images\Icons\marker.png" />
     <EmbeddedResource Include="Images\Icons\pin.png" />
