@@ -117,21 +117,12 @@
     <BundleResource Include="Resources\Roboto-BoldItalic.ttf" />
     <BundleResource Include="Resources\Roboto-Medium.ttf" />
     <BundleResource Include="Resources\Roboto-MediumItalic.ttf" />
-    <AndroidAsset Include="Resources\Fonts\Roboto-Bold.ttf" />
-    <AndroidAsset Include="Resources\Fonts\Roboto-BoldItalic.ttf" />
-    <AndroidAsset Include="Resources\Fonts\Roboto-Italic.ttf" />
-    <AndroidAsset Include="Resources\Fonts\Roboto-Light.ttf" />
-    <AndroidAsset Include="Resources\Fonts\Roboto-LightItalic.ttf" />
-    <AndroidAsset Include="Resources\Fonts\Roboto-Medium.ttf" />
-    <AndroidAsset Include="Resources\Fonts\Roboto-MediumItalic.ttf" />
-    <AndroidAsset Include="Resources\Fonts\Roboto-Regular.ttf" />
-    <AndroidAsset Include="Resources\Fonts\Roboto-ThinItalic.ttf" />
-    <AndroidAsset Include="Resources\Fonts\RobotoCondensed-Bold.ttf" />
-    <AndroidAsset Include="Resources\Fonts\RobotoCondensed-BoldItalic.ttf" />
-    <AndroidAsset Include="Resources\Fonts\RobotoCondensed-Italic.ttf" />
-    <AndroidAsset Include="Resources\Fonts\RobotoCondensed-Light.ttf" />
-    <AndroidAsset Include="Resources\Fonts\RobotoCondensed-LightItalic.ttf" />
-    <AndroidAsset Include="Resources\Fonts\RobotoCondensed-Regular.ttf" />
+    <AndroidAsset Include="Resources\RobotoCondensed-Bold.ttf" />
+    <AndroidAsset Include="Resources\RobotoCondensed-BoldItalic.ttf" />
+    <AndroidAsset Include="Resources\RobotoCondensed-Italic.ttf" />
+    <AndroidAsset Include="Resources\RobotoCondensed-Light.ttf" />
+    <AndroidAsset Include="Resources\RobotoCondensed-LightItalic.ttf" />
+    <AndroidAsset Include="Resources\RobotoCondensed-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
