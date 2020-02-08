@@ -15,7 +15,7 @@
 			        Property=Width,
 				    Factor=1}" />
 
-                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.new.play.png}" Aspect="AspectFit" WidthRequest="150" HeightRequest="50" x:Name="play"
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.new.play.png}" Aspect="AspectFit" WidthRequest="170" HeightRequest="38" x:Name="play"
 			        RelativeLayout.XConstraint="{ConstraintExpression
 				    Type=RelativeToView,
                     ElementName=background,
@@ -27,7 +27,7 @@
                     ElementName=background,
                     Property=Height, 
                     Factor= 1,
-                    Constant=-50}">
+                    Constant=-55}">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer
                             Tapped="btnRiproduci_Clicked"
