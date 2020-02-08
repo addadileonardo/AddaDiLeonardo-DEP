@@ -117,6 +117,12 @@
     <BundleResource Include="Resources\Roboto-BoldItalic.ttf" />
     <BundleResource Include="Resources\Roboto-Medium.ttf" />
     <BundleResource Include="Resources\Roboto-MediumItalic.ttf" />
+    <AndroidAsset Include="Resources\RobotoCondensed-Bold.ttf" />
+    <AndroidAsset Include="Resources\RobotoCondensed-BoldItalic.ttf" />
+    <AndroidAsset Include="Resources\RobotoCondensed-Italic.ttf" />
+    <AndroidAsset Include="Resources\RobotoCondensed-Light.ttf" />
+    <AndroidAsset Include="Resources\RobotoCondensed-LightItalic.ttf" />
+    <AndroidAsset Include="Resources\RobotoCondensed-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

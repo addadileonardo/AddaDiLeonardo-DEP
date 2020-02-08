@@ -8,30 +8,25 @@
              x:Name="_accordion">
   <ContentView.Content>
 
-        <StackLayout Orientation="Vertical" Margin="0,5,0,0">
+        <StackLayout Orientation="Vertical" Margin="0,0,0,0">
 
-            <Frame BackgroundColor="White"
-                   CornerRadius="7"
-                   HasShadow="False"
-                   Padding="0,0,0,0"
-                   Margin="5,5,5,0">
                 <!--Header-->
-                <StackLayout Padding="15,15,15,15" BackgroundColor="{Binding Source={x:Reference _accordion}, Path=BGColor}" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <StackLayout Padding="20,20,20,20" BackgroundColor="{Binding Source={x:Reference _accordion}, Path=BGColor}" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <!--Title-->
-                    <Label  x:Name="_title"
+                <Label  x:Name="_title"
                        HorizontalOptions="Start" VerticalOptions="Center" Margin="5,0,0,0"
                        Text="{Binding Source={x:Reference _accordion}, Path=Title}"
-                       FontSize="Large" TextColor="Black">
+                       FontSize="20" TextColor="Black">
                         <Label.FontFamily>
                             <OnPlatform x:TypeArguments="x:String">
-                                <On Platform="iOS" Value="Oswald-Light" />
-                                <On Platform="Android" Value="Oswald-Light.ttf#Oswald" />
+                                <On Platform="iOS" Value="RobotoCondensed-Bold" />
+                            <On Platform="Android" Value="RobotoCondensed-Bold.ttf#RobotoCondensed-Bold" />
                             </OnPlatform>
                         </Label.FontFamily>
                     </Label>
                     <!--Indicator-->
                 <ContentView  x:Name="_indicator"
-                             HorizontalOptions="EndAndExpand" VerticalOptions="Center" Margin="0,10,0,0"
+                             HorizontalOptions="EndAndExpand" VerticalOptions="Center" Margin="0,0,0,0"
                              Content="{Binding Source={x:Reference _accordion}, Path=Indicator}">
                     
                 </ContentView>
@@ -45,9 +40,9 @@
 
             <!--Content-->
 
-            <StackLayout  Margin="0,0,0,5" x:Name="_content">
-                    <ContentView   BackgroundColor="White" Content="{Binding Source={x:Reference _accordion}, Path=AccordionContent}"   >
-                    </ContentView>
+            <StackLayout  Margin="0,-6,0,0" x:Name="_content" BackgroundColor="{Binding Source={x:Reference _accordion}, Path=BGColor}">
+                <ContentView    Content="{Binding Source={x:Reference _accordion}, Path=AccordionContent}">
+                </ContentView>
             </StackLayout>
 
         </StackLayout>

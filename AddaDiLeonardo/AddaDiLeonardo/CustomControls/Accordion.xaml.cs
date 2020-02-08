@@ -23,6 +23,13 @@ namespace AddaDiLeonardo.CustomControls
 
         //Elements
 
+        public static readonly BindableProperty NameProperty = BindableProperty.Create(nameof(AccordionName), typeof(string), typeof(Accordion), default(string));
+        public string AccordionName
+        {
+            get => (string)GetValue(NameProperty);
+            set => SetValue(NameProperty, value);
+        }
+
         public static readonly BindableProperty TitleTextProperty = BindableProperty.Create(nameof(Title), typeof(string), typeof(Accordion), default(string));
         public string Title
         {
@@ -60,11 +67,17 @@ namespace AddaDiLeonardo.CustomControls
             set => SetValue(AccordionContentProperty, value);
         }
 
+        //Event
+        public event EventHandler<EventArgs> AccordionOpened;
+
         //Open handling
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             IsOpen = !IsOpen;
+            EventHandler<EventArgs> handler = AccordionOpened;
+            if(handler != null)
+                handler(this, e);
         }
 
         public static void IsOpenChanged(BindableObject bindable, object oldValue, object newValue)
@@ -86,12 +99,12 @@ namespace AddaDiLeonardo.CustomControls
             }
         }
 
-        public uint AnimationDuration { get; set; } = 250;
-        async void Open()
+        public static uint AnimationDuration { get; set; } = /*250*/50;
+        public async void Open()
         {
             _content.IsVisible = true;
             await Task.WhenAll(
-                _content.TranslateTo(0, 5, AnimationDuration),
+                _content.TranslateTo(0, 0, AnimationDuration),
                 Img.TranslateTo(-20, 0, AnimationDuration),
                 IndicatorOpen(),
                 _indicator.RotateTo(0, AnimationDuration),
@@ -105,10 +118,10 @@ namespace AddaDiLeonardo.CustomControls
             return;
         }
 
-        async void Close()
+        public async void Close()
         {
             await Task.WhenAll(
-                _content.TranslateTo(0, -5, AnimationDuration),
+                _content.TranslateTo(0, 0, AnimationDuration),
                 Img.TranslateTo(10, 0, AnimationDuration),
                 IndicatorClose(),
                 _indicator.RotateTo(-180, AnimationDuration),
