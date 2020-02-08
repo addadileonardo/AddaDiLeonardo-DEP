@@ -7,7 +7,7 @@
 
     <ContentPage.Content>
         <ScrollView BackgroundColor="Black">
-            <RelativeLayout Padding="0, 0, 0, 50">
+            <RelativeLayout Padding="0, 0, 0, 0">
 
                 <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.new.backgroundtesto.jpg}" Aspect="AspectFill" x:Name="background"
 			        RelativeLayout.WidthConstraint="{ConstraintExpression
@@ -27,7 +27,7 @@
                     ElementName=background,
                     Property=Height, 
                     Factor= 1,
-                    Constant=-30}">
+                    Constant=-50}">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer
                             Tapped="btnRiproduci_Clicked"
@@ -35,29 +35,96 @@
                     </Image.GestureRecognizers>
                 </Image>
 
-                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.new.centrale.png}" Aspect="AspectFill" HeightRequest="50" x:Name="step3"
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.new.centrale.png}" Aspect="AspectFit" HeightRequest="200" ClassId="step4" x:Name="step4"
 			        RelativeLayout.XConstraint="{ConstraintExpression
-				    Type=RelativeToView,
-                    ElementName=background,
-			        Property=Width,
-				    Factor=0.5,
-                    Constant=-75}"
+				    Type=RelativeToParent,
+			        Property=X,
+				    Factor=1}"
                     RelativeLayout.YConstraint="{ConstraintExpression
                     Type=RelativeToView,
                     ElementName=background,
                     Property=Height, 
-                    Factor= 1,
-                    Constant=-30}"
+                    Factor=1,
+                    Constant=5}"
                     RelativeLayout.WidthConstraint="{ConstraintExpression
                     Type=RelativeToParent,
                     Property=Width,
                     Factor=1}">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer
-                            Tapped="btnRiproduci_Clicked"
+                            Tapped="OnImageNameTapped"
                             NumberOfTapsRequired="1" />
                     </Image.GestureRecognizers>
                 </Image>
+
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.new.ponte.png}" Aspect="AspectFit" HeightRequest="200" ClassId="step2" x:Name="step2"
+			        RelativeLayout.XConstraint="{ConstraintExpression
+				    Type=RelativeToParent,
+			        Property=X,
+				    Factor=1}"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=step4,
+                    Property=Y, 
+                    Factor= 1,
+                    Constant=200}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Width,
+                    Factor=1}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnImageNameTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.new.rocchetta.png}" Aspect="AspectFit" HeightRequest="200" ClassId="step3" x:Name="step3"
+			        RelativeLayout.XConstraint="{ConstraintExpression
+				    Type=RelativeToParent,
+			        Property=X,
+				    Factor=1}"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=step2,
+                    Property=Y, 
+                    Factor= 1,
+                    Constant=200}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Width,
+                    Factor=1}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnImageNameTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.new.traghetto.png}" Aspect="AspectFit" HeightRequest="200" ClassId="step1" x:Name="step1"
+			        RelativeLayout.XConstraint="{ConstraintExpression
+				    Type=RelativeToParent,
+			        Property=X,
+				    Factor=1}"
+                    RelativeLayout.YConstraint="{ConstraintExpression
+                    Type=RelativeToView,
+                    ElementName=step3,
+                    Property=Y, 
+                    Factor= 1,
+                    Constant=200}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression
+                    Type=RelativeToParent,
+                    Property=Width,
+                    Factor=1}">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Tapped="OnImageNameTapped"
+                            NumberOfTapsRequired="1" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+
+
 
                 <!--Dipendenza HEIGHT -> spacing (yConstraint)-->
                 <!--<Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.new.centrale.png}" Aspect="AspectFit" x:Name="step4"
