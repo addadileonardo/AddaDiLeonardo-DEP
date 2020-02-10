@@ -29,7 +29,7 @@ namespace AddaDiLeonardo.Views
             //Children.Add(new NavigationPage(new MappaPage()) { Title = "Mappa", BackgroundColor = Color.LightGreen, IconImageSource = "map.png" });
 
             NavigationPage.SetHasNavigationBar(this, false);
-
+            
         }
     }
 }
