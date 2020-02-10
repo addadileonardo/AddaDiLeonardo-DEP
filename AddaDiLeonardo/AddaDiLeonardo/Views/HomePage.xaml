@@ -35,7 +35,7 @@
                     </Image.GestureRecognizers>
                 </Image>
 
-                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.new.centrale.png}" Aspect="AspectFit" HeightRequest="200" ClassId="step4" x:Name="step4"
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.new.centrale.png}" Aspect="AspectFill" HeightRequest="200" ClassId="step4" x:Name="step4"
 			        RelativeLayout.XConstraint="{ConstraintExpression
 				    Type=RelativeToParent,
 			        Property=X,
@@ -57,7 +57,7 @@
                     </Image.GestureRecognizers>
                 </Image>
 
-                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.new.ponte.png}" Aspect="AspectFit" HeightRequest="200" ClassId="step2" x:Name="step2"
+                <Image Source="{local:EmbeddedImage AddaDiLeonardo.Images.Home.new.ponte.png}" Aspect="AspectFill" HeightRequest="200" ClassId="step2" x:Name="step2"
 			        RelativeLayout.XConstraint="{ConstraintExpression
 				    Type=RelativeToParent,
 			        Property=X,
