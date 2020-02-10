@@ -48,6 +48,8 @@
     <None Remove="Images\Icons\arrow2.png" />
     <None Remove="Images\Icons\circle-down.png" />
     <None Remove="Images\Icons\circle-up.png" />
+    <None Remove="Images\Icons\close.png" />
+    <None Remove="Images\Icons\close_1.png" />
     <None Remove="Images\Icons\Icon-Place.png" />
     <None Remove="Images\Icons\Icon-Place_@2x.png" />
     <None Remove="Images\Icons\Icon-Place_@3x.png" />
@@ -115,6 +117,8 @@
     <EmbeddedResource Include="Images\Icons\arrow2.png" />
     <EmbeddedResource Include="Images\Icons\circle-down.png" />
     <EmbeddedResource Include="Images\Icons\circle-up.png" />
+    <EmbeddedResource Include="Images\Icons\close.png" />
+    <EmbeddedResource Include="Images\Icons\close_1.png" />
     <EmbeddedResource Include="Images\Icons\home.png" />
     <EmbeddedResource Include="Images\Icons\Icon-Place_%402x.png" />
     <EmbeddedResource Include="Images\Icons\Icon-Place_%403x.png" />
