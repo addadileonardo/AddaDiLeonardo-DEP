@@ -34,7 +34,7 @@ namespace AddaDiLeonardo.Views
                 accordion.AccordionOpened += accordionEvent;
 
             #region INTRODUZIONE
-            close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close_1.png");
+            close.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.close.close_5.png");
             imgTappa.Source = ImageSource.FromResource("AddaDiLeonardo.Content.Rocchetta.img_tappa.jpg");
             iconMarker.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Icons.Icon-Place_@3x.png");
             //lblTitolo.Text = tappa.Titolo;
