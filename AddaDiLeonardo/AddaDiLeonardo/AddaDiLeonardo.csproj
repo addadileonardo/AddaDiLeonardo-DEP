@@ -36,6 +36,12 @@
     <None Remove="Images\Home\background.png" />
     <None Remove="Images\Home\backgroundv1.jpg" />
     <None Remove="Images\Home\centrale.png" />
+    <None Remove="Images\Home\new\backgroundtesto.jpg" />
+    <None Remove="Images\Home\new\centrale.png" />
+    <None Remove="Images\Home\new\play.png" />
+    <None Remove="Images\Home\new\ponte.png" />
+    <None Remove="Images\Home\new\rocchetta.png" />
+    <None Remove="Images\Home\new\traghetto.png" />
     <None Remove="Images\Home\Play.png" />
     <None Remove="Images\Home\ponte.png" />
     <None Remove="Images\Home\rocchetta.png" />
@@ -102,6 +108,18 @@
     <EmbeddedResource Include="Images\Home\backgroundv1.jpg" />
 
     <EmbeddedResource Include="Images\Home\centrale.png" />
+
+    <EmbeddedResource Include="Images\Home\new\backgroundtesto.jpg" />
+
+    <EmbeddedResource Include="Images\Home\new\centrale.png" />
+
+    <EmbeddedResource Include="Images\Home\new\play.png" />
+
+    <EmbeddedResource Include="Images\Home\new\ponte.png" />
+
+    <EmbeddedResource Include="Images\Home\new\rocchetta.png" />
+
+    <EmbeddedResource Include="Images\Home\new\traghetto.png" />
     <EmbeddedResource Include="Images\Home\Play.png" />
     <EmbeddedResource Include="Images\Home\ponte.png" />
     <EmbeddedResource Include="Images\Home\rocchetta.png" />
