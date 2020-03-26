@@ -123,6 +123,9 @@
     <AndroidAsset Include="Resources\RobotoCondensed-Light.ttf" />
     <AndroidAsset Include="Resources\RobotoCondensed-LightItalic.ttf" />
     <AndroidAsset Include="Resources\RobotoCondensed-Regular.ttf" />
+    <BundleResource Include="Resources\Francese.db" />
+    <BundleResource Include="Resources\Inglese.db" />
+    <BundleResource Include="Resources\Italiano.db" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

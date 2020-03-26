@@ -5,12 +5,12 @@ using System.Text;
 
 namespace AddaDiLeonardo.Database.Classes
 {
-    [Table(nameof(Sezione))]
+    [Table("Sezioni")]
     public class Sezione
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
 
-        public int IDTappa { get; set; }
+        public int Tappa { get; set; }
 
         public string Titolo { get; set; }
 
