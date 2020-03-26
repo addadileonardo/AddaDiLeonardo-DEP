@@ -17,7 +17,7 @@ namespace AddaDiLeonardo.Database
         });
 
         static SQLiteAsyncConnection Database => lazyInitializer.Value;
-        static string DBName = "Italian.db3";
+        static string DBName = "Italiano.db";
         static bool initialized = false;
 
         public LanguageDatabase(string dbName)
@@ -88,12 +88,12 @@ namespace AddaDiLeonardo.Database
 
         public async Task<Tappa> GetTappaAsync(int id)
         {
-            return await Database.Table<Tappa>().Where(i => i.ID == id).FirstOrDefaultAsync().ConfigureAwait(false);
+            return await Database.Table<Tappa>().Where(i => i.Id == id).FirstOrDefaultAsync().ConfigureAwait(false);
         }
 
         public Task<int> SaveTappaAsync(Tappa item)
         {
-            if (item.ID /*!*/== 0)
+            if (item.Id /*!*/== 0)
             {
                 return Database.UpdateAsync(item);
             }
@@ -119,12 +119,12 @@ namespace AddaDiLeonardo.Database
 
         public async Task<List<Sezione>> GetSezioneAsync(int idtappa)
         {
-            return await Database.Table<Sezione>().Where(i => i.IDTappa == idtappa).ToListAsync().ConfigureAwait(false);
+            return await Database.Table<Sezione>().Where(i => i.Tappa == idtappa).ToListAsync().ConfigureAwait(false);
         }
 
         public Task<int> SaveSezioneAsync(Sezione item)
         {
-            if (item.ID /*!*/== 0)
+            if (item.Id /*!*/== 0)
             {
                 return Database.UpdateAsync(item);
             }
@@ -150,20 +150,20 @@ namespace AddaDiLeonardo.Database
 
         public async Task<List<Contenuto>> GetContenutoAsync(int idsezione)
         {
-            return await Database.Table<Contenuto>().Where(i => i.IDSezione == idsezione).ToListAsync().ConfigureAwait(false);
+            return await Database.Table<Contenuto>().Where(i => i.Sezione == idsezione).ToListAsync().ConfigureAwait(false);
         }
 
-        public Task<int> SaveContenutoAsync(Contenuto item)
-        {
-            if (item.ID /*!*/== 0)
-            {
-                return Database.UpdateAsync(item);
-            }
-            else
-            {
-                return Database.InsertAsync(item);
-            }
-        }
+        //public Task<int> SaveContenutoAsync(Contenuto item)
+        //{
+        //    if (item.Id /*!*/== 0)
+        //    {
+        //        return Database.UpdateAsync(item);
+        //    }
+        //    else
+        //    {
+        //        return Database.InsertAsync(item);
+        //    }
+        //}
 
         public Task<int> DeleteContenutoAsync(Contenuto item)
         {

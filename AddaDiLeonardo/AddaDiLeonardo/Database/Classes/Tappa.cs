@@ -5,10 +5,10 @@ using System.Text;
 
 namespace AddaDiLeonardo.Database.Classes
 {
-    [Table( nameof(Tappa))]
+    [Table("Tappe")]
     public class Tappa
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         public string Titolo { get; set; }
 

@@ -111,6 +111,9 @@
     <AndroidAsset Include="Assets\RobotoCondensed-Light.ttf" />
     <AndroidAsset Include="Assets\RobotoCondensed-LightItalic.ttf" />
     <AndroidAsset Include="Assets\RobotoCondensed-Regular.ttf" />
+    <AndroidAsset Include="Assets\Francese.db" />
+    <AndroidAsset Include="Assets\Inglese.db" />
+    <AndroidAsset Include="Assets\Italiano.db" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

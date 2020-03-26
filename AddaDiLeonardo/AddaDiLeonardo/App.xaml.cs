@@ -11,7 +11,7 @@ namespace AddaDiLeonardo
     {
         private const string LanguageKey = "Lingua";
 
-        private static readonly string[] DBNames = new string[3] { "Italian.db3", "English.db3", "French.db3" };
+        private static readonly string[] DBNames = new string[3] { "Italiano.db", "Inglese.db", "Francese.db" };
 
         public App()
         {

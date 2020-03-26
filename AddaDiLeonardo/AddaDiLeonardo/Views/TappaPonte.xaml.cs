@@ -47,7 +47,7 @@ namespace AddaDiLeonardo.Views
             #region SECTION 1
 
             Accordion0.Title = Sezioni[0].Titolo;
-            Contenuti = db.GetContenutoAsync(Sezioni[0].ID).Result.OrderBy(c => c.Indice).ToList();
+            Contenuti = db.GetContenutoAsync(Sezioni[0].Id).Result.OrderBy(c => c.Indice).ToList();
 
             imgSection1.Source = ImageSource.FromResource("AddaDiLeonardo.Images.Tappa1.adda.jpg");
             lblSection1_1.Text = Contenuti[0].Testo;
