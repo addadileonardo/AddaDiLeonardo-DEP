@@ -28,7 +28,6 @@ namespace AddaDiLeonardo.Views
         private object syncLockTappa = new object();
         bool isInCallTappa = false;
 
-        #region
         private async void OnImageNameTapped(object sender, EventArgs args)
         {
 
